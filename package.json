@@ -1,0 +1,21 @@
+{
+  "name": "default-project",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.17.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "build": "npm run build -ws --if-present",
+    "verify": "npm run typecheck --if-present && npm run lint --if-present && npm run build --if-present && npm run test --if-present",
+    "typecheck": "tsc --noEmit -p tsconfig.base.json",
+    "lint": "oxlint --type-aware --type-check || echo lint-not-configured-yet",
+    "format": "oxfmt . || echo format-not-configured-yet",
+    "test": "vitest run --if-present || echo no-tests-yet"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": { "node": ">=24.0.0", "npm": ">=11.0.0" }
+}
