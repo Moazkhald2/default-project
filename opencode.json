@@ -1,0 +1,10 @@
+{
+  "permission": {
+    "skill": {
+      "*": "ask",
+      "perf-check": "allow",
+      "code-review": "allow",
+      "project-bootstrap": "allow"
+    }
+  }
+}
