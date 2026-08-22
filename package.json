@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
     "build": "npm run build -ws --if-present",
     "verify": "node scripts/verify.mjs",
-    "typecheck": "tsc --noEmit -p tsconfig.base.json",
+    "typecheck": "npm run typecheck -ws --if-present",
     "lint": "oxlint --type-aware --type-check",
     "lint:fix": "oxlint --fix --type-aware",
     "format": "oxfmt .",
