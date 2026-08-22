@@ -15,5 +15,7 @@ export default app;
 // Node adapter — one line swap for Workers (wrangler handles export default)
 if (import.meta.env?.MODE !== "worker") {
   const { serve } = await import("@hono/node-server");
-  serve({ fetch: app.fetch, port: 3000 }, (info) => console.log(`api http://localhost:${info.port}`));
+  serve({ fetch: app.fetch, port: 3000 }, (info) =>
+    console.log(`api http://localhost:${info.port}`),
+  );
 }

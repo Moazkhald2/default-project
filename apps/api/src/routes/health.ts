@@ -12,7 +12,7 @@ health.post(
   (c) => {
     console.log("vitals", c.req.valid("json"));
     return c.json({ ok: true });
-  }
+  },
 );
 
 export default health;

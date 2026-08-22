@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react"],
+  "rules": {
+    "no-console": "off",
+    "typescript/no-explicit-any": "error",
+    "no-unused-vars": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.test.*"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ],
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
+  }
+}

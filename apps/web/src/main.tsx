@@ -4,4 +4,8 @@ import App from "./App";
 import { initWebVitals } from "./lib/web-vitals";
 import "./index.css";
 initWebVitals();
-ReactDOM.createRoot(document.getElementById("root")!).render(<React.StrictMode><App /></React.StrictMode>);
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
