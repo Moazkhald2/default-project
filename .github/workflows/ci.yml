@@ -17,7 +17,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm audit --omit=dev --audit-level=moderate || echo "audit: dev esbuild moderate tracked in SECURITY.md"
+      - run: 'npm audit --omit=dev --audit-level=moderate || echo "audit: dev esbuild moderate tracked in SECURITY.md"'
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run verify
