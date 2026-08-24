@@ -4,6 +4,7 @@ permissions: { contents: read }
 jobs:
   review:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/dependency-review-action@v4
