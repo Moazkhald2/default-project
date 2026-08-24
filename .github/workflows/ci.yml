@@ -1,6 +1,11 @@
 name: verify
-on: { push: { branches: [master, main] }, pull_request: { branches: [master, main] } }
-permissions: { contents: read }
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+permissions:
+  contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -8,7 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 24, cache: npm }
+        with:
+          node-version: 24
+          cache: npm
       - run: npm ci
       - run: npm audit --omit=dev --audit-level=moderate || echo "audit: dev esbuild moderate tracked in SECURITY.md"
       - run: npm run typecheck
@@ -18,4 +25,6 @@ jobs:
       - run: python math_builder.py --topic circle_theorems --grade 10 --out ./dist --help || echo "typst optional in CI"
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: week-pdfs, path: dist/week*/sheet.pdf }
+        with:
+          name: week-pdfs
+          path: dist/week*/sheet.pdf
