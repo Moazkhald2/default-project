@@ -8,3 +8,10 @@ playwright-report/
 .env
 .env.local
 wrangler/.dev/
+# backups — kept locally + OneDrive, not in git
+backups/
+*.bundle
+dev.db
+dev.db-journal
+*.log
+*.err

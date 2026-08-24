@@ -10,6 +10,20 @@
     "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
     "build": "npm run build -ws --if-present",
     "verify": "node scripts/verify.mjs",
+    "fetch:libs": "node scripts/fetch_libraries.mjs all",
+    "ingest": "node scripts/ingest.mjs content/bank",
+    "ingest:vault": "node scripts/ingest.mjs Local_Math_Vault/Question_Bank",
+    "sheet:build": "powershell -ExecutionPolicy Bypass -File scripts/fast_build.ps1",
+    "sheet:generate": "node scripts/generate_sheet.mjs",
+    "sheet:week": "node scripts/batch_generate.mjs --weeks=1-4 --grade=10",
+    "vault:sync": "node scripts/fetch_libraries.mjs all && npm run ingest:vault",
+    "deploy:check": "node scripts/deploy_check.mjs",
+    "backup": "node scripts/backup.mjs",
+    "backup:all": "node scripts/backup-all.mjs",
+    "backup:system": "node scripts/backup-system.mjs --level full",
+    "backup:memories": "node scripts/backup-system.mjs --level memories --no-projects",
+    "backup:restore": "node scripts/restore.mjs",
+    "backup:list": "node scripts/restore.mjs --list",
     "typecheck": "npm run typecheck -ws --if-present",
     "lint": "oxlint --type-aware --type-check",
     "lint:fix": "oxlint --fix --type-aware",
@@ -18,12 +32,16 @@
     "test": "vitest run --if-present || echo no-tests-yet"
   },
   "devDependencies": {
+    "@types/node": "^26.2.0",
     "concurrently": "^9.1.2",
     "lint-staged": "^17.3.0",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
     "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "esbuild": "^0.25.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: weekly, day: monday, time: "06:00" }
+    groups:
+      dev-dependencies: { dependency-type: development, patterns: ["*"], update-types: [minor, patch] }
+      prod-dependencies: { dependency-type: production, patterns: ["*"], update-types: [minor, patch] }
+    open-pull-requests-limit: 10
+    labels: [dependencies, security]
+    commit-message: { prefix: chore, include: scope }
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }
+    labels: [github-actions, security]

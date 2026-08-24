@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
-    "module": "ESNext"
+    "module": "ESNext",
+    "types": ["node"]
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.ts", "dist"]

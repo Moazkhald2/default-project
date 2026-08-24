@@ -11,7 +11,7 @@ npm workspaces (pnpm-ready)
 ├── apps/api      Hono 4 + Zod + hono/client RPC, WinterCG (Node ↔ Workers)
 ├── packages/shared  shared types (future)
 ├── scripts/verify.mjs  typecheck → lint → test → build (fail-fast)
-└── .opencode/skills  perf-check, code-review, project-bootstrap
+└── .opencode/skills  perf-check, code-review, project-bootstrap, free-claude-code
 ```
 
 - **Node** >=24.0.0, **npm** >=11.0.0 — `npm install` today, `pnpm install` tomorrow.
@@ -107,5 +107,26 @@ Allowlisted in `opencode.json`:
 - `perf-check` — LCP `fetchPriority`, image dimensions, JS budget, lighthouse budgets
 - `code-review` — strict review checklist
 - `project-bootstrap` — scaffold conventions
+- `free-claude-code` — use `OpenCode`/`Claude Code`/`Codex`/`Pi` with free models via `Alishahryar1/free-claude-code` (49 providers, `1.3B+` free tokens, MIT)
 
 Skills live in `.opencode/skills/` and are mirrored to `.agents/skills/` for portability.
+
+## Free Claude Code — Free Models for OpenCode
+
+Proxy `https://github.com/Alishahryar1/free-claude-code` routes `OpenCode` to NVIDIA NIM (`40 req/min` free), OpenRouter, Groq, local `LM Studio`/`Ollama`/`llama.cpp` and 42 more — no Anthropic key needed.
+
+```powershell
+# Windows — install (review script first)
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.ps1")))
+# then launch tray app -> Admin UI at http://localhost:8082
+
+# Configure: Admin UI -> paste NVIDIA_NIM_API_KEY (https://build.nvidia.com/settings/api-keys)
+# -> select MODEL=nvidia_nim/nvidia/nemotron-3-super-120b-a12b -> Validate -> Apply
+
+fcc-opencode          # run OpenCode via free proxy
+fcc-opencode --help   # normal args pass through
+```
+
+- Local: `MODEL=lmstudio/<id>` (`http://localhost:1234/v1`), `ollama/<tag>` (`http://localhost:11434`), `llamacpp/<id>` (`http://localhost:8080/v1`)
+- Update: re-run install command; version `fcc-server --version`
+- Docs: `.opencode/skills/free-claude-code/SKILL.md` (full provider catalog, fallback models, messaging/voice)

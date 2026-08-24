@@ -1,0 +1,23 @@
+---
+description: Design system rules for front-end UI components — The Math Mentor House v2
+globs: ["**/*.tsx", "**/*.jsx", "**/*.vue", "**/*.svelte", "**/*.css", "**/*.typ"]
+alwaysApply: false
+---
+
+# Design System Enforcement — The Math Mentor (House v2)
+
+Before generating or modifying ANY UI component, page, worksheet, or style:
+
+1. **Always read `SYSTEM_SPEC.md` (§2 Tokens, §4 Pedagogy, §6 Components) + `DESIGN.md` bridge** — they are the single source of truth. `SYSTEM_SPEC.md` wins on conflict.
+2. **Use ONLY House v2 tokens** defined in `SYSTEM_SPEC.md §2.2` and `apps/web/src/index.css` `@theme`:
+   `bg-primary` `#0A9396`, `bg-primary-light` `#E6F5F5`, `bg-navy` `#1A1A2E`, `bg-secondary` `#01CBFC`, `bg-gold` `#D4A373`/`bg-gold-light` `#FAF3E7`, `bg-terra` `#E76F51`/`bg-terra-light` `#FDF0ED`, `bg-sage` `#84A98C`/`bg-sage-light` `#EEF3EF`, `bg-paper`/`bg-canvas` `#FAF9F6`, `bg-surface` `#FFFFFF`, `text-ink` `#2D3436`, `text-muted` `#636E72`, `border-border` `#E7E5E4`, `rounded-xl` 12px, `rounded-lg` 8px, `rounded-[20px]`, `rounded-full`
+3. **Grade accents (§2.4):** G4 `#E76F51` | G5 `#CF7B1D` | G6 `#B33A63` | G7 `#2980B9` | G8 `#8E44AD` | G9 `#6C3483` | G10 `#0A9396` | G11 `#1A1A2E` — use for covers, badges, progress tracks.
+4. **Do NOT invent** new hex, arbitrary values (`bg-[#123456]`, `p-[13px]`), new font families, or gradients/glows. Replace legacy `bg-zinc-900`/`bg-blue-500`/`bg-violet-600` with House v2.
+5. **Enforce Figure-First + Pedagogy Loop (§4):** geometry diagrams ≥65–85% width FIRST, then Key Rule (gold), then I Do (teal two-col), You Do (sage workspace + watermark), Common Mistakes (terra→sage), 791pt budget.
+6. **Humanized tone:** generous `p-5`/`p-6`, `gap-4`, `shadow-sm` only, conversational micro-copy (“You’re nearly halfway — 40% done!”).
+7. **A11y:** 4.5:1 contrast, 44×44 touch target, visible `focus-visible:ring-primary`.
+8. **Icons:** `lucide-react` or `@phosphor-icons/react` only.
+9. **Empty states:** `border-dashed bg-paper rounded-[20px]` + friendly icon + warm text (DESIGN.md §3).
+10. **Print parity:** Typst `templates/master_sheet.typ` uses `teal #0A9396` / `navy #1A1A2E` / `paper #FAF9F6` — keep web and print in sync.
+
+If a requested color/layout conflicts with `SYSTEM_SPEC.md`, ask before deviating and propose a token update in `SYSTEM_SPEC.md §2.2` → `DESIGN.md §2.1` → `index.css` `@theme` together.

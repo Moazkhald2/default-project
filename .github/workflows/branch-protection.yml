@@ -1,0 +1,14 @@
+name: Branch Protection Check
+on: { push: { branches: [master, main] } }
+permissions: { contents: read }
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Block direct push if not signed
+        run: |
+          if ! git log -1 --pretty=%G? | grep -qE "G|U"; then echo "⚠ Commit not GPG signed — enable commit.gpgsign"; exit 1; fi
+          echo "✓ signed"

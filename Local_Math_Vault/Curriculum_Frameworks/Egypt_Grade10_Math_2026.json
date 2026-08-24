@@ -1,0 +1,41 @@
+{
+  "framework": "Egypt Grade 10 Math 2026 — New Curriculum",
+  "updated": "2026-08-24",
+  "grade": "10",
+  "term": "full-year",
+  "units": [
+    {
+      "id": "alg-01",
+      "title": "Algebra — Quadratic Equations",
+      "topics": ["quadratic_formula", "completing_square", "discriminant"],
+      "weeks": [1, 2],
+      "vault_path": "Question_Bank/Grade_09_12/Algebra",
+      "figure_ids": []
+    },
+    {
+      "id": "geo-01",
+      "title": "Geometry — Circle Theorems",
+      "topics": ["inscribed_angles", "central_angles", "chord_theorems"],
+      "weeks": [3, 4],
+      "vault_path": "Question_Bank/Grade_09_12/Geometry",
+      "figure_ids": ["circle-inscribed-angle", "circle-chord"]
+    },
+    {
+      "id": "geo-02",
+      "title": "Geometry — Right Triangle Trigonometry",
+      "topics": ["pythagoras", "trig_ratios", "special_triangles"],
+      "weeks": [5, 6],
+      "vault_path": "Question_Bank/Grade_09_12/Geometry",
+      "figure_ids": ["right-triangle"]
+    },
+    {
+      "id": "geo-03",
+      "title": "Geometry — Parallel Lines & Transversals",
+      "topics": ["corresponding_angles", "alternate_angles", "co-interior"],
+      "weeks": [7, 8],
+      "vault_path": "Question_Bank/Grade_09_12/Geometry",
+      "figure_ids": ["parallel-transversal"]
+    }
+  ],
+  "mapping_notes": "Organize by topic, not chapter — adapts to curriculum reorder. AI adapts old PDFs to new weeks via topic tags."
+}

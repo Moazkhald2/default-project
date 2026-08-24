@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Circle with inscribed angle ACB">
+  <circle cx="160" cy="160" r="110" fill="none" stroke="#111827" stroke-width="2"/>
+  <circle cx="160" cy="160" r="3.5" fill="#111827"/>
+  <circle cx="237" cy="82" r="4" fill="#111827"/>
+  <circle cx="237" cy="238" r="4" fill="#111827"/>
+  <circle cx="62" cy="184" r="4" fill="#111827"/>
+  <line x1="160" y1="160" x2="237" y2="82" stroke="#111827" stroke-width="1.3"/>
+  <line x1="160" y1="160" x2="237" y2="238" stroke="#111827" stroke-width="1.3"/>
+  <line x1="237" y1="82" x2="62" y2="184" stroke="#4b5563" stroke-width="1.2"/>
+  <line x1="237" y1="238" x2="62" y2="184" stroke="#4b5563" stroke-width="1.2"/>
+  <text x="166" y="152" font-size="14" font-family="serif">O</text>
+  <text x="248" y="78" font-size="14" font-family="serif">A</text>
+  <text x="248" y="252" font-size="14" font-family="serif">B</text>
+  <text x="44" y="192" font-size="14" font-family="serif">C</text>
+</svg>

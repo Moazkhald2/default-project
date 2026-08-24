@@ -1,1 +1,80 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  /* House v2 — canonical from SYSTEM_SPEC.md §2.2 — do not invent */
+  --color-primary: #0a9396;
+  --color-primary-light: #e6f5f5;
+  --color-primary-dark: #0a6f72;
+  --color-primary-hover: #0a6f72;
+  --color-primary-soft: #e6f5f5;
+
+  --color-navy: #1a1a2e;
+
+  --color-secondary: #01cbfc;
+  --color-secondary-light: #e0faff;
+
+  --color-accent: #d4a373;
+  --color-gold: #d4a373;
+  --color-gold-light: #faf3e7;
+  --color-gold-dark: #8a5a1e;
+
+  --color-terra: #e76f51;
+  --color-terra-light: #fdf0ed;
+  --color-terra-dark: #9c3b22;
+
+  --color-sage: #84a98c;
+  --color-sage-light: #eef3ef;
+  --color-sage-dark: #3e5f4a;
+
+  --color-ink: #2d3436;
+  --color-muted: #636e72;
+  --color-paper: #faf9f6;
+  --color-canvas: #faf9f6;
+  --color-surface: #ffffff;
+  --color-border: #e7e5e4;
+  --color-border-strong: #d6d3d1;
+
+  --color-success: #84a98c;
+  --color-warning: #d4a373;
+  --color-error: #e76f51;
+  --color-info: #0a9396;
+
+  /* Grade accents §2.4 */
+  --color-grade-4: #e76f51;
+  --color-grade-5: #cf7b1d;
+  --color-grade-6: #b33a63;
+  --color-grade-7: #2980b9;
+  --color-grade-8: #8e44ad;
+  --color-grade-9: #6c3483;
+  --color-grade-10: #0a9396;
+  --color-grade-11: #1a1a2e;
+
+  --font-display: "Playfair Display", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-body: "Lexend", "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-card: 12px;
+  --radius-control: 8px;
+  --radius-pill: 9999px;
+  --radius-sheet: 20px;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background: var(--color-canvas);
+    color: var(--color-ink);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}

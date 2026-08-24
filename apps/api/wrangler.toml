@@ -1,3 +1,20 @@
 name = "default-project-api"
 main = "src/index.ts"
 compatibility_date = "2026-08-22"
+compatibility_flags = ["nodejs_compat"]
+
+# Local dev uses file:./dev.db via @libsql/client
+# Prod: bind Turso (hosted SQLite) for zero-downtime — no cold start, <5ms
+#   wrangler secret put TURSO_DATABASE_URL
+#   wrangler secret put TURSO_AUTH_TOKEN
+# Alternative: Cloudflare D1
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "math-academy"
+# database_id = "xxx"
+
+[vars]
+ENV = "production"
+
+[observability]
+enabled = true
