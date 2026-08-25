@@ -75,14 +75,48 @@ export function getCurrentToolVersion() {
   } catch { return "unknown"; }
 }
 
-const mode = process.argv.find(a => a.startsWith("--mode="))?.split("=")[1] || "check";
-const dryRun = process.argv.includes("--dry-run");
-if (process.argv[1]?.endsWith("autopilot.mjs")) {
-  if (mode === "check") {
-    const report = await improveJobs(dryRun);
-    const tools = await discoverTools({ dryRun });
-    console.log(JSON.stringify({ mode, dryRun, report, tools, scoreSample: scoreTool({ free: true, noAPI: true, license: "MIT", stars: 500, updatedDaysAgo: 5, fitsJobs: true }) }, null, 2));
-  } else {
-    console.log(`autopilot mode=${mode} score test:`, scoreTool({ free: true, noAPI: true, license: "MIT", stars: 500, updatedDaysAgo: 5, fitsJobs: true }));
+export function decideAction(current, best) {
+  if (!best || !current) return "KEEP";
+  return best.score > current.score + 10 ? "RECOMMEND" : "KEEP";
+}
+
+export async function cloudMain(opts = {}) {
+  const dryRun = !!opts.dryRun;
+  console.log("[autopilot:cloud] discover...");
+  const tools = await discoverTools({ dryRun });
+  const current = tools.find(t => t.name === "@playwright/mcp") || tools[0];
+  const best = [...tools].sort((a,b)=>b.score-a.score)[0];
+  const action = decideAction(current, best);
+  console.log(`[autopilot:cloud] best=${best.name} score=${best.score} action=${action}`);
+  const improve = await improveJobs(dryRun);
+  console.log("[autopilot:cloud] improve:", improve);
+  if (improve.verify === "fail") { console.error("verify failed — abort"); return { action: "ABORT", reason: "verify fail" }; }
+  const report = { date: new Date().toISOString(), tools, best, action, improve };
+  fs.mkdirSync("backups", { recursive: true });
+  fs.writeFileSync(`backups/autopilot-cloud-${Date.now()}.json`, JSON.stringify(report, null, 2));
+  if (dryRun) return report;
+  const branch = `autopilot/${new Date().toISOString().slice(0,10)}`;
+  try {
+    execSync(`git checkout -b ${branch}`, { stdio: "ignore" });
+    execSync(`git add backups/autopilot-cloud-*.json`, { stdio: "ignore" });
+    execSync(`git commit -m "chore(autopilot): weekly ${action} — best ${best.name} score ${best.score}" --no-verify`, { stdio: "ignore" });
+    execSync(`git push -u origin ${branch}`, { stdio: "ignore" });
+    execSync(`gh pr create --title "chore(autopilot): weekly ${action}" --body "Auto report ${JSON.stringify(report,null,2).slice(0,2000)}"`, { stdio: "ignore" });
+  } catch (e) { console.error("PR create failed", e.message); }
+  return report;
+}
+
+export async function localMain(opts = {}) {
+  return { status: "not-implemented", dryRun: !!opts.dryRun };
+}
+
+if (process.argv[1]?.replace(/\\/g, "/")?.endsWith("autopilot.mjs")) {
+  const mode = process.argv.find(a => a.startsWith("--mode="))?.split("=")[1] || "check";
+  const dryRun = process.argv.includes("--dry-run");
+  if (mode === "cloud") await cloudMain({ dryRun });
+  else if (mode === "local") await localMain({ dryRun });
+  else {
+    const r = await cloudMain({ dryRun: true });
+    console.log(JSON.stringify(r, null, 2));
   }
 }

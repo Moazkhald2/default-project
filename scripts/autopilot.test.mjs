@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { scoreTool, improveJobs, searchAllSources, runVerify } from "./autopilot.mjs";
+import { scoreTool, improveJobs, searchAllSources, runVerify, decideAction } from "./autopilot.mjs";
 
 describe("scoreTool", () => {
   it("scores free no-API tool high", () => {
@@ -36,5 +36,17 @@ describe("searchAllSources", () => {
 describe("runVerify", () => {
   it("is a function", () => {
     expect(typeof runVerify).toBe("function");
+  });
+});
+describe("decideAction", () => {
+  it("keeps current if best not > current+10", () => {
+    const current = { name: "@playwright/mcp", score: 90 };
+    const best = { name: "chrome-devtools-mcp", score: 95 };
+    expect(decideAction(current, best)).toBe("KEEP");
+  });
+  it("recommends if best > current+10", () => {
+    const current = { name: "@playwright/mcp", score: 80 };
+    const best = { name: "new-mcp", score: 95 };
+    expect(decideAction(current, best)).toBe("RECOMMEND");
   });
 });
