@@ -10,6 +10,7 @@
     "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
     "build": "npm run build -ws --if-present",
     "verify": "node scripts/verify.mjs",
+    "kit:bootstrap": "powershell -ExecutionPolicy Bypass -File agent-kit/bootstrap.ps1",
     "fetch:libs": "node scripts/fetch_libraries.mjs all",
     "ingest": "node scripts/ingest.mjs content/bank",
     "ingest:vault": "node scripts/ingest.mjs Local_Math_Vault/Question_Bank",
@@ -29,7 +30,9 @@
     "lint:fix": "oxlint --fix --type-aware",
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",
-    "test": "vitest run --if-present || echo no-tests-yet"
+    "test": "vitest run",
+    "autopilot:check": "node scripts/autopilot.mjs --mode=check",
+    "autopilot:setup-local": "node scripts/setup-autopilot-local.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
