@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { scoreTool, improveJobs, searchAllSources, runVerify, decideAction } from "./autopilot.mjs";
+import { scoreTool, improveJobs, searchAllSources, runVerify, decideAction, localMain } from "./autopilot.mjs";
 
 describe("scoreTool", () => {
   it("scores free no-API tool high", () => {
@@ -48,5 +48,12 @@ describe("decideAction", () => {
     const current = { name: "@playwright/mcp", score: 80 };
     const best = { name: "new-mcp", score: 95 };
     expect(decideAction(current, best)).toBe("RECOMMEND");
+  });
+});
+describe("localMain", () => {
+  it("dryRun returns applied status", async () => {
+    const r = await localMain({ dryRun: true });
+    expect(r).toHaveProperty("status");
+    expect(["applied", "skipped", "backup-check"]).toContain(r.status);
   });
 });

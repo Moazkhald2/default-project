@@ -107,7 +107,27 @@ export async function cloudMain(opts = {}) {
 }
 
 export async function localMain(opts = {}) {
-  return { status: "not-implemented", dryRun: !!opts.dryRun };
+  const dryRun = !!opts.dryRun;
+  console.log("[autopilot:local] fetch & pull...");
+  try {
+    if (!dryRun) {
+      execSync("git fetch --all --prune", { stdio: "ignore", timeout: 30000 });
+      // try pull main if not on autopilot branch
+      try { execSync("git pull --ff-only", { stdio: "ignore", timeout: 30000 }); } catch {}
+      execSync("npm install --silent", { stdio: "ignore", timeout: 60000 });
+    }
+  } catch (e) { console.error("fetch/pull failed", e.message); }
+  // backup check if cloud missed: run cloudMain dryRun to see if update needed
+  let status = "applied";
+  try {
+    const cloudReport = await cloudMain({ dryRun: true });
+    status = cloudReport.action === "RECOMMEND" ? "backup-check" : "applied";
+  } catch { status = "skipped"; }
+  const localReport = { date: new Date().toISOString(), status, mode: "local" };
+  fs.mkdirSync("backups", { recursive: true });
+  fs.writeFileSync(`backups/autopilot-local-${Date.now()}.json`, JSON.stringify(localReport, null, 2));
+  console.log("[autopilot:local] done", localReport);
+  return localReport;
 }
 
 if (process.argv[1]?.replace(/\\/g, "/")?.endsWith("autopilot.mjs")) {
