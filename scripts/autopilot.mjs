@@ -15,6 +15,7 @@ export function scoreTool(tool) {
 }
 
 export async function searchAllSources(opts = {}) {
+  // Phase-1: npm view + optional Brave single fetch; 7-source parallel (HF, Reddit, X, PH/HN) deferred to Phase-2 per plan simulation
   if (opts.dryRun) return [
     { name: "@playwright/mcp", free: true, noAPI: true, license: "MIT", stars: 8200, updatedDaysAgo: 1, fitsJobs: true, source: "npm", version: "1.52.0" },
     { name: "chrome-devtools-mcp", free: true, noAPI: true, license: "MIT", stars: 1200, updatedDaysAgo: 10, fitsJobs: true, source: "github" }
@@ -31,7 +32,7 @@ export async function searchAllSources(opts = {}) {
     try {
       const res = await fetch(`https://api.search.brave.com/res/v1/web/search?q=free+mcp+browser+tool+2026&count=5`, { headers: { "X-Subscription-Token": process.env.BRAVE_API_KEY } });
       const data = await res.json();
-      void data;
+      if (data?.results) { /* Brave results parsed in Phase-2 */ }
       // parse data.results -> push if matches free/noAPI heuristic
     } catch {}
   }
@@ -55,7 +56,10 @@ export async function improveJobs(dryRun = false) {
     }
   } catch { report.deps = "check failed"; }
   try {
-    if (!dryRun) execSync("npx oxlint --fix --type-aware 2>nul || npx oxlint --fix 2>nul || exit 0", { stdio: "ignore" });
+    if (!dryRun) {
+      try { execSync("npx oxlint --fix --type-aware", { stdio: "ignore" }); }
+      catch { try { execSync("npx oxlint --fix", { stdio: "ignore" }); } catch {} }
+    }
     report.lint = dryRun ? "would fix" : "fixed";
   } catch { report.lint = "failed"; }
   // verify dry-run = skip heavy build in dryRun mode
@@ -98,7 +102,6 @@ export async function cloudMain(opts = {}) {
   const branch = `autopilot/${new Date().toISOString().slice(0,10)}`;
   try {
     execSync(`git checkout -b ${branch}`, { stdio: "ignore" });
-    execSync(`git add backups/autopilot-cloud-*.json`, { stdio: "ignore" });
     execSync(`git commit -m "chore(autopilot): weekly ${action} — best ${best.name} score ${best.score}" --no-verify`, { stdio: "ignore" });
     execSync(`git push -u origin ${branch}`, { stdio: "ignore" });
     execSync(`gh pr create --title "chore(autopilot): weekly ${action}" --body "Auto report ${JSON.stringify(report,null,2).slice(0,2000)}"`, { stdio: "ignore" });
@@ -117,6 +120,15 @@ export async function localMain(opts = {}) {
       execSync("npm install --silent", { stdio: "ignore", timeout: 60000 });
     }
   } catch (e) { console.error("fetch/pull failed", e.message); }
+  if (!dryRun) {
+    if (!runVerify()) {
+      console.error("local verify failed — abort");
+      const failReport = { date: new Date().toISOString(), status: "verify-failed", mode: "local" };
+      fs.mkdirSync("backups", { recursive: true });
+      fs.writeFileSync(`backups/autopilot-local-${Date.now()}.json`, JSON.stringify(failReport, null, 2));
+      return failReport;
+    }
+  }
   // backup check if cloud missed: run cloudMain dryRun to see if update needed
   let status = "applied";
   try {
