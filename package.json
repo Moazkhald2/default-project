@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
-    "concurrently": "^9.1.2",
+    "concurrently": "^10.0.5",
     "lint-staged": "^17.3.0",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
