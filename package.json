@@ -54,7 +54,7 @@
     "{apps,packages,scripts,.github,docs}/**/*.{json,md}": [
       "oxfmt"
     ],
-    "*.json": [
+    "!(package-lock).json": [
       "oxfmt"
     ]
   },
