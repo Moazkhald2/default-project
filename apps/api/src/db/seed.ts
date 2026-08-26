@@ -3,7 +3,19 @@ import { drizzle } from "drizzle-orm/libsql";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import * as schema from "./schema";
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(scriptDir, "../../../..");
+
+export function vaultRoots(base = repoRoot) {
+  return [path.resolve(base, "Local_Math_Vault/Question_Bank"), path.resolve(base, "content/bank")];
+}
+
+export function existingVaultRoots(base = repoRoot) {
+  return vaultRoots(base).filter((r) => existsSync(r));
+}
 
 function parseFrontmatter(src: string) {
   const m = src.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -32,15 +44,12 @@ async function collect(dir: string, out: string[] = []) {
 }
 
 async function main() {
-  const url = process.env.TURSO_DATABASE_URL ?? "file:./dev.db";
+  const url = process.env.TURSO_DATABASE_URL ?? `file:${path.resolve(repoRoot, "apps/api/dev.db")}`;
   const authToken = process.env.TURSO_AUTH_TOKEN;
   const client = createClient({ url, authToken });
   const db = drizzle(client);
 
-  const roots = [
-    path.resolve("../../Local_Math_Vault/Question_Bank"),
-    path.resolve("../../content/bank"),
-  ];
+  const roots = existingVaultRoots();
   const files: string[] = [];
   for (const r of roots) await collect(r, files);
 
@@ -82,7 +91,9 @@ async function main() {
   console.log(`Seeded ${inserted} questions → ${url.includes("file:") ? "dev.db" : "Turso"}`);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}
