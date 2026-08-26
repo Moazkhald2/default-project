@@ -1,5 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { scoreTool, improveJobs, searchAllSources, runVerify, decideAction, localMain } from "./autopilot.mjs";
+import { scoreTool, improveJobs, searchAllSources, runVerify, decideAction, localMain, rotateBackups } from "./autopilot.mjs";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 
 describe("scoreTool", () => {
   it("scores free no-API tool high", () => {
@@ -55,5 +58,40 @@ describe("localMain", () => {
     const r = await localMain({ dryRun: true });
     expect(r).toHaveProperty("status");
     expect(["applied", "skipped", "backup-check"]).toContain(r.status);
+  });
+});
+
+function makeTempBackups(count) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "autopilot-rot-"));
+  const base = Date.now() - 100000;
+  for (let i = 0; i < count; i++) {
+    fs.writeFileSync(path.join(dir, `autopilot-cloud-${base + i}.json`), "{}");
+  }
+  return dir;
+}
+
+describe("rotateBackups", () => {
+  it("deletes oldest JSONs beyond keep limit", () => {
+    const dir = makeTempBackups(10);
+    const result = rotateBackups({ dir, keep: 8 });
+    const remaining = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+    expect(remaining.length).toBe(8);
+    expect(result.deleted.length).toBe(2);
+    fs.rmSync(dir, { recursive: true, force: true });
+  });
+  it("keeps newest files, deletes oldest first", () => {
+    const dir = makeTempBackups(10);
+    rotateBackups({ dir, keep: 8 });
+    const remaining = fs.readdirSync(dir).sort();
+    // oldest two (base+0, base+1) must be gone
+    expect(remaining.some(f => f.includes(String(Date.now() - 100000)))).toBe(false);
+    fs.rmSync(dir, { recursive: true, force: true });
+  });
+  it("no-op when under limit", () => {
+    const dir = makeTempBackups(3);
+    const result = rotateBackups({ dir, keep: 8 });
+    expect(result.deleted.length).toBe(0);
+    expect(fs.readdirSync(dir).length).toBe(3);
+    fs.rmSync(dir, { recursive: true, force: true });
   });
 });
