@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { execSync } from "node:child_process";
 import fs from "node:fs";
+import path from "node:path";
 
 export function scoreTool(tool) {
   if (!tool.free) return 0;
@@ -49,7 +50,7 @@ export function runVerify() {
 export async function improveJobs(dryRun = false) {
   const report = { deps: "skip", lint: "skip", verify: "pending", changed: false };
   try {
-    const outdated = execSync("npm outdated --json || exit 0", { encoding: "utf8" });
+    const outdated = execSync("npm outdated --json || exit 0", { encoding: "utf8", timeout: 8000 });
     report.deps = outdated.trim() ? "patch available" : "up to date";
     if (!dryRun && outdated) {
       // only patch, no major: npm update handles it safely; we just report
@@ -84,6 +85,30 @@ export function decideAction(current, best) {
   return best.score > current.score + 10 ? "RECOMMEND" : "KEEP";
 }
 
+export function rotateBackups({ dir = "backups", prefix = "autopilot-", keep = 8 } = {}) {
+  const deleted = [];
+  try {
+    const files = fs.readdirSync(dir)
+      .filter(f => f.startsWith(prefix) && f.endsWith(".json"))
+      .map(f => ({ f, mtime: fs.statSync(path.join(dir, f)).mtimeMs }))
+      .sort((a, b) => b.mtime - a.mtime);
+    for (const { f } of files.slice(keep)) {
+      fs.rmSync(path.join(dir, f));
+      deleted.push(f);
+    }
+    const logFile = path.join(dir, `${prefix}local.log`);
+    let fd;
+    try {
+      fd = fs.openSync(logFile, "r+");
+      if (fs.fstatSync(fd).size > 1024 * 1024) {
+        fs.ftruncateSync(fd, 0);
+        deleted.push(`${prefix}local.log`);
+      }
+    } catch {} finally { if (fd !== undefined) fs.closeSync(fd); }
+  } catch {}
+  return { deleted };
+}
+
 export async function cloudMain(opts = {}) {
   const dryRun = !!opts.dryRun;
   console.log("[autopilot:cloud] discover...");
@@ -98,6 +123,7 @@ export async function cloudMain(opts = {}) {
   const report = { date: new Date().toISOString(), tools, best, action, improve };
   fs.mkdirSync("backups", { recursive: true });
   fs.writeFileSync(`backups/autopilot-cloud-${Date.now()}.json`, JSON.stringify(report, null, 2));
+  rotateBackups();
   if (dryRun) return report;
   const branch = `autopilot/${new Date().toISOString().slice(0,10)}`;
   try {
@@ -138,6 +164,7 @@ export async function localMain(opts = {}) {
   const localReport = { date: new Date().toISOString(), status, mode: "local" };
   fs.mkdirSync("backups", { recursive: true });
   fs.writeFileSync(`backups/autopilot-local-${Date.now()}.json`, JSON.stringify(localReport, null, 2));
+  rotateBackups({ prefix: "autopilot-" });
   console.log("[autopilot:local] done", localReport);
   return localReport;
 }
