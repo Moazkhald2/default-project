@@ -51,7 +51,10 @@
       "oxlint --fix --type-aware",
       "oxfmt"
     ],
-    "*.{json,md}": [
+    "{apps,packages,scripts,.github,docs}/**/*.{json,md}": [
+      "oxfmt"
+    ],
+    "*.json": [
       "oxfmt"
     ]
   },

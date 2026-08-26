@@ -1,0 +1,288 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "oh-my-openagent@latest"
+  ],
+  "mcp": {
+    "obsidian-memory": {
+      "type": "local",
+      "command": ["node", "C:/Users/moaz7/obsidian-memory-layer-mcp/dist/index.js", "C:/Users/moaz7/ObsidianVault"],
+      "enabled": true
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "duckduckgo": {
+      "type": "local",
+      "command": ["npx", "-y", "@ericthered926/duckduckgo-mcp-server"],
+      "enabled": true
+    },
+    "filesystem": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\moaz7"],
+      "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true,
+      "environment": {
+        "GITHUB_TOKEN": "{env:GITHUB_TOKEN}"
+      }
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp"],
+      "enabled": true
+    },
+    "sqlite": {
+      "type": "local",
+      "command": ["npx", "-y", "@mokei/mcp-sqlite"],
+      "enabled": true
+    },
+    "winget-mcp": {
+      "type": "local",
+      "command": ["C:\\Users\\moaz7\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\WindowsPackageManagerMCPServer.exe"],
+      "enabled": true
+    },
+    "pdf": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-pdf"],
+      "enabled": false
+    },
+    "supabase": {
+      "type": "remote",
+      "url": "https://mcp.supabase.com/mcp?project_ref=vjhzbqtoktktrjevcodq&features=docs%2Caccount%2Cdatabase%2Cdebugging%2Cdevelopment%2Cfunctions%2Cbranching",
+      "enabled": true
+    },
+    "cloudflare": {
+      "type": "remote",
+      "url": "https://mcp.cloudflare.com/mcp",
+      "enabled": true,
+      "oauth": {}
+    },
+    "cloudflare-docs": {
+      "type": "remote",
+      "url": "https://docs.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-bindings": {
+      "type": "remote",
+      "url": "https://bindings.mcp.cloudflare.com/mcp",
+      "enabled": true,
+      "oauth": {}
+    },
+    "cloudflare-builds": {
+      "type": "remote",
+      "url": "https://builds.mcp.cloudflare.com/mcp",
+      "enabled": true,
+      "oauth": {}
+    },
+    "cloudflare-observability": {
+      "type": "remote",
+      "url": "https://observability.mcp.cloudflare.com/mcp",
+      "enabled": true,
+      "oauth": {}
+    }
+  },
+    "tools": {
+      "obsidian-memory_*": true,
+      "sequential-thinking_*": false,
+      "duckduckgo_*": false,
+      "filesystem_*": false,
+      "github_*": false,
+      "playwright_*": false,
+      "sqlite_*": false,
+      "winget-mcp_*": false,
+      "supabase_*": false,
+      "cloudflare_*": false,
+      "cloudflare-docs_*": false,
+      "cloudflare-bindings_*": false,
+      "cloudflare-builds_*": false,
+      "cloudflare-observability_*": false,
+      "planner_*": false,
+      "reviewer_*": false,
+      "tdd-guide_*": false,
+      "security-auditor_*": false,
+      "docs-writer_*": false,
+      "math-tutor_*": false,
+      "freelance-manager_*": false
+    },
+  "agent": {
+    "sisyphus": {
+      "tools": {
+        "obsidian-memory_*": true,
+        "sequential-thinking_*": true,
+        "duckduckgo_*": true,
+        "filesystem_*": true
+      }
+    },
+    "explore": {
+      "tools": {
+        "duckduckgo_*": true,
+        "filesystem_*": true,
+        "github_*": true
+      }
+    },
+    "auto-build": {
+      "tools": {
+        "playwright_*": true,
+        "github_*": true,
+        "filesystem_*": true
+      }
+    },
+    "deep-debug": {
+      "tools": {
+        "sequential-thinking_*": true
+      }
+    },
+    "code-search": {
+      "tools": {
+        "duckduckgo_*": true,
+        "filesystem_*": true
+      }
+    },
+    "sisyphus-junior": {
+      "tools": {
+        "duckduckgo_*": true,
+        "filesystem_*": true
+      }
+    },
+    "strategy-plan": {
+      "tools": {
+        "duckduckgo_*": true
+      }
+    },
+    "build": {
+      "tools": {
+        "playwright_*": true,
+        "github_*": true,
+        "filesystem_*": true
+      }
+    },
+    "plan": {
+      "tools": {
+        "duckduckgo_*": true
+      }
+    },
+    "planner": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/planner.md",
+      "tools": {
+        "read": true,
+        "grep": true,
+        "glob": true,
+        "bash": true,
+        "edit": false,
+        "write": false
+      }
+    },
+    "reviewer": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/reviewer.md",
+      "tools": {
+        "read": true,
+        "grep": true,
+        "glob": true,
+        "bash": true,
+        "edit": false,
+        "write": false
+      }
+    },
+    "tdd-guide": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/tdd-guide.md",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": true,
+        "grep": true,
+        "glob": true
+      }
+    },
+    "security-auditor": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/security-auditor.md",
+      "tools": {
+        "read": true,
+        "grep": true,
+        "glob": true,
+        "bash": true,
+        "edit": false,
+        "write": false
+      }
+    },
+    "docs-writer": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/docs-writer.md",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": false,
+        "grep": true,
+        "glob": true
+      }
+    },
+    "math-tutor": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/math-tutor.md",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": true,
+        "grep": true,
+        "glob": true
+      }
+    },
+    "freelance-manager": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/freelance-manager.md",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": false,
+        "grep": true,
+        "glob": true
+      }
+    },
+    "cloudflare-dev": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/cloudflare-dev.md",
+      "mode": "subagent",
+      "tools": {
+        "cloudflare_*": true,
+        "cloudflare-docs_*": true,
+        "cloudflare-bindings_*": true,
+        "cloudflare-builds_*": true,
+        "cloudflare-observability_*": true
+      }
+    },
+    "db-dev": {
+      "prompt": "C:/Users/moaz7/.config/opencode/agents/db-dev.md",
+      "mode": "subagent",
+      "tools": {
+        "supabase_*": true,
+        "sqlite_*": true
+      }
+    }
+  },
+  
+  "instructions": [
+    "C:/Users/moaz7/.config/opencode/rules/memory-layer.md",
+    "C:/Users/moaz7/.config/opencode/token-optimization.md",
+    "C:/Users/moaz7/.config/opencode/rules/security.md",
+    "C:/Users/moaz7/.config/opencode/rules/coding-style.md",
+    "C:/Users/moaz7/.config/opencode/rules/testing.md",
+    "C:/Users/moaz7/.config/opencode/rules/git-workflow.md",
+    "C:/Users/moaz7/.config/opencode/rules/performance.md",
+    "C:/Users/moaz7/.config/opencode/rules/mcp-servers.md",
+    "C:/Users/moaz7/.config/opencode/rules/tokenrouter.md",
+    "C:/Users/moaz7/.config/opencode/rules/taste-skill.md"
+  ],
+  "skills": {
+    "paths": [
+      "C:/Users/moaz7/.config/opencode/.opencode/skills",
+      "C:/Users/moaz7/.config/opencode/skills",
+      "C:/Users/moaz7/.agents/skills"
+    ]
+  }
+}
