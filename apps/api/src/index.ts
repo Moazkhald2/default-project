@@ -52,6 +52,8 @@ const ALLOWED = new Set([
   "http://localhost:5173",
   "http://localhost:3000",
   "https://default-project.pages.dev",
+  "https://default-project-aj2.pages.dev",
+  "https://02dfcd8c.default-project-aj2.pages.dev",
 ]);
 app.use(
   "/api/*",
@@ -74,11 +76,15 @@ app.get("/", (c) => c.text("api ok — try /api/health"));
 
 export default app;
 
-// Node adapter — one line swap for Workers (wrangler handles export default)
-if (import.meta.env?.MODE !== "worker") {
-  const { serve } = await import("@hono/node-server");
-  serve({ fetch: app.fetch, port: 3000 }, (info) =>
-    // eslint-disable-next-line no-console
-    console.log(`api http://localhost:${info.port}`),
-  );
-}
+// Node adapter — only run in Node, never on Workers (Workers have `caches` global)
+try {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  const isWorkers = typeof caches !== "undefined";
+  if (!isWorkers) {
+    const { serve } = await import("@hono/node-server");
+    serve({ fetch: app.fetch, port: 3000 }, (info) =>
+      // eslint-disable-next-line no-console
+      console.log(`api http://localhost:${info.port}`),
+    );
+  }
+} catch {}
