@@ -15,3 +15,6 @@ dev.db
 dev.db-journal
 *.log
 *.err
+# autopilot (local logs, gitignored but synced via OneDrive)
+backups/autopilot-*.json
+backups/autopilot-*.log

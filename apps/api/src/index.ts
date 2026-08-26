@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
@@ -77,6 +78,7 @@ export default app;
 if (import.meta.env?.MODE !== "worker") {
   const { serve } = await import("@hono/node-server");
   serve({ fetch: app.fetch, port: 3000 }, (info) =>
+    // eslint-disable-next-line no-console
     console.log(`api http://localhost:${info.port}`),
   );
 }
