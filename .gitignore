@@ -18,3 +18,10 @@ dev.db-journal
 # autopilot (local logs, gitignored but synced via OneDrive)
 backups/autopilot-*.json
 backups/autopilot-*.log
+
+# Spec Kit machine-local state
+.specify/feature.json
+.specify/extensions/*/local-config.yml
+
+# stray local copy (untracked)
+test-project/

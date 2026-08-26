@@ -50,7 +50,7 @@ export function runVerify() {
 export async function improveJobs(dryRun = false) {
   const report = { deps: "skip", lint: "skip", verify: "pending", changed: false };
   try {
-    const outdated = execSync("npm outdated --json || exit 0", { encoding: "utf8" });
+    const outdated = execSync("npm outdated --json || exit 0", { encoding: "utf8", timeout: 8000 });
     report.deps = outdated.trim() ? "patch available" : "up to date";
     if (!dryRun && outdated) {
       // only patch, no major: npm update handles it safely; we just report
@@ -97,12 +97,14 @@ export function rotateBackups({ dir = "backups", prefix = "autopilot-", keep = 8
       deleted.push(f);
     }
     const logFile = path.join(dir, `${prefix}local.log`);
+    let fd;
     try {
-      if (fs.statSync(logFile).size > 1024 * 1024) {
-        fs.writeFileSync(logFile, "");
+      fd = fs.openSync(logFile, "r+");
+      if (fs.fstatSync(fd).size > 1024 * 1024) {
+        fs.ftruncateSync(fd, 0);
         deleted.push(`${prefix}local.log`);
       }
-    } catch {}
+    } catch {} finally { if (fd !== undefined) fs.closeSync(fd); }
   } catch {}
   return { deleted };
 }

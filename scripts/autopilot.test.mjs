@@ -20,7 +20,7 @@ describe("scoreTool", () => {
 });
 
 describe("improveJobs", () => {
-  it("returns dryRun report without mutating", async () => {
+  it("returns dryRun report without mutating", { timeout: 15000 }, async () => {
     const report = await improveJobs(true);
     expect(report).toHaveProperty("deps");
     expect(report).toHaveProperty("lint");
