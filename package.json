@@ -32,7 +32,11 @@
     "format:check": "oxfmt --check .",
     "test": "vitest run",
     "autopilot:check": "node scripts/autopilot.mjs --mode=check",
-    "autopilot:setup-local": "node scripts/setup-autopilot-local.mjs"
+    "autopilot:setup-local": "node scripts/setup-autopilot-local.mjs",
+    "spec:init": "uvx --from git+https://github.com/github/spec-kit.git specify init . --here --force --integration opencode --non-interactive",
+    "spec:feature": "powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/create-new-feature.ps1",
+    "spec:check": "uvx --from git+https://github.com/github/spec-kit.git specify check",
+    "spec:upgrade": "uvx --from git+https://github.com/github/spec-kit.git specify self upgrade"
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
