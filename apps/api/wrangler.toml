@@ -7,11 +7,10 @@ compatibility_flags = ["nodejs_compat"]
 # Prod: bind Turso (hosted SQLite) for zero-downtime — no cold start, <5ms
 #   wrangler secret put TURSO_DATABASE_URL
 #   wrangler secret put TURSO_AUTH_TOKEN
-# Alternative: Cloudflare D1
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "math-academy"
-# database_id = "xxx"
+[[d1_databases]]
+binding = "DB"
+database_name = "math-academy"
+database_id = "61ccbc02-f78c-4d8d-b622-bfb2a18f6e19"
 
 [vars]
 ENV = "production"
