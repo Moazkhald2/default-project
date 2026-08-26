@@ -97,10 +97,12 @@ export function rotateBackups({ dir = "backups", prefix = "autopilot-", keep = 8
       deleted.push(f);
     }
     const logFile = path.join(dir, `${prefix}local.log`);
-    if (fs.existsSync(logFile) && fs.statSync(logFile).size > 1024 * 1024) {
-      fs.writeFileSync(logFile, "");
-      deleted.push(`${prefix}local.log`);
-    }
+    try {
+      if (fs.statSync(logFile).size > 1024 * 1024) {
+        fs.writeFileSync(logFile, "");
+        deleted.push(`${prefix}local.log`);
+      }
+    } catch {}
   } catch {}
   return { deleted };
 }
