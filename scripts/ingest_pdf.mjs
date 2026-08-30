@@ -43,6 +43,7 @@ for (const pdf of pdfs) {
   let done = false;
 
   // 1. Docling (IBM, CPU-light, best for 32GB RAM)
+  // lgtm[js/useless-conditional] — done is false on first iteration, but kept for symmetry with later checks
   if (!done && tryCmd("docling", ["--help"])) {
     console.log("  trying docling (CPU)...");
     if (tryCmd("docling", [pdf, "--to", "md", "--output", outMd])) {
