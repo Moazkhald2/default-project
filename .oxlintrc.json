@@ -17,5 +17,6 @@
   "options": {
     "typeAware": true,
     "typeCheck": true
-  }
+  },
+  "ignorePatterns": [".agents/**", ".opencode/**", "dist/**", "node_modules/**"]
 }
