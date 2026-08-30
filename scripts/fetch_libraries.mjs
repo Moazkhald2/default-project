@@ -212,6 +212,7 @@ async function fetchNumbas() {
   const sampleJson = JSON.stringify({ id: "numbas-geo-001", topic: "circle-theorems", question: "Find $\\angle ACB$ if $\\angle AOB=80\\degree$", answer: "$40\\degree$", vars: {} }, null, 2);
   for (const base of [OUT_BANK, VAULT_GEO]) {
     const out = path.join(base, "numbas-sample.json");
+    // lgtm[js/file-system-race] — single-user local vault, TOCTOU acceptable; atomic write via writeFile tmp+rename would be stricter
     if (!existsSync(out)) await writeFile(out, sampleJson);
   }
 }
