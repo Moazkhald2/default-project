@@ -11,7 +11,7 @@ import {
   similaritySpec,
   type MathFlowchartSpec,
 } from "./components/MathFlowchart";
-import { g7LinearSpec, g8FactorSpec, g9QuadraticGraphSpec } from "./components/G7Flowcharts";
+import { g7LinearSpec, g8FactorSpec, g9QuadraticGraphSpec, g7ProportionalSpec } from "./components/G7Flowcharts";
 import { CurriculumGraph } from "./components/CurriculumGraph";
 const TeacherDashboard = lazy(() =>
   import("./components/TeacherDashboard").then((m) => ({ default: m.TeacherDashboard })),
@@ -172,6 +172,12 @@ export default function App() {
               className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === similaritySpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
             >
               Similarity
+            </button>
+            <button
+              onClick={() => setFlowSpec(g7ProportionalSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === g7ProportionalSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              G7-01 Prop.
             </button>
             <button
               onClick={() => setFlowSpec(g7LinearSpec)}

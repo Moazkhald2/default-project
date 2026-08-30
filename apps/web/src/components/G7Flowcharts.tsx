@@ -67,7 +67,35 @@ export const g9QuadraticGraphSpec: MathFlowchartSpec = {
   ],
 };
 
+export const g7ProportionalSpec: MathFlowchartSpec = {
+  title: "G7 — Proportional Relationships",
+  titleTex: String.raw`G7-01: $y=kx$ ? vs non-proportional`,
+  archifyType: "workflow",
+  nodes: [
+    { id: "start", kind: "start", labelTex: String.raw`Start: Table $(x,y)$ given` },
+    { id: "ratio", kind: "step", labelTex: String.raw`Compute $k_i = y_i/x_i$ for each row` },
+    { id: "decision", kind: "decision", labelTex: String.raw`All $k_i$ equal?`, yesBranch: "prop", noBranch: "nonprop" },
+    { id: "prop", kind: "step", labelTex: String.raw`Proportional: $y=kx$, $k$ constant (G7-02)` },
+    { id: "nonprop", kind: "step", labelTex: String.raw`Non-proportional: $k$ varies` },
+    { id: "scale", kind: "decision", labelTex: String.raw`Need $y$ for new $x$?`, yesBranch: "calc", noBranch: "done" },
+    { id: "calc", kind: "step", labelTex: String.raw`$y = k \cdot x$ (scale, G7-04)` },
+    { id: "done", kind: "answer", labelTex: String.raw`Classified $\blacksquare$` },
+  ],
+  edges: [
+    { from: "start", to: "ratio" },
+    { from: "ratio", to: "decision" },
+    { from: "decision", to: "prop", condition: "yes", label: "yes" },
+    { from: "decision", to: "nonprop", condition: "no", label: "no" },
+    { from: "prop", to: "scale" },
+    { from: "nonprop", to: "done" },
+    { from: "scale", to: "calc", condition: "yes", label: "yes" },
+    { from: "scale", to: "done", condition: "no", label: "no" },
+    { from: "calc", to: "done" },
+  ],
+};
+
 export const allCurriculumSpecs: Record<string, MathFlowchartSpec> = {
+  g7Proportional: g7ProportionalSpec,
   g7Linear: g7LinearSpec,
   g8Factor: g8FactorSpec,
   g9QuadraticGraph: g9QuadraticGraphSpec,

@@ -21,9 +21,11 @@
 - [x] Next phase: curriculum 7 specs + print sheet built
 
 ## Next Action
-- Next: author flowchart for outcome:G7-01 — "Identifies proportional and non-proportional relationships." (auto-loop cycle 1 2026-08-30T06:27:02.362Z)
+- DONE: G7-01 proportional flowchart authored `G7Flowcharts.tsx:g7ProportionalSpec` (8 nodes, App 8-button switcher) — picked by auto-loop cycle 1. Next: G7-02 scale/actual length via auto-loop cycle 2.
 
 ## Human Steering
 Edit this `Next Action` to pivot team next cycle. Last updated: 2026-08-30 09:02 feat/math-flowcharts post-verify.
 
 <!-- auto-loop cycle 1 2026-08-30T06:27:02.362Z squad=planner,geometer,qa picked=outcome:G7-01 -->
+
+<!-- auto-loop cycle 1 2026-08-30T06:33:39.511Z squad=planner,geometer,qa picked=outcome:G7-01 -->
