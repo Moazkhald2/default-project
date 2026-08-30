@@ -12,6 +12,7 @@ import {
   type MathFlowchartSpec,
 } from "./components/MathFlowchart";
 import { g7LinearSpec, g8FactorSpec, g9QuadraticGraphSpec } from "./components/G7Flowcharts";
+import { CurriculumGraph } from "./components/CurriculumGraph";
 const TeacherDashboard = lazy(() =>
   import("./components/TeacherDashboard").then((m) => ({ default: m.TeacherDashboard })),
 );
@@ -142,6 +143,7 @@ export default function App() {
 
       {view === "flowcharts" ? (
         <section className="mt-8 grid gap-4">
+          <CurriculumGraph />
           <h2 className="font-display text-xl font-semibold text-ink">Math Flowcharts — Stepwise Solver</h2>
           <p className="text-sm text-muted">
             Interactive DAG · archify workflow · KaTeX nodes · GeoGebra figures · 7-layer agent loop.

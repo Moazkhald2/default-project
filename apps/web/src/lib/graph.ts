@@ -6,9 +6,14 @@ export type GraphNode = {
   prereqs: string[];
   count: number;
   sources: string[];
+  fullText?: string;
 };
 export type GraphEdge = { from: string; to: string; label: string };
-export type MathGraph = { meta: { generated: string; stages: string }; nodes: GraphNode[]; edges: GraphEdge[] };
+export type MathGraph = {
+  meta: { generated: string; stages: string; curriculumOutcomes?: number; source?: string; bankTopics?: number };
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+};
 
 export function getPrereqs(graph: MathGraph, topic: string, grade = "10"): string[] {
   const node = graph.nodes.find((n) => n.topic === topic && n.grade === grade);
