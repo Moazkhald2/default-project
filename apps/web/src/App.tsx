@@ -7,6 +7,8 @@ import {
   MathFlowchart,
   rightTriangleSpec,
   circleTheoremSpec,
+  quadraticSpec,
+  similaritySpec,
   type MathFlowchartSpec,
 } from "./components/MathFlowchart";
 const TeacherDashboard = lazy(() =>
@@ -143,7 +145,7 @@ export default function App() {
           <p className="text-sm text-muted">
             Interactive DAG · archify workflow · KaTeX nodes · GeoGebra figures · 7-layer agent loop.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setFlowSpec(rightTriangleSpec)}
               className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === rightTriangleSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
@@ -154,7 +156,19 @@ export default function App() {
               onClick={() => setFlowSpec(circleTheoremSpec)}
               className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === circleTheoremSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
             >
-              Circle Theorems
+              Circle
+            </button>
+            <button
+              onClick={() => setFlowSpec(quadraticSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === quadraticSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              Quadratic
+            </button>
+            <button
+              onClick={() => setFlowSpec(similaritySpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === similaritySpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              Similarity
             </button>
           </div>
           <MathFlowchart spec={flowSpec} />

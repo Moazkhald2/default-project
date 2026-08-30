@@ -5,7 +5,6 @@ import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const bankDir = "content/bank";
-const vaultGlob = "Local_Math_Vault";
 const outFile = "data/math_graph.json";
 
 function parseFrontmatter(src) {

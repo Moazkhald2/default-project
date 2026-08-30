@@ -348,3 +348,50 @@ export const circleTheoremSpec: MathFlowchartSpec = {
     { from: "compute", to: "answer" },
   ],
 };
+
+export const quadraticSpec: MathFlowchartSpec = {
+  title: "Quadratic — Formula path",
+  titleTex: String.raw`ax^2+bx+c=0, \; a\neq 0`,
+  archifyType: "workflow",
+  nodes: [
+    { id: "start", kind: "start", labelTex: String.raw`Start: $ax^2+bx+c=0$` },
+    { id: "disc", kind: "step", labelTex: String.raw`Compute discriminant $D=b^2-4ac$` },
+    { id: "decision", kind: "decision", labelTex: String.raw`$D \ge 0$ ?`, yesBranch: "real", noBranch: "complex" },
+    { id: "real", kind: "step", labelTex: String.raw`Real roots: $x=\frac{-b\pm\sqrt{D}}{2a}$` },
+    { id: "complex", kind: "step", labelTex: String.raw`Complex: $x=\frac{-b\pm i\sqrt{-D}}{2a}$` },
+    { id: "check", kind: "step", labelTex: String.raw`Check by substitution` },
+    { id: "answer", kind: "answer", labelTex: String.raw`$\blacksquare$ Roots verified` },
+  ],
+  edges: [
+    { from: "start", to: "disc" },
+    { from: "disc", to: "decision" },
+    { from: "decision", to: "real", condition: "yes", label: "yes" },
+    { from: "decision", to: "complex", condition: "no", label: "no" },
+    { from: "real", to: "check" },
+    { from: "complex", to: "check" },
+    { from: "check", to: "answer" },
+  ],
+};
+
+export const similaritySpec: MathFlowchartSpec = {
+  title: "Similarity — Prove triangles similar",
+  titleTex: String.raw`\triangle ABC \sim \triangle DEF ?`,
+  archifyType: "workflow",
+  nodes: [
+    { id: "start", kind: "start", labelTex: String.raw`Start: Two triangles given` },
+    { id: "aa", kind: "decision", labelTex: String.raw`AA: $\angle A=\angle D$ and $\angle B=\angle E$?`, yesBranch: "similar", noBranch: "sas" },
+    { id: "sas", kind: "decision", labelTex: String.raw`SAS: $AB/DE = AC/DF$ and included $\angle$ equal?`, yesBranch: "similar", noBranch: "sss" },
+    { id: "sss", kind: "decision", labelTex: String.raw`SSS: All sides proportional?`, yesBranch: "similar", noBranch: "not-sim" },
+    { id: "similar", kind: "answer", labelTex: String.raw`Similar $\blacksquare$ $\Rightarrow$ scale factor $k$` },
+    { id: "not-sim", kind: "answer", labelTex: String.raw`Not similar` },
+  ],
+  edges: [
+    { from: "start", to: "aa" },
+    { from: "aa", to: "similar", condition: "yes" },
+    { from: "aa", to: "sas", condition: "no" },
+    { from: "sas", to: "similar", condition: "yes" },
+    { from: "sas", to: "sss", condition: "no" },
+    { from: "sss", to: "similar", condition: "yes" },
+    { from: "sss", to: "not-sim", condition: "no" },
+  ],
+};
