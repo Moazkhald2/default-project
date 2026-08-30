@@ -4,23 +4,24 @@
 > 5-layer architecture: Observability layer file-based HITL.
 
 ## Current State
-- **Branch:** `feat/math-flowcharts` `6a7eec9` pushed to `origin/feat/math-flowcharts`
-- **Installed skills:** `ui-ux-pro-max` (7), `archify` (1), `taste-skill` (13), `superpowers` (14) + 4 scientific cherry-picks (`paper-lookup`, `scientific-visualization`, `matplotlib`, `markdown-mermaid-writing`) = 46 total `.agents/skills`
-- **Verified:** `node scripts/verify.mjs` ✓ PASS, `node scripts/deploy_check.mjs` ✓ ready, `archify doctor` ready, `vite build` 486.59 kB (148.54 kB gzip)
-- **PR:** https://github.com/Moazkhald2/default-project/pull/new/feat/math-flowcharts (token lacks createPullRequest scope, manual create)
+- **Branch:** `feat/math-flowcharts` `e477cd5` -> now 455 nodes, pushed `e477cd5..next`
+- **Installed skills:** 46 total `.agents/skills` (ui-ux-pro-max 7, archify 1, taste 13, superpowers 14 + 4 scientific) + 3 local (`math-flowcharts`, `graph-engineering`, `auto-company`)
+- **Graph:** `455 nodes, 9 edges` `data/math_graph.json` — 441 curriculum outcomes (G1-G9) + 5 bank topics + 9 grade chain, `curriculumOutcomes:441`
+- **Verified:** `node scripts/verify.mjs` ✓ PASS, `deploy_check` ✓ ready, `archify` 9/9 PASS, `vite build` 489.62 kB (149.19 kB gzip)
+- **PR:** https://github.com/Moazkhald2/default-project/pull/new/feat/math-flowcharts (manual create, token lacks scope)
 
 ## Completed
-- [x] `opencode.json` allowlist (ui-ux-pro-max, ckm:*, archify, taste-skill, superpowers, math-flowcharts, graph-engineering, auto-company)
-- [x] `.oxlintrc.json` `ignorePatterns: [".agents/**", ".opencode/**"]` — fixes 795 warnings from vendored skills
-- [x] `npx skills add` for ui-ux-pro-max, archify, taste-skill, superpowers + scientific 4 via git clone
-- [x] `docs/architecture/agent-7layer.md` (Amir 7-layer), `graph-engineering.md` (Annatar 5 stages), `prompt-skills.md` (Ruben 3), `docs/references/quant/finrl-qlib.md` (parked)
-- [x] `MathFlowchart.tsx` interactive DAG (4 specs: rightTriangle, circleTheorem, quadratic, similarity) + `MathFlowchart.test.tsx` 4 tests + `scripts/build_graph.mjs` + `apps/web/src/lib/graph.ts` + `data/math_graph.json` + `data/archify/*.html` delivered
-- [x] `App.tsx` flowcharts tab (4 spec switcher, archify JSON export)
-- [x] `data/archify/quadratic.html` delivered via `archify deliver workflow --quality showcase` (9 checks PASS)
-- [x] Push + `node scripts/verify.mjs` + deploy check
+- [x] `opencode.json` allowlist, `.oxlintrc.json` ignorePatterns, lint 0 errors
+- [x] `npx skills add` + scientific 4 via git clone, 46 skills
+- [x] `docs/architecture/agent-7layer.md`, `graph-engineering.md`, `prompt-skills.md`, `quant/finrl-qlib.md`
+- [x] `MathFlowchart.tsx` DAG (4 specs) -> now + `G7Flowcharts.tsx` (G7 linear G7-27, G8 GCF G8-08, G9 parabola G9-08/12) = 7 specs, `App.tsx` 7-button switcher
+- [x] `scripts/build_graph.mjs` now ingests `Egypt_Math_2026_2027_FirstTerm.json` 441 outcomes + grade chain `grade:1->9` + bank links
+- [x] `templates/flowchart_sheet.typ` CeTZ `fnode`/`fedge` anchored + `scripts/generate_flowchart_sheet.mjs` + `data/archify/*.html` delivered
+- [x] Push `6a7eec9` + `e477cd5` + `verify` PASS x2
+- [x] Next phase: curriculum 7 specs + print sheet built
 
 ## Next Action
-- Phase 1: Run `npx skills` update, add `FinRL`/`qlib` only if adaptive difficulty needed. Expand graph `scripts/build_graph.mjs` with `Local_Math_Vault/Curriculum_Frameworks/*.json` prerequisites. Add `MathFlowchart` print via Typst CeTZ + archify share-card 1200x630 per `docs/architecture/graph-engineering.md`.
+- Phase 2: Wire `templates/flowchart_sheet.typ` to `typst compile` in CI, add `generate_flowchart_sheet.mjs --out` to `sheet:build`, add archify share-card 1200x630 export (`node archify/bin/archify.mjs` PNG/WebM), add FinRL/qlib only if adaptive difficulty requested. All Phase 0-1 DONE, ready for manual PR review.
 
 ## Human Steering
 Edit this `Next Action` to pivot team next cycle. Last updated: 2026-08-30 09:02 feat/math-flowcharts post-verify.

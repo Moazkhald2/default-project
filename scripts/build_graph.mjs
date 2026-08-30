@@ -5,6 +5,7 @@ import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const bankDir = "content/bank";
+const curriculumFile = "Local_Math_Vault/Curriculum_Frameworks/Egypt_Math_2026_2027_FirstTerm.json";
 const outFile = "data/math_graph.json";
 
 function parseFrontmatter(src) {
@@ -37,6 +38,53 @@ async function main() {
   const files = await readdir(bankDir).catch(() => []);
   const nodes = new Map();
   const edges = [];
+  let curriculumOutcomes = 0;
+
+  // Stage 1: ingest curriculum frameworks (441 outcomes across G1-G9)
+  try {
+    const raw = await readFile(curriculumFile, "utf8");
+    const j = JSON.parse(raw);
+    for (const g of j.grades ?? []) {
+      const grade = String(g.grade);
+      for (const o of g.outcomes ?? []) {
+        // also keep raw outcome node
+        const id = `outcome:${o.id}`;
+        if (!nodes.has(id)) {
+          nodes.set(id, {
+            id,
+            topic: o.text.slice(0, 80),
+            grade,
+            prereqs: [],
+            count: 1,
+            sources: [`curriculum:${o.id}`],
+            fullText: o.text,
+          });
+        }
+        curriculumOutcomes++;
+      }
+      // grade summary node
+      const gid = `grade:${grade}`;
+      if (!nodes.has(gid)) {
+        nodes.set(gid, {
+          id: gid,
+          topic: `Grade ${grade} ${g.stage}`,
+          grade,
+          prereqs: Number(grade) > 1 ? [`grade:${Number(grade) - 1}`] : [],
+          count: g.totalOutcomes,
+          sources: [`curriculum:grade-${grade}`],
+        });
+        if (Number(grade) > 1) edges.push({ from: `grade:${Number(grade) - 1}`, to: gid, label: "prereq" });
+      }
+    }
+    // cross-grade prerequisite chain: G7 geometry -> G8 radicals -> G9 quadratics
+    const chain = [
+      ["grade:7", "grade:8"],
+      ["grade:8", "grade:9"],
+    ];
+    for (const [from, to] of chain) if (nodes.has(from) && nodes.has(to) && !edges.find((e) => e.from === from && e.to === to)) edges.push({ from, to, label: "curriculum" });
+  } catch (e) {
+    console.warn(`curriculum ingest skipped: ${e.message}`);
+  }
 
   for (const f of files.filter((x) => x.endsWith(".md"))) {
     const src = await readFile(path.join(bankDir, f), "utf8");
@@ -68,11 +116,25 @@ async function main() {
     }
   }
 
+  // Link bank topics to curriculum grade nodes
+  for (const n of nodes.values()) {
+    if (n.id.startsWith("grade:")) continue;
+    if (n.id.startsWith("outcome:")) continue;
+    // n is bank topic like circle_theorems:10 -> link to grade:10 if exists, else grade:9 chain
+    const g = n.grade;
+    const gid = `grade:${g}`;
+    if (nodes.has(gid) && !edges.find((e) => e.from === gid && e.to === n.id)) {
+      edges.push({ from: gid, to: n.id, label: "curriculum" });
+    }
+  }
+
   const graph = {
     meta: {
       generated: new Date().toISOString(),
       stages: "extract->resolve->assemble->query",
-      source: "content/bank + Local_Math_Vault",
+      source: "content/bank + Local_Math_Vault (Egypt 2026-2027 441 outcomes + bank)",
+      curriculumOutcomes,
+      bankTopics: [...nodes.values()].filter((n) => !n.id.startsWith("grade:") && !n.id.startsWith("outcome:")).length,
     },
     nodes: [...nodes.values()],
     edges,

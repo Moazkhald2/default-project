@@ -11,6 +11,7 @@ import {
   similaritySpec,
   type MathFlowchartSpec,
 } from "./components/MathFlowchart";
+import { g7LinearSpec, g8FactorSpec, g9QuadraticGraphSpec } from "./components/G7Flowcharts";
 const TeacherDashboard = lazy(() =>
   import("./components/TeacherDashboard").then((m) => ({ default: m.TeacherDashboard })),
 );
@@ -169,6 +170,24 @@ export default function App() {
               className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === similaritySpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
             >
               Similarity
+            </button>
+            <button
+              onClick={() => setFlowSpec(g7LinearSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === g7LinearSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              G7 Linear
+            </button>
+            <button
+              onClick={() => setFlowSpec(g8FactorSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === g8FactorSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              G8 Factor
+            </button>
+            <button
+              onClick={() => setFlowSpec(g9QuadraticGraphSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === g9QuadraticGraphSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              G9 Parabola
             </button>
           </div>
           <MathFlowchart spec={flowSpec} />

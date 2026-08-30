@@ -1,10 +1,4969 @@
 {
   "meta": {
-    "generated": "2026-08-30T04:18:08.942Z",
+    "generated": "2026-08-30T06:16:26.014Z",
     "stages": "extract->resolve->assemble->query",
-    "source": "content/bank + Local_Math_Vault"
+    "source": "content/bank + Local_Math_Vault (Egypt 2026-2027 441 outcomes + bank)",
+    "curriculumOutcomes": 441,
+    "bankTopics": 5
   },
   "nodes": [
+    {
+      "id": "outcome:G1-01",
+      "topic": "Writes numbers from 1 to 5.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-01"
+      ],
+      "fullText": "Writes numbers from 1 to 5."
+    },
+    {
+      "id": "outcome:G1-02",
+      "topic": "Decomposes a number into its different components.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-02"
+      ],
+      "fullText": "Decomposes a number into its different components."
+    },
+    {
+      "id": "outcome:G1-03",
+      "topic": "Writes numbers from 5 to 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-03"
+      ],
+      "fullText": "Writes numbers from 5 to 10."
+    },
+    {
+      "id": "outcome:G1-04",
+      "topic": "Counts objects within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-04"
+      ],
+      "fullText": "Counts objects within 10."
+    },
+    {
+      "id": "outcome:G1-05",
+      "topic": "Decomposes the numbers 6, 7, and 8 into their different components.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-05"
+      ],
+      "fullText": "Decomposes the numbers 6, 7, and 8 into their different components."
+    },
+    {
+      "id": "outcome:G1-06",
+      "topic": "Decomposes the numbers 8, 9, and 10 into their different components.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-06"
+      ],
+      "fullText": "Decomposes the numbers 8, 9, and 10 into their different components."
+    },
+    {
+      "id": "outcome:G1-07",
+      "topic": "Compares two numbers using greater than, less than, and equal to.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-07"
+      ],
+      "fullText": "Compares two numbers using greater than, less than, and equal to."
+    },
+    {
+      "id": "outcome:G1-08",
+      "topic": "Recognizes and writes zero.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-08"
+      ],
+      "fullText": "Recognizes and writes zero."
+    },
+    {
+      "id": "outcome:G1-09",
+      "topic": "Recognizes ordinal numbers.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-09"
+      ],
+      "fullText": "Recognizes ordinal numbers."
+    },
+    {
+      "id": "outcome:G1-10",
+      "topic": "Locates an object using front/behind.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-10"
+      ],
+      "fullText": "Locates an object using front/behind."
+    },
+    {
+      "id": "outcome:G1-11",
+      "topic": "Locates an object using right/left.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-11"
+      ],
+      "fullText": "Locates an object using right/left."
+    },
+    {
+      "id": "outcome:G1-12",
+      "topic": "Locates an object using above/below.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-12"
+      ],
+      "fullText": "Locates an object using above/below."
+    },
+    {
+      "id": "outcome:G1-13",
+      "topic": "Recognizes the concept of addition.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-13"
+      ],
+      "fullText": "Recognizes the concept of addition."
+    },
+    {
+      "id": "outcome:G1-14",
+      "topic": "Adds two numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-14"
+      ],
+      "fullText": "Adds two numbers within 10."
+    },
+    {
+      "id": "outcome:G1-15",
+      "topic": "Solves word problems involving addition within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-15"
+      ],
+      "fullText": "Solves word problems involving addition within 10."
+    },
+    {
+      "id": "outcome:G1-16",
+      "topic": "Adds any number to zero.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-16"
+      ],
+      "fullText": "Adds any number to zero."
+    },
+    {
+      "id": "outcome:G1-17",
+      "topic": "Recognizes the concept of subtraction.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-17"
+      ],
+      "fullText": "Recognizes the concept of subtraction."
+    },
+    {
+      "id": "outcome:G1-18",
+      "topic": "Subtracts two numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-18"
+      ],
+      "fullText": "Subtracts two numbers within 10."
+    },
+    {
+      "id": "outcome:G1-19",
+      "topic": "Subtracts zero from any number.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-19"
+      ],
+      "fullText": "Subtracts zero from any number."
+    },
+    {
+      "id": "outcome:G1-20",
+      "topic": "Finds the difference between quantities of different objects.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-20"
+      ],
+      "fullText": "Finds the difference between quantities of different objects."
+    },
+    {
+      "id": "outcome:G1-21",
+      "topic": "Identifies the longer and shorter object using alignment.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-21"
+      ],
+      "fullText": "Identifies the longer and shorter object using alignment."
+    },
+    {
+      "id": "outcome:G1-22",
+      "topic": "Arranges objects from longest to shortest, or vice versa.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-22"
+      ],
+      "fullText": "Arranges objects from longest to shortest, or vice versa."
+    },
+    {
+      "id": "outcome:G1-23",
+      "topic": "Measures object lengths using non-standard units.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-23"
+      ],
+      "fullText": "Measures object lengths using non-standard units."
+    },
+    {
+      "id": "outcome:G1-24",
+      "topic": "Compares object lengths using length units.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-24"
+      ],
+      "fullText": "Compares object lengths using length units."
+    },
+    {
+      "id": "outcome:G1-25",
+      "topic": "Represents data using pictures.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-25"
+      ],
+      "fullText": "Represents data using pictures."
+    },
+    {
+      "id": "outcome:G1-26",
+      "topic": "Compares different results using pictures.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-26"
+      ],
+      "fullText": "Compares different results using pictures."
+    },
+    {
+      "id": "outcome:G1-27",
+      "topic": "Writes numbers from 11 to 20.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-27"
+      ],
+      "fullText": "Writes numbers from 11 to 20."
+    },
+    {
+      "id": "outcome:G1-28",
+      "topic": "Identifies the components of numbers up to 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-28"
+      ],
+      "fullText": "Identifies the components of numbers up to 10."
+    },
+    {
+      "id": "outcome:G1-29",
+      "topic": "Recognizes the number line.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-29"
+      ],
+      "fullText": "Recognizes the number line."
+    },
+    {
+      "id": "outcome:G1-30",
+      "topic": "Completes missing numbers on the number line.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-30"
+      ],
+      "fullText": "Completes missing numbers on the number line."
+    },
+    {
+      "id": "outcome:G1-31",
+      "topic": "Compares and orders numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-31"
+      ],
+      "fullText": "Compares and orders numbers within 10."
+    },
+    {
+      "id": "outcome:G1-32",
+      "topic": "Adds 10 to a number (within the stated range in the source).",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-32"
+      ],
+      "fullText": "Adds 10 to a number (within the stated range in the source)."
+    },
+    {
+      "id": "outcome:G1-33",
+      "topic": "Subtracts numbers from 1 to 4 from numbers in the stated teen range.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-33"
+      ],
+      "fullText": "Subtracts numbers from 1 to 4 from numbers in the stated teen range."
+    },
+    {
+      "id": "outcome:G1-34",
+      "topic": "Adds two numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-34"
+      ],
+      "fullText": "Adds two numbers within 10."
+    },
+    {
+      "id": "outcome:G1-35",
+      "topic": "Subtracts two numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-35"
+      ],
+      "fullText": "Subtracts two numbers within 10."
+    },
+    {
+      "id": "outcome:G1-36",
+      "topic": "Writes numbers greater than 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-36"
+      ],
+      "fullText": "Writes numbers greater than 10."
+    },
+    {
+      "id": "outcome:G1-37",
+      "topic": "Writes the components of numbers greater than 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-37"
+      ],
+      "fullText": "Writes the components of numbers greater than 10."
+    },
+    {
+      "id": "outcome:G1-38",
+      "topic": "Reads the time on an analog clock.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-38"
+      ],
+      "fullText": "Reads the time on an analog clock."
+    },
+    {
+      "id": "outcome:G1-39",
+      "topic": "Draws the clock hands.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-39"
+      ],
+      "fullText": "Draws the clock hands."
+    },
+    {
+      "id": "outcome:G1-40",
+      "topic": "Adds three numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-40"
+      ],
+      "fullText": "Adds three numbers within 10."
+    },
+    {
+      "id": "outcome:G1-41",
+      "topic": "Subtracts three numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-41"
+      ],
+      "fullText": "Subtracts three numbers within 10."
+    },
+    {
+      "id": "outcome:G1-42",
+      "topic": "Adds and subtracts three numbers within 10.",
+      "grade": "1",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G1-42"
+      ],
+      "fullText": "Adds and subtracts three numbers within 10."
+    },
+    {
+      "id": "grade:1",
+      "topic": "Grade 1 Primary",
+      "grade": "1",
+      "prereqs": [],
+      "count": 42,
+      "sources": [
+        "curriculum:grade-1"
+      ]
+    },
+    {
+      "id": "outcome:G2-01",
+      "topic": "Represents data using a pictograph.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-01"
+      ],
+      "fullText": "Represents data using a pictograph."
+    },
+    {
+      "id": "outcome:G2-02",
+      "topic": "Transfers data from a graph to a table.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-02"
+      ],
+      "fullText": "Transfers data from a graph to a table."
+    },
+    {
+      "id": "outcome:G2-03",
+      "topic": "Answers questions about most, least, and difference using a graph or table.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-03"
+      ],
+      "fullText": "Answers questions about most, least, and difference using a graph or table."
+    },
+    {
+      "id": "outcome:G2-04",
+      "topic": "Adds two numbers vertically using ones and tens.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-04"
+      ],
+      "fullText": "Adds two numbers vertically using ones and tens."
+    },
+    {
+      "id": "outcome:G2-05",
+      "topic": "Recognizes the commutative property of addition.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-05"
+      ],
+      "fullText": "Recognizes the commutative property of addition."
+    },
+    {
+      "id": "outcome:G2-06",
+      "topic": "Subtracts two numbers vertically using ones and tens.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-06"
+      ],
+      "fullText": "Subtracts two numbers vertically using ones and tens."
+    },
+    {
+      "id": "outcome:G2-07",
+      "topic": "Subtracts two numbers using regrouping from the tens.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-07"
+      ],
+      "fullText": "Subtracts two numbers using regrouping from the tens."
+    },
+    {
+      "id": "outcome:G2-08",
+      "topic": "Explains the relationship between subtraction and addition.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-08"
+      ],
+      "fullText": "Explains the relationship between subtraction and addition."
+    },
+    {
+      "id": "outcome:G2-09",
+      "topic": "Checks subtraction using addition.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-09"
+      ],
+      "fullText": "Checks subtraction using addition."
+    },
+    {
+      "id": "outcome:G2-10",
+      "topic": "Reads an analog clock.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-10"
+      ],
+      "fullText": "Reads an analog clock."
+    },
+    {
+      "id": "outcome:G2-11",
+      "topic": "Calculates the time duration between two times.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-11"
+      ],
+      "fullText": "Calculates the time duration between two times."
+    },
+    {
+      "id": "outcome:G2-12",
+      "topic": "Distinguishes times of day: morning, noon, and evening.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-12"
+      ],
+      "fullText": "Distinguishes times of day: morning, noon, and evening."
+    },
+    {
+      "id": "outcome:G2-13",
+      "topic": "Measures object lengths using a ruler.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-13"
+      ],
+      "fullText": "Measures object lengths using a ruler."
+    },
+    {
+      "id": "outcome:G2-14",
+      "topic": "Distinguishes between centimeters and millimeters.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-14"
+      ],
+      "fullText": "Distinguishes between centimeters and millimeters."
+    },
+    {
+      "id": "outcome:G2-15",
+      "topic": "Selects the appropriate unit for measuring object lengths.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-15"
+      ],
+      "fullText": "Selects the appropriate unit for measuring object lengths."
+    },
+    {
+      "id": "outcome:G2-16",
+      "topic": "Converts between centimeters and millimeters.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-16"
+      ],
+      "fullText": "Converts between centimeters and millimeters."
+    },
+    {
+      "id": "outcome:G2-17",
+      "topic": "Draws lines of specified lengths using a ruler.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-17"
+      ],
+      "fullText": "Draws lines of specified lengths using a ruler."
+    },
+    {
+      "id": "outcome:G2-18",
+      "topic": "Adds, subtracts, and compares two lengths.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-18"
+      ],
+      "fullText": "Adds, subtracts, and compares two lengths."
+    },
+    {
+      "id": "outcome:G2-19",
+      "topic": "Decomposes a number into ones, tens, and hundreds.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-19"
+      ],
+      "fullText": "Decomposes a number into ones, tens, and hundreds."
+    },
+    {
+      "id": "outcome:G2-20",
+      "topic": "Forms numbers from ones, tens, and hundreds.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-20"
+      ],
+      "fullText": "Forms numbers from ones, tens, and hundreds."
+    },
+    {
+      "id": "outcome:G2-21",
+      "topic": "Writes a number as the sum of its place values.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-21"
+      ],
+      "fullText": "Writes a number as the sum of its place values."
+    },
+    {
+      "id": "outcome:G2-22",
+      "topic": "Determines the number of tens contained in a number.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-22"
+      ],
+      "fullText": "Determines the number of tens contained in a number."
+    },
+    {
+      "id": "outcome:G2-23",
+      "topic": "Locates numbers on the number line.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-23"
+      ],
+      "fullText": "Locates numbers on the number line."
+    },
+    {
+      "id": "outcome:G2-24",
+      "topic": "Reads and writes numbers within the stated range.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-24"
+      ],
+      "fullText": "Reads and writes numbers within the stated range."
+    },
+    {
+      "id": "outcome:G2-25",
+      "topic": "Represents a number in different ways.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-25"
+      ],
+      "fullText": "Represents a number in different ways."
+    },
+    {
+      "id": "outcome:G2-26",
+      "topic": "Adds and subtracts multiples of ten.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-26"
+      ],
+      "fullText": "Adds and subtracts multiples of ten."
+    },
+    {
+      "id": "outcome:G2-27",
+      "topic": "Adds and subtracts multiples of one hundred.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-27"
+      ],
+      "fullText": "Adds and subtracts multiples of one hundred."
+    },
+    {
+      "id": "outcome:G2-28",
+      "topic": "Adds multiples of one hundred to multiples of ten.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-28"
+      ],
+      "fullText": "Adds multiples of one hundred to multiples of ten."
+    },
+    {
+      "id": "outcome:G2-29",
+      "topic": "Subtracts multiples of ten from a two-digit number.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-29"
+      ],
+      "fullText": "Subtracts multiples of ten from a two-digit number."
+    },
+    {
+      "id": "outcome:G2-30",
+      "topic": "Uses the comparison symbols > and < correctly.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-30"
+      ],
+      "fullText": "Uses the comparison symbols > and < correctly."
+    },
+    {
+      "id": "outcome:G2-31",
+      "topic": "Recognizes the deciliter (dL) as a unit for measuring capacity.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-31"
+      ],
+      "fullText": "Recognizes the deciliter (dL) as a unit for measuring capacity."
+    },
+    {
+      "id": "outcome:G2-32",
+      "topic": "Compares capacity in deciliters.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-32"
+      ],
+      "fullText": "Compares capacity in deciliters."
+    },
+    {
+      "id": "outcome:G2-33",
+      "topic": "Recognizes the liter (L) as a unit for measuring capacity.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-33"
+      ],
+      "fullText": "Recognizes the liter (L) as a unit for measuring capacity."
+    },
+    {
+      "id": "outcome:G2-34",
+      "topic": "Converts between liters and deciliters.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-34"
+      ],
+      "fullText": "Converts between liters and deciliters."
+    },
+    {
+      "id": "outcome:G2-35",
+      "topic": "Recognizes the relationship between liters, deciliters, and milliliters.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-35"
+      ],
+      "fullText": "Recognizes the relationship between liters, deciliters, and milliliters."
+    },
+    {
+      "id": "outcome:G2-36",
+      "topic": "Converts between capacity units.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-36"
+      ],
+      "fullText": "Converts between capacity units."
+    },
+    {
+      "id": "outcome:G2-37",
+      "topic": "Adds and subtracts capacity units.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-37"
+      ],
+      "fullText": "Adds and subtracts capacity units."
+    },
+    {
+      "id": "outcome:G2-38",
+      "topic": "Adds two numbers vertically using regrouping.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-38"
+      ],
+      "fullText": "Adds two numbers vertically using regrouping."
+    },
+    {
+      "id": "outcome:G2-39",
+      "topic": "Subtracts two numbers vertically using borrowing/regrouping.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-39"
+      ],
+      "fullText": "Subtracts two numbers vertically using borrowing/regrouping."
+    },
+    {
+      "id": "outcome:G2-40",
+      "topic": "Uses the commutative property in addition.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-40"
+      ],
+      "fullText": "Uses the commutative property in addition."
+    },
+    {
+      "id": "outcome:G2-41",
+      "topic": "Uses parentheses to determine what is calculated first.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-41"
+      ],
+      "fullText": "Uses parentheses to determine what is calculated first."
+    },
+    {
+      "id": "outcome:G2-42",
+      "topic": "Decomposes numbers to simplify addition and subtraction.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-42"
+      ],
+      "fullText": "Decomposes numbers to simplify addition and subtraction."
+    },
+    {
+      "id": "outcome:G2-43",
+      "topic": "Uses making-ten strategies in mental calculation.",
+      "grade": "2",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G2-43"
+      ],
+      "fullText": "Uses making-ten strategies in mental calculation."
+    },
+    {
+      "id": "grade:2",
+      "topic": "Grade 2 Primary",
+      "grade": "2",
+      "prereqs": [
+        "grade:1"
+      ],
+      "count": 43,
+      "sources": [
+        "curriculum:grade-2"
+      ]
+    },
+    {
+      "id": "outcome:G3-01",
+      "topic": "Explains the effect of increasing or decreasing a factor on the product.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-01"
+      ],
+      "fullText": "Explains the effect of increasing or decreasing a factor on the product."
+    },
+    {
+      "id": "outcome:G3-02",
+      "topic": "Applies the commutative property of multiplication.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-02"
+      ],
+      "fullText": "Applies the commutative property of multiplication."
+    },
+    {
+      "id": "outcome:G3-03",
+      "topic": "Finds the product of two numbers using the distributive property.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-03"
+      ],
+      "fullText": "Finds the product of two numbers using the distributive property."
+    },
+    {
+      "id": "outcome:G3-04",
+      "topic": "Recognizes the multiplication table up to 10.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-04"
+      ],
+      "fullText": "Recognizes the multiplication table up to 10."
+    },
+    {
+      "id": "outcome:G3-05",
+      "topic": "Multiplies any number by zero.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-05"
+      ],
+      "fullText": "Multiplies any number by zero."
+    },
+    {
+      "id": "outcome:G3-06",
+      "topic": "Uses a clock or number line to find the time before or after a given number of m",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-06"
+      ],
+      "fullText": "Uses a clock or number line to find the time before or after a given number of minutes."
+    },
+    {
+      "id": "outcome:G3-07",
+      "topic": "Calculates the finishing time when the starting time and duration are known, and",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-07"
+      ],
+      "fullText": "Calculates the finishing time when the starting time and duration are known, and vice versa."
+    },
+    {
+      "id": "outcome:G3-08",
+      "topic": "Calculates elapsed time between two times.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-08"
+      ],
+      "fullText": "Calculates elapsed time between two times."
+    },
+    {
+      "id": "outcome:G3-09",
+      "topic": "Recognizes the second as a unit for measuring time.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-09"
+      ],
+      "fullText": "Recognizes the second as a unit for measuring time."
+    },
+    {
+      "id": "outcome:G3-10",
+      "topic": "Selects the appropriate unit for each situation.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-10"
+      ],
+      "fullText": "Selects the appropriate unit for each situation."
+    },
+    {
+      "id": "outcome:G3-11",
+      "topic": "Identifies the components of division.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-11"
+      ],
+      "fullText": "Identifies the components of division."
+    },
+    {
+      "id": "outcome:G3-12",
+      "topic": "Uses the multiplication table to find a quotient.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-12"
+      ],
+      "fullText": "Uses the multiplication table to find a quotient."
+    },
+    {
+      "id": "outcome:G3-13",
+      "topic": "Identifies types of word problems in which division is used.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-13"
+      ],
+      "fullText": "Identifies types of word problems in which division is used."
+    },
+    {
+      "id": "outcome:G3-14",
+      "topic": "Compares two numbers or quantities using division.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-14"
+      ],
+      "fullText": "Compares two numbers or quantities using division."
+    },
+    {
+      "id": "outcome:G3-15",
+      "topic": "Determines how many times one number contains another.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-15"
+      ],
+      "fullText": "Determines how many times one number contains another."
+    },
+    {
+      "id": "outcome:G3-16",
+      "topic": "Subtracts numbers containing two or three digits vertically.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-16"
+      ],
+      "fullText": "Subtracts numbers containing two or three digits vertically."
+    },
+    {
+      "id": "outcome:G3-17",
+      "topic": "Distinguishes between addition and subtraction word problems.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-17"
+      ],
+      "fullText": "Distinguishes between addition and subtraction word problems."
+    },
+    {
+      "id": "outcome:G3-18",
+      "topic": "Recognizes units for measuring length/distance.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-18"
+      ],
+      "fullText": "Recognizes units for measuring length/distance."
+    },
+    {
+      "id": "outcome:G3-19",
+      "topic": "Converts between length units.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-19"
+      ],
+      "fullText": "Converts between length units."
+    },
+    {
+      "id": "outcome:G3-20",
+      "topic": "Reads the length indicated on a measuring strip.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-20"
+      ],
+      "fullText": "Reads the length indicated on a measuring strip."
+    },
+    {
+      "id": "outcome:G3-21",
+      "topic": "Selects the appropriate length unit for measuring objects.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-21"
+      ],
+      "fullText": "Selects the appropriate length unit for measuring objects."
+    },
+    {
+      "id": "outcome:G3-22",
+      "topic": "Collects and organizes data using tally marks.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-22"
+      ],
+      "fullText": "Collects and organizes data using tally marks."
+    },
+    {
+      "id": "outcome:G3-23",
+      "topic": "Converts tally marks into numerical values in a table.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-23"
+      ],
+      "fullText": "Converts tally marks into numerical values in a table."
+    },
+    {
+      "id": "outcome:G3-24",
+      "topic": "Interprets a graph and extracts information from it.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-24"
+      ],
+      "fullText": "Interprets a graph and extracts information from it."
+    },
+    {
+      "id": "outcome:G3-25",
+      "topic": "Answers questions related to a graph.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-25"
+      ],
+      "fullText": "Answers questions related to a graph."
+    },
+    {
+      "id": "outcome:G3-26",
+      "topic": "Recognizes the components of a bar graph.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-26"
+      ],
+      "fullText": "Recognizes the components of a bar graph."
+    },
+    {
+      "id": "outcome:G3-27",
+      "topic": "Draws bars with lengths proportional to the given data.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-27"
+      ],
+      "fullText": "Draws bars with lengths proportional to the given data."
+    },
+    {
+      "id": "outcome:G3-28",
+      "topic": "Recognizes how data are organized in tables.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-28"
+      ],
+      "fullText": "Recognizes how data are organized in tables."
+    },
+    {
+      "id": "outcome:G3-29",
+      "topic": "Understands mental-calculation strategies for addition.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-29"
+      ],
+      "fullText": "Understands mental-calculation strategies for addition."
+    },
+    {
+      "id": "outcome:G3-30",
+      "topic": "Uses decomposition and regrouping to facilitate addition.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-30"
+      ],
+      "fullText": "Uses decomposition and regrouping to facilitate addition."
+    },
+    {
+      "id": "outcome:G3-31",
+      "topic": "Understands mental-calculation strategies for subtraction.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-31"
+      ],
+      "fullText": "Understands mental-calculation strategies for subtraction."
+    },
+    {
+      "id": "outcome:G3-32",
+      "topic": "Uses decomposition and regrouping to facilitate subtraction.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-32"
+      ],
+      "fullText": "Uses decomposition and regrouping to facilitate subtraction."
+    },
+    {
+      "id": "outcome:G3-33",
+      "topic": "Uses the multiplication table to find a quotient.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-33"
+      ],
+      "fullText": "Uses the multiplication table to find a quotient."
+    },
+    {
+      "id": "outcome:G3-34",
+      "topic": "Checks the quotient.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-34"
+      ],
+      "fullText": "Checks the quotient."
+    },
+    {
+      "id": "outcome:G3-35",
+      "topic": "Separates a number into groups of three digits.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-35"
+      ],
+      "fullText": "Separates a number into groups of three digits."
+    },
+    {
+      "id": "outcome:G3-36",
+      "topic": "Reads and writes large numbers using numerals and words.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-36"
+      ],
+      "fullText": "Reads and writes large numbers using numerals and words."
+    },
+    {
+      "id": "outcome:G3-37",
+      "topic": "Determines the place value of each digit in a number.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-37"
+      ],
+      "fullText": "Determines the place value of each digit in a number."
+    },
+    {
+      "id": "outcome:G3-38",
+      "topic": "Recognizes the number line.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-38"
+      ],
+      "fullText": "Recognizes the number line."
+    },
+    {
+      "id": "outcome:G3-39",
+      "topic": "Locates a number on the number line.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-39"
+      ],
+      "fullText": "Locates a number on the number line."
+    },
+    {
+      "id": "outcome:G3-40",
+      "topic": "Adds and subtracts large numbers.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-40"
+      ],
+      "fullText": "Adds and subtracts large numbers."
+    },
+    {
+      "id": "outcome:G3-41",
+      "topic": "Recognizes comparison symbols (> and <).",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-41"
+      ],
+      "fullText": "Recognizes comparison symbols (> and <)."
+    },
+    {
+      "id": "outcome:G3-42",
+      "topic": "Compares two numbers using comparison symbols.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-42"
+      ],
+      "fullText": "Compares two numbers using comparison symbols."
+    },
+    {
+      "id": "outcome:G3-43",
+      "topic": "Finds the product of a number by 10 or 100.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-43"
+      ],
+      "fullText": "Finds the product of a number by 10 or 100."
+    },
+    {
+      "id": "outcome:G3-44",
+      "topic": "Finds the quotient when a number is divided by 10.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-44"
+      ],
+      "fullText": "Finds the quotient when a number is divided by 10."
+    },
+    {
+      "id": "outcome:G3-45",
+      "topic": "Multiplies by 10, 100, and their multiples.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-45"
+      ],
+      "fullText": "Multiplies by 10, 100, and their multiples."
+    },
+    {
+      "id": "outcome:G3-46",
+      "topic": "Multiplies a two-digit number by a one-digit number using the vertical algorithm",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-46"
+      ],
+      "fullText": "Multiplies a two-digit number by a one-digit number using the vertical algorithm."
+    },
+    {
+      "id": "outcome:G3-47",
+      "topic": "Multiplies a three-digit number by a one-digit number using the vertical algorit",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-47"
+      ],
+      "fullText": "Multiplies a three-digit number by a one-digit number using the vertical algorithm."
+    },
+    {
+      "id": "outcome:G3-48",
+      "topic": "Multiplies three numbers using the associative/grouping property.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-48"
+      ],
+      "fullText": "Multiplies three numbers using the associative/grouping property."
+    },
+    {
+      "id": "outcome:G3-49",
+      "topic": "Solves word problems using multiplication.",
+      "grade": "3",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G3-49"
+      ],
+      "fullText": "Solves word problems using multiplication."
+    },
+    {
+      "id": "grade:3",
+      "topic": "Grade 3 Primary",
+      "grade": "3",
+      "prereqs": [
+        "grade:2"
+      ],
+      "count": 49,
+      "sources": [
+        "curriculum:grade-3"
+      ]
+    },
+    {
+      "id": "outcome:G4-01",
+      "topic": "Identifies the place values of whole numbers up to the billions.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-01"
+      ],
+      "fullText": "Identifies the place values of whole numbers up to the billions."
+    },
+    {
+      "id": "outcome:G4-02",
+      "topic": "Explains how the position of a digit affects its value.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-02"
+      ],
+      "fullText": "Explains how the position of a digit affects its value."
+    },
+    {
+      "id": "outcome:G4-03",
+      "topic": "Explains how a digit's value changes when it moves to the left in a number.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-03"
+      ],
+      "fullText": "Explains how a digit's value changes when it moves to the left in a number."
+    },
+    {
+      "id": "outcome:G4-04",
+      "topic": "Writes a number in standard, word, and expanded form.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-04"
+      ],
+      "fullText": "Writes a number in standard, word, and expanded form."
+    },
+    {
+      "id": "outcome:G4-05",
+      "topic": "Uses symbols to compare large-number forms.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-05"
+      ],
+      "fullText": "Uses symbols to compare large-number forms."
+    },
+    {
+      "id": "outcome:G4-06",
+      "topic": "Applies different strategies for rounding numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-06"
+      ],
+      "fullText": "Applies different strategies for rounding numbers."
+    },
+    {
+      "id": "outcome:G4-07",
+      "topic": "Identifies properties of addition.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-07"
+      ],
+      "fullText": "Identifies properties of addition."
+    },
+    {
+      "id": "outcome:G4-08",
+      "topic": "Adds multi-digit whole numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-08"
+      ],
+      "fullText": "Adds multi-digit whole numbers."
+    },
+    {
+      "id": "outcome:G4-09",
+      "topic": "Subtracts multi-digit whole numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-09"
+      ],
+      "fullText": "Subtracts multi-digit whole numbers."
+    },
+    {
+      "id": "outcome:G4-10",
+      "topic": "Uses symbols in equations to represent unknown values.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-10"
+      ],
+      "fullText": "Uses symbols in equations to represent unknown values."
+    },
+    {
+      "id": "outcome:G4-11",
+      "topic": "Uses bar models to represent and solve word problems.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-11"
+      ],
+      "fullText": "Uses bar models to represent and solve word problems."
+    },
+    {
+      "id": "outcome:G4-12",
+      "topic": "Solves equations containing variables.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-12"
+      ],
+      "fullText": "Solves equations containing variables."
+    },
+    {
+      "id": "outcome:G4-13",
+      "topic": "Solves multi-step word problems.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-13"
+      ],
+      "fullText": "Solves multi-step word problems."
+    },
+    {
+      "id": "outcome:G4-14",
+      "topic": "Explains relationships between metric units for measuring length.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-14"
+      ],
+      "fullText": "Explains relationships between metric units for measuring length."
+    },
+    {
+      "id": "outcome:G4-15",
+      "topic": "Converts between metric length units.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-15"
+      ],
+      "fullText": "Converts between metric length units."
+    },
+    {
+      "id": "outcome:G4-16",
+      "topic": "Explains relationships between metric units for measuring mass.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-16"
+      ],
+      "fullText": "Explains relationships between metric units for measuring mass."
+    },
+    {
+      "id": "outcome:G4-17",
+      "topic": "Converts between metric mass units.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-17"
+      ],
+      "fullText": "Converts between metric mass units."
+    },
+    {
+      "id": "outcome:G4-18",
+      "topic": "Explains relationships between metric units for measuring capacity.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-18"
+      ],
+      "fullText": "Explains relationships between metric units for measuring capacity."
+    },
+    {
+      "id": "outcome:G4-19",
+      "topic": "Converts between metric capacity units.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-19"
+      ],
+      "fullText": "Converts between metric capacity units."
+    },
+    {
+      "id": "outcome:G4-20",
+      "topic": "Reads the time in minutes.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-20"
+      ],
+      "fullText": "Reads the time in minutes."
+    },
+    {
+      "id": "outcome:G4-21",
+      "topic": "Explains relationships between units of time.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-21"
+      ],
+      "fullText": "Explains relationships between units of time."
+    },
+    {
+      "id": "outcome:G4-22",
+      "topic": "Explains the meaning of elapsed time.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-22"
+      ],
+      "fullText": "Explains the meaning of elapsed time."
+    },
+    {
+      "id": "outcome:G4-23",
+      "topic": "Solves elapsed-time problems.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-23"
+      ],
+      "fullText": "Solves elapsed-time problems."
+    },
+    {
+      "id": "outcome:G4-24",
+      "topic": "Uses multiplication and division to solve measurement problems.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-24"
+      ],
+      "fullText": "Uses multiplication and division to solve measurement problems."
+    },
+    {
+      "id": "outcome:G4-25",
+      "topic": "Solves word problems involving measurement.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-25"
+      ],
+      "fullText": "Solves word problems involving measurement."
+    },
+    {
+      "id": "outcome:G4-26",
+      "topic": "Calculates the perimeter of rectangles and squares.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-26"
+      ],
+      "fullText": "Calculates the perimeter of rectangles and squares."
+    },
+    {
+      "id": "outcome:G4-27",
+      "topic": "Calculates the area of rectangles and squares.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-27"
+      ],
+      "fullText": "Calculates the area of rectangles and squares."
+    },
+    {
+      "id": "outcome:G4-28",
+      "topic": "Finds an unknown dimension in a rectangle or square.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-28"
+      ],
+      "fullText": "Finds an unknown dimension in a rectangle or square."
+    },
+    {
+      "id": "outcome:G4-29",
+      "topic": "Calculates the area and perimeter of composite geometric shapes.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-29"
+      ],
+      "fullText": "Calculates the area and perimeter of composite geometric shapes."
+    },
+    {
+      "id": "outcome:G4-30",
+      "topic": "Compares numbers using multiplication.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-30"
+      ],
+      "fullText": "Compares numbers using multiplication."
+    },
+    {
+      "id": "outcome:G4-31",
+      "topic": "Forms multiplication equations to represent comparisons.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-31"
+      ],
+      "fullText": "Forms multiplication equations to represent comparisons."
+    },
+    {
+      "id": "outcome:G4-32",
+      "topic": "Solves multiplication equations representing comparisons.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-32"
+      ],
+      "fullText": "Solves multiplication equations representing comparisons."
+    },
+    {
+      "id": "outcome:G4-33",
+      "topic": "Explains properties of multiplication.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-33"
+      ],
+      "fullText": "Explains properties of multiplication."
+    },
+    {
+      "id": "outcome:G4-34",
+      "topic": "Applies multiplication properties to solve problems.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-34"
+      ],
+      "fullText": "Applies multiplication properties to solve problems."
+    },
+    {
+      "id": "outcome:G4-35",
+      "topic": "Identifies patterns when multiplying by multiples of 10.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-35"
+      ],
+      "fullText": "Identifies patterns when multiplying by multiples of 10."
+    },
+    {
+      "id": "outcome:G4-36",
+      "topic": "Explains the associative property of multiplication.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-36"
+      ],
+      "fullText": "Explains the associative property of multiplication."
+    },
+    {
+      "id": "outcome:G4-37",
+      "topic": "Applies the associative property of multiplication to solve problems.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-37"
+      ],
+      "fullText": "Applies the associative property of multiplication to solve problems."
+    },
+    {
+      "id": "outcome:G4-38",
+      "topic": "Uses factorization and the associative property to solve equations involving mul",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-38"
+      ],
+      "fullText": "Uses factorization and the associative property to solve equations involving multiples of 10."
+    },
+    {
+      "id": "outcome:G4-39",
+      "topic": "Identifies factors of any whole number.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-39"
+      ],
+      "fullText": "Identifies factors of any whole number."
+    },
+    {
+      "id": "outcome:G4-40",
+      "topic": "Identifies prime and composite numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-40"
+      ],
+      "fullText": "Identifies prime and composite numbers."
+    },
+    {
+      "id": "outcome:G4-41",
+      "topic": "Identifies common factors of two whole numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-41"
+      ],
+      "fullText": "Identifies common factors of two whole numbers."
+    },
+    {
+      "id": "outcome:G4-42",
+      "topic": "Identifies the greatest common factor of two whole numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-42"
+      ],
+      "fullText": "Identifies the greatest common factor of two whole numbers."
+    },
+    {
+      "id": "outcome:G4-43",
+      "topic": "Identifies multiples of whole numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-43"
+      ],
+      "fullText": "Identifies multiples of whole numbers."
+    },
+    {
+      "id": "outcome:G4-44",
+      "topic": "Identifies common multiples of two numbers.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-44"
+      ],
+      "fullText": "Identifies common multiples of two numbers."
+    },
+    {
+      "id": "outcome:G4-45",
+      "topic": "Explains the relationship between factors and multiples.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-45"
+      ],
+      "fullText": "Explains the relationship between factors and multiples."
+    },
+    {
+      "id": "outcome:G4-46",
+      "topic": "Multiplies a number by a digit using a rectangle-area model.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-46"
+      ],
+      "fullText": "Multiplies a number by a digit using a rectangle-area model."
+    },
+    {
+      "id": "outcome:G4-47",
+      "topic": "Multiplies a number by a digit using decomposition.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-47"
+      ],
+      "fullText": "Multiplies a number by a digit using decomposition."
+    },
+    {
+      "id": "outcome:G4-48",
+      "topic": "Multiplies a number by a digit using the standard algorithm.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-48"
+      ],
+      "fullText": "Multiplies a number by a digit using the standard algorithm."
+    },
+    {
+      "id": "outcome:G4-49",
+      "topic": "Multiplies a two-digit number by multiples of 10.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-49"
+      ],
+      "fullText": "Multiplies a two-digit number by multiples of 10."
+    },
+    {
+      "id": "outcome:G4-50",
+      "topic": "Identifies the dividend, divisor, and quotient in a division problem.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-50"
+      ],
+      "fullText": "Identifies the dividend, divisor, and quotient in a division problem."
+    },
+    {
+      "id": "outcome:G4-51",
+      "topic": "Identifies the remainder of a division problem, when present.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-51"
+      ],
+      "fullText": "Identifies the remainder of a division problem, when present."
+    },
+    {
+      "id": "outcome:G4-52",
+      "topic": "Divides multiples of 10, 100, or 1,000 by a digit.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-52"
+      ],
+      "fullText": "Divides multiples of 10, 100, or 1,000 by a digit."
+    },
+    {
+      "id": "outcome:G4-53",
+      "topic": "Divides a number by a digit using a rectangle-area model.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-53"
+      ],
+      "fullText": "Divides a number by a digit using a rectangle-area model."
+    },
+    {
+      "id": "outcome:G4-54",
+      "topic": "Divides a number by a digit using decomposition.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-54"
+      ],
+      "fullText": "Divides a number by a digit using decomposition."
+    },
+    {
+      "id": "outcome:G4-55",
+      "topic": "Divides a number by a digit using the standard algorithm.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-55"
+      ],
+      "fullText": "Divides a number by a digit using the standard algorithm."
+    },
+    {
+      "id": "outcome:G4-56",
+      "topic": "Checks the quotient using multiplication.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-56"
+      ],
+      "fullText": "Checks the quotient using multiplication."
+    },
+    {
+      "id": "outcome:G4-57",
+      "topic": "Recognizes the order of operations.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-57"
+      ],
+      "fullText": "Recognizes the order of operations."
+    },
+    {
+      "id": "outcome:G4-58",
+      "topic": "Writes an equation representing a multi-step word problem and solves it.",
+      "grade": "4",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G4-58"
+      ],
+      "fullText": "Writes an equation representing a multi-step word problem and solves it."
+    },
+    {
+      "id": "grade:4",
+      "topic": "Grade 4 Primary",
+      "grade": "4",
+      "prereqs": [
+        "grade:3"
+      ],
+      "count": 58,
+      "sources": [
+        "curriculum:grade-4"
+      ]
+    },
+    {
+      "id": "outcome:G5-01",
+      "topic": "Explains how a digit's value changes when it moves left or right in a decimal or",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-01"
+      ],
+      "fullText": "Explains how a digit's value changes when it moves left or right in a decimal or whole number."
+    },
+    {
+      "id": "outcome:G5-02",
+      "topic": "Forms and decomposes decimals in multiple ways.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-02"
+      ],
+      "fullText": "Forms and decomposes decimals in multiple ways."
+    },
+    {
+      "id": "outcome:G5-03",
+      "topic": "Rounds decimals to the nearest tenth, hundredth, thousandth, or whole number.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-03"
+      ],
+      "fullText": "Rounds decimals to the nearest tenth, hundredth, thousandth, or whole number."
+    },
+    {
+      "id": "outcome:G5-04",
+      "topic": "Estimates the sum of two decimals.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-04"
+      ],
+      "fullText": "Estimates the sum of two decimals."
+    },
+    {
+      "id": "outcome:G5-05",
+      "topic": "Adds two decimals using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-05"
+      ],
+      "fullText": "Adds two decimals using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-06",
+      "topic": "Estimates the difference between two decimals.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-06"
+      ],
+      "fullText": "Estimates the difference between two decimals."
+    },
+    {
+      "id": "outcome:G5-07",
+      "topic": "Subtracts two decimals using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-07"
+      ],
+      "fullText": "Subtracts two decimals using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-08",
+      "topic": "Solves word problems involving addition and subtraction.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-08"
+      ],
+      "fullText": "Solves word problems involving addition and subtraction."
+    },
+    {
+      "id": "outcome:G5-09",
+      "topic": "Explains the difference between mathematical expressions and equations.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-09"
+      ],
+      "fullText": "Explains the difference between mathematical expressions and equations."
+    },
+    {
+      "id": "outcome:G5-10",
+      "topic": "Uses the relationship between addition and subtraction to find an unknown in an ",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-10"
+      ],
+      "fullText": "Uses the relationship between addition and subtraction to find an unknown in an equation."
+    },
+    {
+      "id": "outcome:G5-11",
+      "topic": "Solves equations involving decimals through the stated decimal place.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-11"
+      ],
+      "fullText": "Solves equations involving decimals through the stated decimal place."
+    },
+    {
+      "id": "outcome:G5-12",
+      "topic": "Uses a factor tree to determine prime factors.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-12"
+      ],
+      "fullText": "Uses a factor tree to determine prime factors."
+    },
+    {
+      "id": "outcome:G5-13",
+      "topic": "Finds common factors of two numbers using a factor tree.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-13"
+      ],
+      "fullText": "Finds common factors of two numbers using a factor tree."
+    },
+    {
+      "id": "outcome:G5-14",
+      "topic": "Finds the greatest common factor of two whole numbers.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-14"
+      ],
+      "fullText": "Finds the greatest common factor of two whole numbers."
+    },
+    {
+      "id": "outcome:G5-15",
+      "topic": "Finds common multiples of two whole numbers.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-15"
+      ],
+      "fullText": "Finds common multiples of two whole numbers."
+    },
+    {
+      "id": "outcome:G5-16",
+      "topic": "Explains the difference between factors and multiples.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-16"
+      ],
+      "fullText": "Explains the difference between factors and multiples."
+    },
+    {
+      "id": "outcome:G5-17",
+      "topic": "Finds the greatest common factor and least common multiple of two numbers.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-17"
+      ],
+      "fullText": "Finds the greatest common factor and least common multiple of two numbers."
+    },
+    {
+      "id": "outcome:G5-18",
+      "topic": "Multiplies a two-digit number using a rectangle-area model.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-18"
+      ],
+      "fullText": "Multiplies a two-digit number using a rectangle-area model."
+    },
+    {
+      "id": "outcome:G5-19",
+      "topic": "Explains the relationship between the rectangle-area multiplication model and th",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-19"
+      ],
+      "fullText": "Explains the relationship between the rectangle-area multiplication model and the distributive property."
+    },
+    {
+      "id": "outcome:G5-20",
+      "topic": "Multiplies a two-digit number using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-20"
+      ],
+      "fullText": "Multiplies a two-digit number using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-21",
+      "topic": "Solves multi-step word problems involving multiplication.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-21"
+      ],
+      "fullText": "Solves multi-step word problems involving multiplication."
+    },
+    {
+      "id": "outcome:G5-22",
+      "topic": "Divides two numbers using a rectangle-area model.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-22"
+      ],
+      "fullText": "Divides two numbers using a rectangle-area model."
+    },
+    {
+      "id": "outcome:G5-23",
+      "topic": "Divides two numbers using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-23"
+      ],
+      "fullText": "Divides two numbers using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-24",
+      "topic": "Uses multiplication to verify a quotient.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-24"
+      ],
+      "fullText": "Uses multiplication to verify a quotient."
+    },
+    {
+      "id": "outcome:G5-25",
+      "topic": "Solves multi-step word problems.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-25"
+      ],
+      "fullText": "Solves multi-step word problems."
+    },
+    {
+      "id": "outcome:G5-26",
+      "topic": "Explains patterns when multiplying by powers of 10 (0.001, 0.01, 0.1, 10, 100, 1",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-26"
+      ],
+      "fullText": "Explains patterns when multiplying by powers of 10 (0.001, 0.01, 0.1, 10, 100, 1,000)."
+    },
+    {
+      "id": "outcome:G5-27",
+      "topic": "Multiplies a decimal fraction by a whole number.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-27"
+      ],
+      "fullText": "Multiplies a decimal fraction by a whole number."
+    },
+    {
+      "id": "outcome:G5-28",
+      "topic": "Multiplies a decimal by a decimal.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-28"
+      ],
+      "fullText": "Multiplies a decimal by a decimal."
+    },
+    {
+      "id": "outcome:G5-29",
+      "topic": "Multiplies whole numbers and decimals using a rectangle-area model.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-29"
+      ],
+      "fullText": "Multiplies whole numbers and decimals using a rectangle-area model."
+    },
+    {
+      "id": "outcome:G5-30",
+      "topic": "Multiplies whole numbers and decimals using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-30"
+      ],
+      "fullText": "Multiplies whole numbers and decimals using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-31",
+      "topic": "Converts measurement units by multiplying by powers of 10.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-31"
+      ],
+      "fullText": "Converts measurement units by multiplying by powers of 10."
+    },
+    {
+      "id": "outcome:G5-32",
+      "topic": "Explains patterns observed when dividing by powers of 10.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-32"
+      ],
+      "fullText": "Explains patterns observed when dividing by powers of 10."
+    },
+    {
+      "id": "outcome:G5-33",
+      "topic": "Connects multiplication by powers of 10 with division by powers of 10.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-33"
+      ],
+      "fullText": "Connects multiplication by powers of 10 with division by powers of 10."
+    },
+    {
+      "id": "outcome:G5-34",
+      "topic": "Divides by a whole number using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-34"
+      ],
+      "fullText": "Divides by a whole number using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-35",
+      "topic": "Divides by a decimal using the standard algorithm.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-35"
+      ],
+      "fullText": "Divides by a decimal using the standard algorithm."
+    },
+    {
+      "id": "outcome:G5-36",
+      "topic": "Recognizes the order of arithmetic operations.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-36"
+      ],
+      "fullText": "Recognizes the order of arithmetic operations."
+    },
+    {
+      "id": "outcome:G5-37",
+      "topic": "Evaluates a numerical expression containing parentheses.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-37"
+      ],
+      "fullText": "Evaluates a numerical expression containing parentheses."
+    },
+    {
+      "id": "outcome:G5-38",
+      "topic": "Writes a numerical expression to represent a written situation.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-38"
+      ],
+      "fullText": "Writes a numerical expression to represent a written situation."
+    },
+    {
+      "id": "outcome:G5-39",
+      "topic": "Identifies a numerical pattern.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-39"
+      ],
+      "fullText": "Identifies a numerical pattern."
+    },
+    {
+      "id": "outcome:G5-40",
+      "topic": "Finds unknown values in a numerical pattern.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-40"
+      ],
+      "fullText": "Finds unknown values in a numerical pattern."
+    },
+    {
+      "id": "outcome:G5-41",
+      "topic": "Finds the rule of a numerical pattern and writes it using symbols and numbers.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-41"
+      ],
+      "fullText": "Finds the rule of a numerical pattern and writes it using symbols and numbers."
+    },
+    {
+      "id": "outcome:G5-42",
+      "topic": "Finds the rule of a pattern when the input and output are known.",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-42"
+      ],
+      "fullText": "Finds the rule of a pattern when the input and output are known."
+    },
+    {
+      "id": "outcome:G5-43",
+      "topic": "Finds the next number in a pattern when the previous number and the rule are kno",
+      "grade": "5",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G5-43"
+      ],
+      "fullText": "Finds the next number in a pattern when the previous number and the rule are known."
+    },
+    {
+      "id": "grade:5",
+      "topic": "Grade 5 Primary",
+      "grade": "5",
+      "prereqs": [
+        "grade:4"
+      ],
+      "count": 43,
+      "sources": [
+        "curriculum:grade-5"
+      ]
+    },
+    {
+      "id": "outcome:G6-01",
+      "topic": "Recognizes divisibility by 2, 3, 4, 5, 6, and 10.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-01"
+      ],
+      "fullText": "Recognizes divisibility by 2, 3, 4, 5, 6, and 10."
+    },
+    {
+      "id": "outcome:G6-02",
+      "topic": "Uses prime factorization and a Venn diagram to find the greatest common factor a",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-02"
+      ],
+      "fullText": "Uses prime factorization and a Venn diagram to find the greatest common factor and least common multiple."
+    },
+    {
+      "id": "outcome:G6-03",
+      "topic": "Recognizes relatively prime numbers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-03"
+      ],
+      "fullText": "Recognizes relatively prime numbers."
+    },
+    {
+      "id": "outcome:G6-04",
+      "topic": "Writes numerical expressions using the greatest common factor.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-04"
+      ],
+      "fullText": "Writes numerical expressions using the greatest common factor."
+    },
+    {
+      "id": "outcome:G6-05",
+      "topic": "Finds a solution to a real-life situation using the greatest common factor and w",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-05"
+      ],
+      "fullText": "Finds a solution to a real-life situation using the greatest common factor and writes a numerical expression representing the situation."
+    },
+    {
+      "id": "outcome:G6-06",
+      "topic": "Uses the least common multiple to form a common denominator.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-06"
+      ],
+      "fullText": "Uses the least common multiple to form a common denominator."
+    },
+    {
+      "id": "outcome:G6-07",
+      "topic": "Finds the result of adding or subtracting unlike fractions.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-07"
+      ],
+      "fullText": "Finds the result of adding or subtracting unlike fractions."
+    },
+    {
+      "id": "outcome:G6-08",
+      "topic": "Recognizes negative numbers and represents them in real-life situations.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-08"
+      ],
+      "fullText": "Recognizes negative numbers and represents them in real-life situations."
+    },
+    {
+      "id": "outcome:G6-09",
+      "topic": "Recognizes the number line for the set of integers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-09"
+      ],
+      "fullText": "Recognizes the number line for the set of integers."
+    },
+    {
+      "id": "outcome:G6-10",
+      "topic": "Finds the next and previous integers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-10"
+      ],
+      "fullText": "Finds the next and previous integers."
+    },
+    {
+      "id": "outcome:G6-11",
+      "topic": "Identifies opposite numbers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-11"
+      ],
+      "fullText": "Identifies opposite numbers."
+    },
+    {
+      "id": "outcome:G6-12",
+      "topic": "Compares and orders integers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-12"
+      ],
+      "fullText": "Compares and orders integers."
+    },
+    {
+      "id": "outcome:G6-13",
+      "topic": "Recognizes the set of rational numbers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-13"
+      ],
+      "fullText": "Recognizes the set of rational numbers."
+    },
+    {
+      "id": "outcome:G6-14",
+      "topic": "Writes a rational number as a common fraction.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-14"
+      ],
+      "fullText": "Writes a rational number as a common fraction."
+    },
+    {
+      "id": "outcome:G6-15",
+      "topic": "Represents a rational number on the number line.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-15"
+      ],
+      "fullText": "Represents a rational number on the number line."
+    },
+    {
+      "id": "outcome:G6-16",
+      "topic": "Compares and orders rational numbers.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-16"
+      ],
+      "fullText": "Compares and orders rational numbers."
+    },
+    {
+      "id": "outcome:G6-17",
+      "topic": "Compares absolute values using symbols.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-17"
+      ],
+      "fullText": "Compares absolute values using symbols."
+    },
+    {
+      "id": "outcome:G6-18",
+      "topic": "Distinguishes between a numerical expression and a symbolic expression.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-18"
+      ],
+      "fullText": "Distinguishes between a numerical expression and a symbolic expression."
+    },
+    {
+      "id": "outcome:G6-19",
+      "topic": "Identifies the elements of an algebraic expression: term, variable, constant, an",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-19"
+      ],
+      "fullText": "Identifies the elements of an algebraic expression: term, variable, constant, and coefficient."
+    },
+    {
+      "id": "outcome:G6-20",
+      "topic": "Identifies like algebraic terms.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-20"
+      ],
+      "fullText": "Identifies like algebraic terms."
+    },
+    {
+      "id": "outcome:G6-21",
+      "topic": "Writes a verbal expression representing an algebraic expression.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-21"
+      ],
+      "fullText": "Writes a verbal expression representing an algebraic expression."
+    },
+    {
+      "id": "outcome:G6-22",
+      "topic": "Recognizes exponential form.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-22"
+      ],
+      "fullText": "Recognizes exponential form."
+    },
+    {
+      "id": "outcome:G6-23",
+      "topic": "Simplifies numerical expressions containing exponents.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-23"
+      ],
+      "fullText": "Simplifies numerical expressions containing exponents."
+    },
+    {
+      "id": "outcome:G6-24",
+      "topic": "Evaluates an algebraic expression for a given value of the variable.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-24"
+      ],
+      "fullText": "Evaluates an algebraic expression for a given value of the variable."
+    },
+    {
+      "id": "outcome:G6-25",
+      "topic": "Identifies equivalent algebraic expressions.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-25"
+      ],
+      "fullText": "Identifies equivalent algebraic expressions."
+    },
+    {
+      "id": "outcome:G6-26",
+      "topic": "Recognizes an equation.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-26"
+      ],
+      "fullText": "Recognizes an equation."
+    },
+    {
+      "id": "outcome:G6-27",
+      "topic": "Solves an equation using a balance model or inverse operation.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-27"
+      ],
+      "fullText": "Solves an equation using a balance model or inverse operation."
+    },
+    {
+      "id": "outcome:G6-28",
+      "topic": "Distinguishes among the symbols >, ≥, <, and ≤.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-28"
+      ],
+      "fullText": "Distinguishes among the symbols >, ≥, <, and ≤."
+    },
+    {
+      "id": "outcome:G6-29",
+      "topic": "Analyzes real-life situations and identifies allowed and disallowed values.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-29"
+      ],
+      "fullText": "Analyzes real-life situations and identifies allowed and disallowed values."
+    },
+    {
+      "id": "outcome:G6-30",
+      "topic": "Solves an inequality and represents its solution on the number line.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-30"
+      ],
+      "fullText": "Solves an inequality and represents its solution on the number line."
+    },
+    {
+      "id": "outcome:G6-31",
+      "topic": "Distinguishes between an independent variable and a dependent variable.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-31"
+      ],
+      "fullText": "Distinguishes between an independent variable and a dependent variable."
+    },
+    {
+      "id": "outcome:G6-32",
+      "topic": "Writes an equation when the rule is known.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-32"
+      ],
+      "fullText": "Writes an equation when the rule is known."
+    },
+    {
+      "id": "outcome:G6-33",
+      "topic": "Distinguishes between input and output.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-33"
+      ],
+      "fullText": "Distinguishes between input and output."
+    },
+    {
+      "id": "outcome:G6-34",
+      "topic": "Represents dependent and independent variables on the coordinate plane.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-34"
+      ],
+      "fullText": "Represents dependent and independent variables on the coordinate plane."
+    },
+    {
+      "id": "outcome:G6-35",
+      "topic": "Distinguishes between statistical and non-statistical questions.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-35"
+      ],
+      "fullText": "Distinguishes between statistical and non-statistical questions."
+    },
+    {
+      "id": "outcome:G6-36",
+      "topic": "Distinguishes between numerical and categorical data.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-36"
+      ],
+      "fullText": "Distinguishes between numerical and categorical data."
+    },
+    {
+      "id": "outcome:G6-37",
+      "topic": "Explores the histogram, its components, and its properties.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-37"
+      ],
+      "fullText": "Explores the histogram, its components, and its properties."
+    },
+    {
+      "id": "outcome:G6-38",
+      "topic": "Draws a histogram for a set of data.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-38"
+      ],
+      "fullText": "Draws a histogram for a set of data."
+    },
+    {
+      "id": "outcome:G6-39",
+      "topic": "Calculates the median of a set of values.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-39"
+      ],
+      "fullText": "Calculates the median of a set of values."
+    },
+    {
+      "id": "outcome:G6-40",
+      "topic": "Explores the box-and-whisker plot and its components.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-40"
+      ],
+      "fullText": "Explores the box-and-whisker plot and its components."
+    },
+    {
+      "id": "outcome:G6-41",
+      "topic": "Draws a box-and-whisker plot for a set of values.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-41"
+      ],
+      "fullText": "Draws a box-and-whisker plot for a set of values."
+    },
+    {
+      "id": "outcome:G6-42",
+      "topic": "Explores the balance point of a dot plot.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-42"
+      ],
+      "fullText": "Explores the balance point of a dot plot."
+    },
+    {
+      "id": "outcome:G6-43",
+      "topic": "Finds the mode of a set of values.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-43"
+      ],
+      "fullText": "Finds the mode of a set of values."
+    },
+    {
+      "id": "outcome:G6-44",
+      "topic": "Recognizes an outlier.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-44"
+      ],
+      "fullText": "Recognizes an outlier."
+    },
+    {
+      "id": "outcome:G6-45",
+      "topic": "Determines the effect of an outlier on the mean and median.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-45"
+      ],
+      "fullText": "Determines the effect of an outlier on the mean and median."
+    },
+    {
+      "id": "outcome:G6-46",
+      "topic": "Calculates the range of a set of values.",
+      "grade": "6",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G6-46"
+      ],
+      "fullText": "Calculates the range of a set of values."
+    },
+    {
+      "id": "grade:6",
+      "topic": "Grade 6 Primary",
+      "grade": "6",
+      "prereqs": [
+        "grade:5"
+      ],
+      "count": 46,
+      "sources": [
+        "curriculum:grade-6"
+      ]
+    },
+    {
+      "id": "outcome:G7-01",
+      "topic": "Identifies proportional and non-proportional relationships.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-01"
+      ],
+      "fullText": "Identifies proportional and non-proportional relationships."
+    },
+    {
+      "id": "outcome:G7-02",
+      "topic": "Uses the concept of proportion to solve real-life problems.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-02"
+      ],
+      "fullText": "Uses the concept of proportion to solve real-life problems."
+    },
+    {
+      "id": "outcome:G7-03",
+      "topic": "Defines scale.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-03"
+      ],
+      "fullText": "Defines scale."
+    },
+    {
+      "id": "outcome:G7-04",
+      "topic": "Calculates actual length or drawing length using scale.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-04"
+      ],
+      "fullText": "Calculates actual length or drawing length using scale."
+    },
+    {
+      "id": "outcome:G7-05",
+      "topic": "Uses ratio and proportion in applications such as scale, proportional division, ",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-05"
+      ],
+      "fullText": "Uses ratio and proportion in applications such as scale, proportional division, buying, and selling."
+    },
+    {
+      "id": "outcome:G7-06",
+      "topic": "Defines the concept of a set.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-06"
+      ],
+      "fullText": "Defines the concept of a set."
+    },
+    {
+      "id": "outcome:G7-07",
+      "topic": "Distinguishes membership and subset symbols.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-07"
+      ],
+      "fullText": "Distinguishes membership and subset symbols."
+    },
+    {
+      "id": "outcome:G7-08",
+      "topic": "Distinguishes intersection and union symbols.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-08"
+      ],
+      "fullText": "Distinguishes intersection and union symbols."
+    },
+    {
+      "id": "outcome:G7-09",
+      "topic": "Finds the union or intersection of two sets.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-09"
+      ],
+      "fullText": "Finds the union or intersection of two sets."
+    },
+    {
+      "id": "outcome:G7-10",
+      "topic": "Finds the sum or difference of two integers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-10"
+      ],
+      "fullText": "Finds the sum or difference of two integers."
+    },
+    {
+      "id": "outcome:G7-11",
+      "topic": "Uses properties of addition and subtraction to solve integer exercises.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-11"
+      ],
+      "fullText": "Uses properties of addition and subtraction to solve integer exercises."
+    },
+    {
+      "id": "outcome:G7-12",
+      "topic": "Finds the product of two integers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-12"
+      ],
+      "fullText": "Finds the product of two integers."
+    },
+    {
+      "id": "outcome:G7-13",
+      "topic": "Finds the quotient of two integers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-13"
+      ],
+      "fullText": "Finds the quotient of two integers."
+    },
+    {
+      "id": "outcome:G7-14",
+      "topic": "Knows the properties of multiplication and division of integers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-14"
+      ],
+      "fullText": "Knows the properties of multiplication and division of integers."
+    },
+    {
+      "id": "outcome:G7-15",
+      "topic": "Recognizes different forms of rational numbers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-15"
+      ],
+      "fullText": "Recognizes different forms of rational numbers."
+    },
+    {
+      "id": "outcome:G7-16",
+      "topic": "Finds the sum or difference of two rational numbers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-16"
+      ],
+      "fullText": "Finds the sum or difference of two rational numbers."
+    },
+    {
+      "id": "outcome:G7-17",
+      "topic": "Uses properties of addition and subtraction to solve rational-number exercises.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-17"
+      ],
+      "fullText": "Uses properties of addition and subtraction to solve rational-number exercises."
+    },
+    {
+      "id": "outcome:G7-18",
+      "topic": "Finds the product of two rational numbers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-18"
+      ],
+      "fullText": "Finds the product of two rational numbers."
+    },
+    {
+      "id": "outcome:G7-19",
+      "topic": "Knows the properties of multiplication and division of rational numbers.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-19"
+      ],
+      "fullText": "Knows the properties of multiplication and division of rational numbers."
+    },
+    {
+      "id": "outcome:G7-20",
+      "topic": "Represents variables using symbols.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-20"
+      ],
+      "fullText": "Represents variables using symbols."
+    },
+    {
+      "id": "outcome:G7-21",
+      "topic": "Defines a term and an algebraic expression.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-21"
+      ],
+      "fullText": "Defines a term and an algebraic expression."
+    },
+    {
+      "id": "outcome:G7-22",
+      "topic": "Defines a mathematical expression and a mathematical formula.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-22"
+      ],
+      "fullText": "Defines a mathematical expression and a mathematical formula."
+    },
+    {
+      "id": "outcome:G7-23",
+      "topic": "Distinguishes between a mathematical expression and a mathematical formula.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-23"
+      ],
+      "fullText": "Distinguishes between a mathematical expression and a mathematical formula."
+    },
+    {
+      "id": "outcome:G7-24",
+      "topic": "Defines an equation and an inequality.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-24"
+      ],
+      "fullText": "Defines an equation and an inequality."
+    },
+    {
+      "id": "outcome:G7-25",
+      "topic": "Forms a linear equation in one unknown.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-25"
+      ],
+      "fullText": "Forms a linear equation in one unknown."
+    },
+    {
+      "id": "outcome:G7-26",
+      "topic": "Distinguishes the relationship between the substitution set and the solution set",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-26"
+      ],
+      "fullText": "Distinguishes the relationship between the substitution set and the solution set."
+    },
+    {
+      "id": "outcome:G7-27",
+      "topic": "Solves a linear equation in one unknown over the natural, integer, and rational ",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-27"
+      ],
+      "fullText": "Solves a linear equation in one unknown over the natural, integer, and rational number sets."
+    },
+    {
+      "id": "outcome:G7-28",
+      "topic": "Defines an angle and its units of measurement.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-28"
+      ],
+      "fullText": "Defines an angle and its units of measurement."
+    },
+    {
+      "id": "outcome:G7-29",
+      "topic": "Identifies types of angles and distinguishes among them.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-29"
+      ],
+      "fullText": "Identifies types of angles and distinguishes among them."
+    },
+    {
+      "id": "outcome:G7-30",
+      "topic": "Identifies complementary and supplementary angles.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-30"
+      ],
+      "fullText": "Identifies complementary and supplementary angles."
+    },
+    {
+      "id": "outcome:G7-31",
+      "topic": "Identifies vertically opposite angles.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-31"
+      ],
+      "fullText": "Identifies vertically opposite angles."
+    },
+    {
+      "id": "outcome:G7-32",
+      "topic": "Defines parallelism.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-32"
+      ],
+      "fullText": "Defines parallelism."
+    },
+    {
+      "id": "outcome:G7-33",
+      "topic": "Identifies corresponding, alternate, and same-side interior angles formed by a t",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-33"
+      ],
+      "fullText": "Identifies corresponding, alternate, and same-side interior angles formed by a transversal."
+    },
+    {
+      "id": "outcome:G7-34",
+      "topic": "Proves that two lines are parallel.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-34"
+      ],
+      "fullText": "Proves that two lines are parallel."
+    },
+    {
+      "id": "outcome:G7-35",
+      "topic": "Develops the skill of writing a geometric proof.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-35"
+      ],
+      "fullText": "Develops the skill of writing a geometric proof."
+    },
+    {
+      "id": "outcome:G7-36",
+      "topic": "Finds the sum of the measures of the interior angles of a triangle.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-36"
+      ],
+      "fullText": "Finds the sum of the measures of the interior angles of a triangle."
+    },
+    {
+      "id": "outcome:G7-37",
+      "topic": "Defines an exterior angle of a triangle.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-37"
+      ],
+      "fullText": "Defines an exterior angle of a triangle."
+    },
+    {
+      "id": "outcome:G7-38",
+      "topic": "Derives the relationship between an exterior angle and the interior angles of a ",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-38"
+      ],
+      "fullText": "Derives the relationship between an exterior angle and the interior angles of a triangle."
+    },
+    {
+      "id": "outcome:G7-39",
+      "topic": "Finds the sum of the measures of the interior angles of a quadrilateral.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-39"
+      ],
+      "fullText": "Finds the sum of the measures of the interior angles of a quadrilateral."
+    },
+    {
+      "id": "outcome:G7-40",
+      "topic": "Distinguishes special quadrilaterals.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-40"
+      ],
+      "fullText": "Distinguishes special quadrilaterals."
+    },
+    {
+      "id": "outcome:G7-41",
+      "topic": "Proves that a quadrilateral is a parallelogram.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-41"
+      ],
+      "fullText": "Proves that a quadrilateral is a parallelogram."
+    },
+    {
+      "id": "outcome:G7-42",
+      "topic": "Identifies the relationship among families of quadrilaterals.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-42"
+      ],
+      "fullText": "Identifies the relationship among families of quadrilaterals."
+    },
+    {
+      "id": "outcome:G7-43",
+      "topic": "Determines when a parallelogram is a rectangle, rhombus, or square.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-43"
+      ],
+      "fullText": "Determines when a parallelogram is a rectangle, rhombus, or square."
+    },
+    {
+      "id": "outcome:G7-44",
+      "topic": "Defines a polygon.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-44"
+      ],
+      "fullText": "Defines a polygon."
+    },
+    {
+      "id": "outcome:G7-45",
+      "topic": "Distinguishes convex and concave polygons.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-45"
+      ],
+      "fullText": "Distinguishes convex and concave polygons."
+    },
+    {
+      "id": "outcome:G7-46",
+      "topic": "Finds the sum of the measures of the interior angles of a polygon.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-46"
+      ],
+      "fullText": "Finds the sum of the measures of the interior angles of a polygon."
+    },
+    {
+      "id": "outcome:G7-47",
+      "topic": "Defines a regular polygon.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-47"
+      ],
+      "fullText": "Defines a regular polygon."
+    },
+    {
+      "id": "outcome:G7-48",
+      "topic": "Identifies axes of symmetry in polygons.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-48"
+      ],
+      "fullText": "Identifies axes of symmetry in polygons."
+    },
+    {
+      "id": "outcome:G7-49",
+      "topic": "Represents the coordinates of a point on the coordinate plane.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-49"
+      ],
+      "fullText": "Represents the coordinates of a point on the coordinate plane."
+    },
+    {
+      "id": "outcome:G7-50",
+      "topic": "Identifies the quadrant containing a point.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-50"
+      ],
+      "fullText": "Identifies the quadrant containing a point."
+    },
+    {
+      "id": "outcome:G7-51",
+      "topic": "Determines the projection of a point or line segment on the axes.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-51"
+      ],
+      "fullText": "Determines the projection of a point or line segment on the axes."
+    },
+    {
+      "id": "outcome:G7-52",
+      "topic": "Determines the coordinates of the midpoint of a line segment.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-52"
+      ],
+      "fullText": "Determines the coordinates of the midpoint of a line segment."
+    },
+    {
+      "id": "outcome:G7-53",
+      "topic": "Represents data using a stem-and-leaf plot.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-53"
+      ],
+      "fullText": "Represents data using a stem-and-leaf plot."
+    },
+    {
+      "id": "outcome:G7-54",
+      "topic": "Distinguishes misleading and non-misleading graphs.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-54"
+      ],
+      "fullText": "Distinguishes misleading and non-misleading graphs."
+    },
+    {
+      "id": "outcome:G7-55",
+      "topic": "Calculates the arithmetic mean from a frequency table.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-55"
+      ],
+      "fullText": "Calculates the arithmetic mean from a frequency table."
+    },
+    {
+      "id": "outcome:G7-56",
+      "topic": "Defines misleading statistical data.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-56"
+      ],
+      "fullText": "Defines misleading statistical data."
+    },
+    {
+      "id": "outcome:G7-57",
+      "topic": "Defines a pie chart.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-57"
+      ],
+      "fullText": "Defines a pie chart."
+    },
+    {
+      "id": "outcome:G7-58",
+      "topic": "Represents data using pie charts.",
+      "grade": "7",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G7-58"
+      ],
+      "fullText": "Represents data using pie charts."
+    },
+    {
+      "id": "grade:7",
+      "topic": "Grade 7 Preparatory",
+      "grade": "7",
+      "prereqs": [
+        "grade:6"
+      ],
+      "count": 58,
+      "sources": [
+        "curriculum:grade-7"
+      ]
+    },
+    {
+      "id": "outcome:G8-01",
+      "topic": "Knows the laws for multiplying and dividing square roots.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-01"
+      ],
+      "fullText": "Knows the laws for multiplying and dividing square roots."
+    },
+    {
+      "id": "outcome:G8-02",
+      "topic": "Knows the laws for multiplying and dividing cube roots.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-02"
+      ],
+      "fullText": "Knows the laws for multiplying and dividing cube roots."
+    },
+    {
+      "id": "outcome:G8-03",
+      "topic": "Uses radical laws to simplify numbers.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-03"
+      ],
+      "fullText": "Uses radical laws to simplify numbers."
+    },
+    {
+      "id": "outcome:G8-04",
+      "topic": "Uses radical laws to solve real-life problems.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-04"
+      ],
+      "fullText": "Uses radical laws to solve real-life problems."
+    },
+    {
+      "id": "outcome:G8-05",
+      "topic": "Recognizes repeated multiplication in the set of real numbers.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-05"
+      ],
+      "fullText": "Recognizes repeated multiplication in the set of real numbers."
+    },
+    {
+      "id": "outcome:G8-06",
+      "topic": "Knows laws of exponents in the real numbers.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-06"
+      ],
+      "fullText": "Knows laws of exponents in the real numbers."
+    },
+    {
+      "id": "outcome:G8-07",
+      "topic": "Uses exponent laws to simplify mathematical expressions.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-07"
+      ],
+      "fullText": "Uses exponent laws to simplify mathematical expressions."
+    },
+    {
+      "id": "outcome:G8-08",
+      "topic": "Defines factorization by taking out the greatest common factor.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-08"
+      ],
+      "fullText": "Defines factorization by taking out the greatest common factor."
+    },
+    {
+      "id": "outcome:G8-09",
+      "topic": "Factors a polynomial by taking out the greatest common factor.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-09"
+      ],
+      "fullText": "Factors a polynomial by taking out the greatest common factor."
+    },
+    {
+      "id": "outcome:G8-10",
+      "topic": "Uses greatest-common-factor factorization in solving problems.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-10"
+      ],
+      "fullText": "Uses greatest-common-factor factorization in solving problems."
+    },
+    {
+      "id": "outcome:G8-11",
+      "topic": "Solves equations using greatest-common-factor factorization.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-11"
+      ],
+      "fullText": "Solves equations using greatest-common-factor factorization."
+    },
+    {
+      "id": "outcome:G8-12",
+      "topic": "Factors trinomials of the stated standard forms.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-12"
+      ],
+      "fullText": "Factors trinomials of the stated standard forms."
+    },
+    {
+      "id": "outcome:G8-13",
+      "topic": "Uses factorization to solve real-life problems.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-13"
+      ],
+      "fullText": "Uses factorization to solve real-life problems."
+    },
+    {
+      "id": "outcome:G8-14",
+      "topic": "Recognizes when a trinomial represents a perfect square.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-14"
+      ],
+      "fullText": "Recognizes when a trinomial represents a perfect square."
+    },
+    {
+      "id": "outcome:G8-15",
+      "topic": "Factors a perfect-square trinomial.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-15"
+      ],
+      "fullText": "Factors a perfect-square trinomial."
+    },
+    {
+      "id": "outcome:G8-16",
+      "topic": "Factors the difference of two squares.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-16"
+      ],
+      "fullText": "Factors the difference of two squares."
+    },
+    {
+      "id": "outcome:G8-17",
+      "topic": "Factors the sum and difference of two cubes.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-17"
+      ],
+      "fullText": "Factors the sum and difference of two cubes."
+    },
+    {
+      "id": "outcome:G8-18",
+      "topic": "Uses factorization to simplify arithmetic operations.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-18"
+      ],
+      "fullText": "Uses factorization to simplify arithmetic operations."
+    },
+    {
+      "id": "outcome:G8-19",
+      "topic": "Factors a polynomial by grouping.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-19"
+      ],
+      "fullText": "Factors a polynomial by grouping."
+    },
+    {
+      "id": "outcome:G8-20",
+      "topic": "Recognizes completing the square.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-20"
+      ],
+      "fullText": "Recognizes completing the square."
+    },
+    {
+      "id": "outcome:G8-21",
+      "topic": "Uses completing the square in factorization and solving equations.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-21"
+      ],
+      "fullText": "Uses completing the square in factorization and solving equations."
+    },
+    {
+      "id": "outcome:G8-22",
+      "topic": "Recognizes congruence of plane geometric figures.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-22"
+      ],
+      "fullText": "Recognizes congruence of plane geometric figures."
+    },
+    {
+      "id": "outcome:G8-23",
+      "topic": "Knows the conditions for congruence of two polygons.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-23"
+      ],
+      "fullText": "Knows the conditions for congruence of two polygons."
+    },
+    {
+      "id": "outcome:G8-24",
+      "topic": "Knows the congruence cases for two triangles.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-24"
+      ],
+      "fullText": "Knows the congruence cases for two triangles."
+    },
+    {
+      "id": "outcome:G8-25",
+      "topic": "Uses congruence to find angle measures and side lengths.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-25"
+      ],
+      "fullText": "Uses congruence to find angle measures and side lengths."
+    },
+    {
+      "id": "outcome:G8-26",
+      "topic": "Proves two triangles congruent.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-26"
+      ],
+      "fullText": "Proves two triangles congruent."
+    },
+    {
+      "id": "outcome:G8-27",
+      "topic": "Knows the relationship among the side lengths of a right triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-27"
+      ],
+      "fullText": "Knows the relationship among the side lengths of a right triangle."
+    },
+    {
+      "id": "outcome:G8-28",
+      "topic": "Finds an unknown side when the other two sides are known.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-28"
+      ],
+      "fullText": "Finds an unknown side when the other two sides are known."
+    },
+    {
+      "id": "outcome:G8-29",
+      "topic": "Proves that a triangle is right-angled when its three sides are known.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-29"
+      ],
+      "fullText": "Proves that a triangle is right-angled when its three sides are known."
+    },
+    {
+      "id": "outcome:G8-30",
+      "topic": "Determines the type of triangle by its angles when its side lengths are known.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-30"
+      ],
+      "fullText": "Determines the type of triangle by its angles when its side lengths are known."
+    },
+    {
+      "id": "outcome:G8-31",
+      "topic": "Knows the relationship among the lengths of intercepts between parallel lines.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-31"
+      ],
+      "fullText": "Knows the relationship among the lengths of intercepts between parallel lines."
+    },
+    {
+      "id": "outcome:G8-32",
+      "topic": "Knows the relationship between a midsegment and its opposite side.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-32"
+      ],
+      "fullText": "Knows the relationship between a midsegment and its opposite side."
+    },
+    {
+      "id": "outcome:G8-33",
+      "topic": "Identifies the intersection point of the medians of a triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-33"
+      ],
+      "fullText": "Identifies the intersection point of the medians of a triangle."
+    },
+    {
+      "id": "outcome:G8-34",
+      "topic": "Knows the ratio in which the centroid divides a triangle's median.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-34"
+      ],
+      "fullText": "Knows the ratio in which the centroid divides a triangle's median."
+    },
+    {
+      "id": "outcome:G8-35",
+      "topic": "Knows the median to the hypotenuse in a right triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-35"
+      ],
+      "fullText": "Knows the median to the hypotenuse in a right triangle."
+    },
+    {
+      "id": "outcome:G8-36",
+      "topic": "Knows the properties of an isosceles triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-36"
+      ],
+      "fullText": "Knows the properties of an isosceles triangle."
+    },
+    {
+      "id": "outcome:G8-37",
+      "topic": "Knows the properties of an equilateral triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-37"
+      ],
+      "fullText": "Knows the properties of an equilateral triangle."
+    },
+    {
+      "id": "outcome:G8-38",
+      "topic": "Knows the axis of symmetry of an isosceles triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-38"
+      ],
+      "fullText": "Knows the axis of symmetry of an isosceles triangle."
+    },
+    {
+      "id": "outcome:G8-39",
+      "topic": "Knows the relationship among the side lengths of a 30-degree triangle.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-39"
+      ],
+      "fullText": "Knows the relationship among the side lengths of a 30-degree triangle."
+    },
+    {
+      "id": "outcome:G8-40",
+      "topic": "Knows the formula for the sum of the interior angles of a polygon.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-40"
+      ],
+      "fullText": "Knows the formula for the sum of the interior angles of a polygon."
+    },
+    {
+      "id": "outcome:G8-41",
+      "topic": "Knows the sum of the exterior angles of a polygon.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-41"
+      ],
+      "fullText": "Knows the sum of the exterior angles of a polygon."
+    },
+    {
+      "id": "outcome:G8-42",
+      "topic": "Knows the formula for the measure of an interior angle of a regular polygon.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-42"
+      ],
+      "fullText": "Knows the formula for the measure of an interior angle of a regular polygon."
+    },
+    {
+      "id": "outcome:G8-43",
+      "topic": "Knows the formula for the number of diagonals of a polygon.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-43"
+      ],
+      "fullText": "Knows the formula for the number of diagonals of a polygon."
+    },
+    {
+      "id": "outcome:G8-44",
+      "topic": "Constructs an ascending cumulative-frequency table from a grouped frequency tabl",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-44"
+      ],
+      "fullText": "Constructs an ascending cumulative-frequency table from a grouped frequency table."
+    },
+    {
+      "id": "outcome:G8-45",
+      "topic": "Draws the ascending cumulative-frequency curve.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-45"
+      ],
+      "fullText": "Draws the ascending cumulative-frequency curve."
+    },
+    {
+      "id": "outcome:G8-46",
+      "topic": "Estimates the mean of a grouped frequency table.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-46"
+      ],
+      "fullText": "Estimates the mean of a grouped frequency table."
+    },
+    {
+      "id": "outcome:G8-47",
+      "topic": "Estimates the median of a grouped frequency table.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-47"
+      ],
+      "fullText": "Estimates the median of a grouped frequency table."
+    },
+    {
+      "id": "outcome:G8-48",
+      "topic": "Estimates the mode of a grouped frequency table.",
+      "grade": "8",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G8-48"
+      ],
+      "fullText": "Estimates the mode of a grouped frequency table."
+    },
+    {
+      "id": "grade:8",
+      "topic": "Grade 8 Preparatory",
+      "grade": "8",
+      "prereqs": [
+        "grade:7"
+      ],
+      "count": 48,
+      "sources": [
+        "curriculum:grade-8"
+      ]
+    },
+    {
+      "id": "outcome:G9-01",
+      "topic": "Defines the concept of a power of a power.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-01"
+      ],
+      "fullText": "Defines the concept of a power of a power."
+    },
+    {
+      "id": "outcome:G9-02",
+      "topic": "Finds a power of a power for a real number.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-02"
+      ],
+      "fullText": "Finds a power of a power for a real number."
+    },
+    {
+      "id": "outcome:G9-03",
+      "topic": "Uses the power-of-a-power law to simplify mathematical expressions.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-03"
+      ],
+      "fullText": "Uses the power-of-a-power law to simplify mathematical expressions."
+    },
+    {
+      "id": "outcome:G9-04",
+      "topic": "Uses the law for the power of a product or quotient of powers.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-04"
+      ],
+      "fullText": "Uses the law for the power of a product or quotient of powers."
+    },
+    {
+      "id": "outcome:G9-05",
+      "topic": "Solves exponential equations using the same base.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-05"
+      ],
+      "fullText": "Solves exponential equations using the same base."
+    },
+    {
+      "id": "outcome:G9-06",
+      "topic": "Solves exponential equations using the same exponent.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-06"
+      ],
+      "fullText": "Solves exponential equations using the same exponent."
+    },
+    {
+      "id": "outcome:G9-07",
+      "topic": "Uses exponential equations to solve real-life problems.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-07"
+      ],
+      "fullText": "Uses exponential equations to solve real-life problems."
+    },
+    {
+      "id": "outcome:G9-08",
+      "topic": "Recognizes the standard form of a quadratic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-08"
+      ],
+      "fullText": "Recognizes the standard form of a quadratic function."
+    },
+    {
+      "id": "outcome:G9-09",
+      "topic": "Recognizes the vertex form of a quadratic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-09"
+      ],
+      "fullText": "Recognizes the vertex form of a quadratic function."
+    },
+    {
+      "id": "outcome:G9-10",
+      "topic": "Identifies the vertex and axis of symmetry of a quadratic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-10"
+      ],
+      "fullText": "Identifies the vertex and axis of symmetry of a quadratic function."
+    },
+    {
+      "id": "outcome:G9-11",
+      "topic": "Represents a quadratic function graphically.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-11"
+      ],
+      "fullText": "Represents a quadratic function graphically."
+    },
+    {
+      "id": "outcome:G9-12",
+      "topic": "Finds the maximum or minimum value of a quadratic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-12"
+      ],
+      "fullText": "Finds the maximum or minimum value of a quadratic function."
+    },
+    {
+      "id": "outcome:G9-13",
+      "topic": "Uses a calculator to create a table for a graphical representation.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-13"
+      ],
+      "fullText": "Uses a calculator to create a table for a graphical representation."
+    },
+    {
+      "id": "outcome:G9-14",
+      "topic": "Finds the set of real zeros of polynomial functions algebraically.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-14"
+      ],
+      "fullText": "Finds the set of real zeros of polynomial functions algebraically."
+    },
+    {
+      "id": "outcome:G9-15",
+      "topic": "Finds the set of real zeros of polynomial functions.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-15"
+      ],
+      "fullText": "Finds the set of real zeros of polynomial functions."
+    },
+    {
+      "id": "outcome:G9-16",
+      "topic": "Uses real zeros of polynomial functions to solve real-life problems.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-16"
+      ],
+      "fullText": "Uses real zeros of polynomial functions to solve real-life problems."
+    },
+    {
+      "id": "outcome:G9-17",
+      "topic": "Defines a rational algebraic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-17"
+      ],
+      "fullText": "Defines a rational algebraic function."
+    },
+    {
+      "id": "outcome:G9-18",
+      "topic": "Defines the domain of a rational algebraic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-18"
+      ],
+      "fullText": "Defines the domain of a rational algebraic function."
+    },
+    {
+      "id": "outcome:G9-19",
+      "topic": "Simplifies a rational algebraic fraction to simplest form.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-19"
+      ],
+      "fullText": "Simplifies a rational algebraic fraction to simplest form."
+    },
+    {
+      "id": "outcome:G9-20",
+      "topic": "Finds the zero set of a rational algebraic function.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-20"
+      ],
+      "fullText": "Finds the zero set of a rational algebraic function."
+    },
+    {
+      "id": "outcome:G9-21",
+      "topic": "Finds the common domain of two or more rational algebraic functions.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-21"
+      ],
+      "fullText": "Finds the common domain of two or more rational algebraic functions."
+    },
+    {
+      "id": "outcome:G9-22",
+      "topic": "Knows the conditions for equality of rational algebraic functions.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-22"
+      ],
+      "fullText": "Knows the conditions for equality of rational algebraic functions."
+    },
+    {
+      "id": "outcome:G9-23",
+      "topic": "Performs operations on rational algebraic fractions.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-23"
+      ],
+      "fullText": "Performs operations on rational algebraic fractions."
+    },
+    {
+      "id": "outcome:G9-24",
+      "topic": "Defines additive and multiplicative inverses.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-24"
+      ],
+      "fullText": "Defines additive and multiplicative inverses."
+    },
+    {
+      "id": "outcome:G9-25",
+      "topic": "Knows the conditions for similarity of two polygons.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-25"
+      ],
+      "fullText": "Knows the conditions for similarity of two polygons."
+    },
+    {
+      "id": "outcome:G9-26",
+      "topic": "Defines the scale factor of similarity.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-26"
+      ],
+      "fullText": "Defines the scale factor of similarity."
+    },
+    {
+      "id": "outcome:G9-27",
+      "topic": "Knows the conditions for similarity of two triangles.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-27"
+      ],
+      "fullText": "Knows the conditions for similarity of two triangles."
+    },
+    {
+      "id": "outcome:G9-28",
+      "topic": "Uses triangle similarity to find angle measures and side lengths.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-28"
+      ],
+      "fullText": "Uses triangle similarity to find angle measures and side lengths."
+    },
+    {
+      "id": "outcome:G9-29",
+      "topic": "Proves two triangles similar.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-29"
+      ],
+      "fullText": "Proves two triangles similar."
+    },
+    {
+      "id": "outcome:G9-30",
+      "topic": "Uses triangle similarity to solve real-life problems.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-30"
+      ],
+      "fullText": "Uses triangle similarity to solve real-life problems."
+    },
+    {
+      "id": "outcome:G9-31",
+      "topic": "Defines dilation.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-31"
+      ],
+      "fullText": "Defines dilation."
+    },
+    {
+      "id": "outcome:G9-32",
+      "topic": "Defines positive dilation.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-32"
+      ],
+      "fullText": "Defines positive dilation."
+    },
+    {
+      "id": "outcome:G9-33",
+      "topic": "Recognizes the trigonometric ratios of an acute angle in a right triangle.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-33"
+      ],
+      "fullText": "Recognizes the trigonometric ratios of an acute angle in a right triangle."
+    },
+    {
+      "id": "outcome:G9-34",
+      "topic": "Finds sine, cosine, and tangent of an angle in a right triangle.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-34"
+      ],
+      "fullText": "Finds sine, cosine, and tangent of an angle in a right triangle."
+    },
+    {
+      "id": "outcome:G9-35",
+      "topic": "Knows the trigonometric ratios of 30°, 45°, and 60°.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-35"
+      ],
+      "fullText": "Knows the trigonometric ratios of 30°, 45°, and 60°."
+    },
+    {
+      "id": "outcome:G9-36",
+      "topic": "Uses a calculator to find trigonometric ratios when the angle measure is known.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-36"
+      ],
+      "fullText": "Uses a calculator to find trigonometric ratios when the angle measure is known."
+    },
+    {
+      "id": "outcome:G9-37",
+      "topic": "Finds an angle measure when one of its trigonometric ratios is known, using a ca",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-37"
+      ],
+      "fullText": "Finds an angle measure when one of its trigonometric ratios is known, using a calculator."
+    },
+    {
+      "id": "outcome:G9-38",
+      "topic": "Derives the slope of a straight line from the tangent of its angle of inclinatio",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-38"
+      ],
+      "fullText": "Derives the slope of a straight line from the tangent of its angle of inclination."
+    },
+    {
+      "id": "outcome:G9-39",
+      "topic": "Knows the relationship between the slopes of parallel lines.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-39"
+      ],
+      "fullText": "Knows the relationship between the slopes of parallel lines."
+    },
+    {
+      "id": "outcome:G9-40",
+      "topic": "Knows the relationship between the slopes of perpendicular lines.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-40"
+      ],
+      "fullText": "Knows the relationship between the slopes of perpendicular lines."
+    },
+    {
+      "id": "outcome:G9-41",
+      "topic": "Solves real-life problems using the slope of a straight line.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-41"
+      ],
+      "fullText": "Solves real-life problems using the slope of a straight line."
+    },
+    {
+      "id": "outcome:G9-42",
+      "topic": "Finds the equation of a straight line in slope-intercept form.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-42"
+      ],
+      "fullText": "Finds the equation of a straight line in slope-intercept form."
+    },
+    {
+      "id": "outcome:G9-43",
+      "topic": "Finds the equation of a straight line in point-slope form.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-43"
+      ],
+      "fullText": "Finds the equation of a straight line in point-slope form."
+    },
+    {
+      "id": "outcome:G9-44",
+      "topic": "Recognizes the standard form of the equation of a straight line.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-44"
+      ],
+      "fullText": "Recognizes the standard form of the equation of a straight line."
+    },
+    {
+      "id": "outcome:G9-45",
+      "topic": "Uses the slope and y-intercept to represent the straight-line equation.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-45"
+      ],
+      "fullText": "Uses the slope and y-intercept to represent the straight-line equation."
+    },
+    {
+      "id": "outcome:G9-46",
+      "topic": "Uses the equation of a straight line to solve real-life problems.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-46"
+      ],
+      "fullText": "Uses the equation of a straight line to solve real-life problems."
+    },
+    {
+      "id": "outcome:G9-47",
+      "topic": "Defines dispersion.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-47"
+      ],
+      "fullText": "Defines dispersion."
+    },
+    {
+      "id": "outcome:G9-48",
+      "topic": "Defines range.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-48"
+      ],
+      "fullText": "Defines range."
+    },
+    {
+      "id": "outcome:G9-49",
+      "topic": "Defines interquartile range.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-49"
+      ],
+      "fullText": "Defines interquartile range."
+    },
+    {
+      "id": "outcome:G9-50",
+      "topic": "Defines standard deviation.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-50"
+      ],
+      "fullText": "Defines standard deviation."
+    },
+    {
+      "id": "outcome:G9-51",
+      "topic": "Finds the range and interquartile range for a data set.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-51"
+      ],
+      "fullText": "Finds the range and interquartile range for a data set."
+    },
+    {
+      "id": "outcome:G9-52",
+      "topic": "Finds the standard deviation for a set of observations.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-52"
+      ],
+      "fullText": "Finds the standard deviation for a set of observations."
+    },
+    {
+      "id": "outcome:G9-53",
+      "topic": "Finds the standard deviation for a simple frequency distribution.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-53"
+      ],
+      "fullText": "Finds the standard deviation for a simple frequency distribution."
+    },
+    {
+      "id": "outcome:G9-54",
+      "topic": "Finds the standard deviation for a grouped frequency distribution.",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "curriculum:G9-54"
+      ],
+      "fullText": "Finds the standard deviation for a grouped frequency distribution."
+    },
+    {
+      "id": "grade:9",
+      "topic": "Grade 9 Preparatory",
+      "grade": "9",
+      "prereqs": [
+        "grade:8"
+      ],
+      "count": 54,
+      "sources": [
+        "curriculum:grade-9"
+      ]
+    },
     {
       "id": "circle_theorems:10",
       "topic": "circle_theorems",
@@ -60,5 +5019,51 @@
       ]
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "from": "grade:1",
+      "to": "grade:2",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:2",
+      "to": "grade:3",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:3",
+      "to": "grade:4",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:4",
+      "to": "grade:5",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:5",
+      "to": "grade:6",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:6",
+      "to": "grade:7",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:7",
+      "to": "grade:8",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:8",
+      "to": "grade:9",
+      "label": "prereq"
+    },
+    {
+      "from": "grade:9",
+      "to": "parallel_lines:9",
+      "label": "curriculum"
+    }
+  ]
 }
