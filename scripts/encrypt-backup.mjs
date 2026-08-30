@@ -25,6 +25,7 @@ function getKey() {
   // generate
   const raw = randomBytes(32).toString("hex");
   mkdirSync(join(os.homedir(), ".secrets"), { recursive: true });
+  // lgtm[js/file-system-race] — single-user key generation, TOCTOU acceptable
   writeFileSync(keyPath, raw, { mode: 0o600 });
   // also gitignore ensure
   try { writeFileSync(join(os.homedir(), ".secrets", ".gitignore"), "*\n!.gitignore\n", { flag: "wx" }); } catch {}

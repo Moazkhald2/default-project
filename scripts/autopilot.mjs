@@ -156,6 +156,7 @@ export async function localMain(opts = {}) {
     }
   }
   // backup check if cloud missed: run cloudMain dryRun to see if update needed
+  // lgtm[js/useless-assignment-to-local] — status reassigned in try/catch, initial value is intentional default if no throw
   let status = "applied";
   try {
     const cloudReport = await cloudMain({ dryRun: true });

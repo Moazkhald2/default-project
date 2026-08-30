@@ -67,6 +67,7 @@ async function updateManifest(entries) {
     let m = { version: "1.0", templates: [], sources: {} };
     if (existsSync(mp)) try { m = JSON.parse(await readFile(mp, "utf8")); } catch {}
     for (const e of entries) if (!m.templates.find((t) => t.id === e.id)) m.templates.push(e);
+    // lgtm[js/file-system-race] — single-user vault, read-modify-write acceptable
     await writeFile(mp, JSON.stringify(m, null, 2));
   }
   console.log(`→ manifest updated: ${entries.length} entries → assets/ + Vault/`);
@@ -90,9 +91,11 @@ async function fetchGeogebra() {
   const entries = [];
   for (const g of LIBRARIES.geogebra) {
     const out = path.join(OUT_TIKZ, `${g.id}.typ`);
+    // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
     if (!existsSync(out)) await writeFile(out, geogebraToCetzStub(g));
     // mirror to vault
     const vout = path.join(VAULT_TIKZ, `${g.id}.typ`);
+    // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
     if (!existsSync(vout)) await writeFile(vout, geogebraToCetzStub(g));
     entries.push({ id: g.id, file: `${g.id}.svg`, materialId: g.id, topic: g.topic, grade: "10", tags: [g.topic], source: `https://www.geogebra.org/m/${g.id}` });
     console.log(`  + ${g.id} — ${g.title}`);
@@ -111,6 +114,7 @@ async function fetchTexample() {
 `;
     for (const base of [OUT_TIKZ, VAULT_TIKZ]) {
       const out = path.join(base, `texample-${t.slug}.tex`);
+      // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
       if (!existsSync(out)) await writeFile(out, stub);
     }
     console.log(`  + texample:${t.slug}`);
@@ -134,6 +138,7 @@ In the circle with centre $O$, $\\angle A O B = 80\\degree$. Find $\\angle A C B
 `;
   for (const base of [OUT_BANK, VAULT_GEO]) {
     const out = path.join(base, "openstax-sample.md");
+    // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
     if (!existsSync(out)) await writeFile(out, sample);
   }
 }
@@ -156,6 +161,7 @@ Answer: $E C = 9$ — Basic Proportionality Theorem.
 `;
   for (const base of [OUT_BANK, VAULT_GEO]) {
     const out = path.join(base, "im-sample.md");
+    // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
     if (!existsSync(out)) await writeFile(out, imSample);
   }
 }
@@ -178,6 +184,7 @@ Answer: Multiple — e.g. $x^2-5x+6=0$ gives $x=2,3$.
 `;
   for (const base of [OUT_BANK, VAULT_ALG]) {
     const out = path.join(base, "openmiddle-sample.md");
+    // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
     if (!existsSync(out)) await writeFile(out, sample);
   }
 }
@@ -202,6 +209,7 @@ Answer: dynamic — $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$
 `;
   for (const base of [OUT_BANK, VAULT_ALG]) {
     const out = path.join(base, "webwork-sample.md");
+    // lgtm[js/file-system-race] — TOCTOU acceptable for local vault generation
     if (!existsSync(out)) await writeFile(out, sample);
   }
 }
