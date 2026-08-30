@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // decrypt-backup.mjs — reverse of encrypt-backup.mjs
-import { createDecipheriv, createHash, scryptSync } from "node:crypto";
+import { createDecipheriv, scryptSync } from "node:crypto";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import os from "node:os";
@@ -8,13 +8,14 @@ import os from "node:os";
 function getKey() {
   if (process.env.BACKUP_PASSPHRASE) {
     const salt = (() => { try { return readFileSync(join(os.homedir(), ".secrets", "backup.salt"), "utf8").trim().slice(0, 32); } catch { return "math-academy-scrypt-salt-v1"; } })();
-    try { return scryptSync(process.env.BACKUP_PASSPHRASE, salt, 32); } catch { return createHash("sha256").update(process.env.BACKUP_PASSPHRASE).digest(); }
+    return scryptSync(process.env.BACKUP_PASSPHRASE, salt, 32);
   }
   const keyPath = join(os.homedir(), ".secrets", "backup.key");
   if (!existsSync(keyPath)) { console.error(`missing ${keyPath} — set BACKUP_PASSPHRASE env`); process.exit(1); }
   const hex = readFileSync(keyPath, "utf8").trim();
   if (/^[0-9a-f]{64}$/i.test(hex)) return Buffer.from(hex, "hex");
-  return createHash("sha256").update(hex).digest();
+  const salt = (() => { try { return readFileSync(join(os.homedir(), ".secrets", "backup.salt"), "utf8").trim().slice(0, 32); } catch { return "math-academy-scrypt-salt-v1"; } })();
+  return scryptSync(hex, salt, 32);
 }
 const file = process.argv[2];
 if (!file || !existsSync(file)) { console.error("usage: node scripts/decrypt-backup.mjs <file.enc> [--out <zip>]"); process.exit(1); }
