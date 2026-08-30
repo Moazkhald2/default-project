@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "generated": "2026-08-30T04:18:08.942Z",
+    "stages": "extract->resolve->assemble->query",
+    "source": "content/bank + Local_Math_Vault"
+  },
+  "nodes": [
+    {
+      "id": "circle_theorems:10",
+      "topic": "circle_theorems",
+      "grade": "10",
+      "prereqs": [],
+      "count": 2,
+      "sources": [
+        "circle-theorem-001.md",
+        "openstax-sample.md"
+      ]
+    },
+    {
+      "id": "similarity:10",
+      "topic": "similarity",
+      "grade": "10",
+      "prereqs": [],
+      "count": 2,
+      "sources": [
+        "im-sample.md",
+        "similar-triangles-001.md"
+      ]
+    },
+    {
+      "id": "quadratic_formula:10",
+      "topic": "quadratic_formula",
+      "grade": "10",
+      "prereqs": [],
+      "count": 3,
+      "sources": [
+        "openmiddle-sample.md",
+        "quadratic-001.md",
+        "webwork-sample.md"
+      ]
+    },
+    {
+      "id": "parallel_lines:9",
+      "topic": "parallel_lines",
+      "grade": "9",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "parallel-lines-001.md"
+      ]
+    },
+    {
+      "id": "right_triangle_trigonometry:10",
+      "topic": "right_triangle_trigonometry",
+      "grade": "10",
+      "prereqs": [],
+      "count": 1,
+      "sources": [
+        "right-triangle-x.md"
+      ]
+    }
+  ],
+  "edges": []
+}

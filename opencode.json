@@ -6,7 +6,21 @@
       "perf-check": "allow",
       "code-review": "allow",
       "project-bootstrap": "allow",
-      "free-claude-code": "allow"
+      "free-claude-code": "allow",
+      "ui-ux-pro-max": "allow",
+      "ckm:design-system": "allow",
+      "ckm:design": "allow",
+      "ckm:ui-styling": "allow",
+      "ckm:brand": "allow",
+      "ckm:banner-design": "allow",
+      "ckm:slides": "allow",
+      "archify": "allow",
+      "taste-skill": "allow",
+      "superpowers": "allow",
+      "scientific-agent-skills": "allow",
+      "math-flowcharts": "allow",
+      "graph-engineering": "allow",
+      "auto-company": "allow"
     }
   }
 }

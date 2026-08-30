@@ -3,6 +3,12 @@ import { PerfImage } from "./components/PerfImage";
 import { Math, BlockMath } from "./components/Math";
 import { GebraEmbed } from "./components/GebraEmbed";
 import { QuestionCard, type Question } from "./components/QuestionCard";
+import {
+  MathFlowchart,
+  rightTriangleSpec,
+  circleTheoremSpec,
+  type MathFlowchartSpec,
+} from "./components/MathFlowchart";
 const TeacherDashboard = lazy(() =>
   import("./components/TeacherDashboard").then((m) => ({ default: m.TeacherDashboard })),
 );
@@ -76,7 +82,8 @@ export default function App() {
   }, []);
 
   const qs = bank ?? DEMO_QS;
-  const [view, setView] = useState<"student" | "teacher" | "exam">("student");
+  const [view, setView] = useState<"student" | "teacher" | "exam" | "flowcharts">("student");
+  const [flowSpec, setFlowSpec] = useState<MathFlowchartSpec>(rightTriangleSpec);
 
   return (
     <main className="mx-auto max-w-3xl p-6 bg-canvas min-h-screen">
@@ -91,12 +98,18 @@ export default function App() {
         <div className="mt-3 rounded-xl border border-border bg-surface p-3">
           <BlockMath tex={String.raw`\displaystyle \int_0^1 x^2\,dx = \frac13`} />
         </div>
-        <div className="mt-4 flex gap-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           <button
             onClick={() => setView("student")}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${view === "student" ? "bg-primary text-white" : "border border-border bg-surface text-ink hover:bg-canvas"}`}
           >
             Student View
+          </button>
+          <button
+            onClick={() => setView("flowcharts")}
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${view === "flowcharts" ? "bg-primary text-white" : "border border-border bg-surface text-ink hover:bg-canvas"}`}
+          >
+            Flowcharts
           </button>
           <button
             onClick={() => setView("teacher")}
@@ -124,7 +137,38 @@ export default function App() {
         priority
       />
 
-      {view === "teacher" ? (
+      {view === "flowcharts" ? (
+        <section className="mt-8 grid gap-4">
+          <h2 className="font-display text-xl font-semibold text-ink">Math Flowcharts — Stepwise Solver</h2>
+          <p className="text-sm text-muted">
+            Interactive DAG · archify workflow · KaTeX nodes · GeoGebra figures · 7-layer agent loop.
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setFlowSpec(rightTriangleSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === rightTriangleSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              Right Triangle
+            </button>
+            <button
+              onClick={() => setFlowSpec(circleTheoremSpec)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${flowSpec.title === circleTheoremSpec.title ? "bg-primary text-white" : "border border-border bg-surface text-ink"}`}
+            >
+              Circle Theorems
+            </button>
+          </div>
+          <MathFlowchart spec={flowSpec} />
+          <details className="rounded-xl border border-border bg-canvas p-3">
+            <summary className="cursor-pointer text-sm font-medium">Archify export — workflow / architecture JSON</summary>
+            <pre className="mt-2 overflow-auto rounded bg-ink p-3 text-xs text-white">
+              {JSON.stringify(flowSpec, null, 2)}
+            </pre>
+            <p className="mt-2 text-xs text-muted">
+              Validate: <code>node .agents/skills/archify/bin/archify.mjs validate workflow data/flow.json --quality showcase --json</code>
+            </p>
+          </details>
+        </section>
+      ) : view === "teacher" ? (
         <Suspense fallback={<p className="mt-8 text-sm text-muted">Loading your dashboard...</p>}>
           <section className="mt-8 grid gap-4">
             <TeacherDashboard />
