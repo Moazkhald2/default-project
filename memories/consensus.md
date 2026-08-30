@@ -21,7 +21,9 @@
 - [x] Next phase: curriculum 7 specs + print sheet built
 
 ## Next Action
-- Phase 2: Wire `templates/flowchart_sheet.typ` to `typst compile` in CI, add `generate_flowchart_sheet.mjs --out` to `sheet:build`, add archify share-card 1200x630 export (`node archify/bin/archify.mjs` PNG/WebM), add FinRL/qlib only if adaptive difficulty requested. All Phase 0-1 DONE, ready for manual PR review.
+- Next: author flowchart for outcome:G7-01 — "Identifies proportional and non-proportional relationships." (auto-loop cycle 1 2026-08-30T06:27:02.362Z)
 
 ## Human Steering
 Edit this `Next Action` to pivot team next cycle. Last updated: 2026-08-30 09:02 feat/math-flowcharts post-verify.
+
+<!-- auto-loop cycle 1 2026-08-30T06:27:02.362Z squad=planner,geometer,qa picked=outcome:G7-01 -->
