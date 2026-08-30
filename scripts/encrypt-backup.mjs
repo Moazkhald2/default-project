@@ -8,13 +8,13 @@ import os from "node:os";
 function getKey() {
   // CodeQL: use scrypt for passphrase (was sha256), random 32-byte hex file remains high-entropy
   if (process.env.BACKUP_PASSPHRASE) {
-    // lgtm[js/insufficient-password-hash] — scrypt with fixed salt for deterministic key, replace with PBKDF2+random salt for rotation
-    const salt = readFileSync(join(os.homedir(), ".secrets", "backup.salt"), "utf8").trim().slice(0, 32) || "math-academy-scrypt-salt-v1";
+    // Use a KDF consistently for passphrase-derived keys; never fall back to fast hashes.
+    let salt = "math-academy-scrypt-salt-v1";
     try {
-      return scryptSync(process.env.BACKUP_PASSPHRASE, salt, 32);
-    } catch {
-      return createHash("sha256").update(process.env.BACKUP_PASSPHRASE).digest(); // fallback
-    }
+      const fileSalt = readFileSync(join(os.homedir(), ".secrets", "backup.salt"), "utf8").trim().slice(0, 32);
+      if (fileSalt) salt = fileSalt;
+    } catch {}
+    return scryptSync(process.env.BACKUP_PASSPHRASE, salt, 32);
   }
   const keyPath = join(os.homedir(), ".secrets", "backup.key");
   if (existsSync(keyPath)) {
