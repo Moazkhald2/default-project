@@ -132,3 +132,51 @@
 #question(20, [
   Quadrantal measures are multiples of: a) $360 degree$ b) $180 degree$ c) $90 degree$ d) $60 degree$ — Answer: c).
 ], points: 1)
+
+#question(21, [
+  Convert $75 degree 32' 15''$ to radians (nearest thousandth): $75 + 32/60 + 15/3600 = 75.5375 degree$; $theta = 75.5375 dot pi/180 approx 1.318^"rad"$.
+], points: 2)
+
+#question(22, [
+  Degree measure of $2.38^"rad"$: $x = 2.38 dot 180/pi approx 136.37 degree$.
+], points: 2)
+
+#question(23, [
+  $43 degree 12'$ in radians: $43.2 degree dot pi/180 = 0.24 pi approx 0.754^"rad"$. Choose b) $0.24 pi$.
+], points: 2)
+
+#question(24, [
+  Recall: $1 degree = 60'$, $1' = 60''$. $180 degree = pi$, $360 degree = 2 pi$.
+], points: 1)
+
+#question(25, [
+  Formula: $theta^"rad" = x degree dot pi/180 degree$; $x degree = theta^"rad" dot 180 degree/pi$.
+], points: 1)
+
+#question(26, [
+  In unit circle ($r=1$), central radian measure equals arc length: $theta = l$.
+], points: 1)
+
+#question(27, [
+  Circle $M$, $theta=pi/2$, arc $5 pi$ cm. Find $r$: $r = l/theta = 5 pi/(pi/2) = 10$ cm.
+], figure: canvas({
+  import draw: *
+  circle((0,0), radius: 1.3, stroke: 1.0pt)
+  line((0,0), (1.3, 0), stroke: 0.9pt)
+  line((0,0), (0, -1.3), stroke: 0.9pt)
+  content((0,0), [$M$], anchor: "north-east", padding: .12)
+  content((1.3, 0), [$A$], anchor: "west", padding: .12)
+  content((0, -1.3), [$B$], anchor: "north", padding: .12)
+}), points: 2)
+
+#question(28, [
+  $r=8$ cm, $theta=7 pi/12$. $l = 7 pi/12 dot 8 = 14 pi/3 approx 14.66$ cm.
+], points: 2)
+
+#question(29, [
+  $theta=9 pi/8$, $l=24$ cm. $r = 24/(9 pi/8) = 64/(3 pi) approx 6.8$ cm.
+], points: 2)
+
+#question(30, [
+  $d=12$ cm ($r=6$), central $60 degree = pi/3$. $l = pi/3 dot 6 = 2 pi$ cm — Answer d).
+], points: 2)
