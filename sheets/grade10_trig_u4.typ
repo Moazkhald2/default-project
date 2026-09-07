@@ -220,3 +220,39 @@
 #question(38, [
   $25 pi/9 = 500° - 360 = 140°$ → 2nd? Recompute: $25*20=500$, $500-360=140$ → 2nd. $-9 pi/4 = -405° + 720 = 315°$ → 4th.
 ], points: 2)
+
+#question(39, [
+  Angle $1670 degree$: $1670-1440=230 degree$ → 3rd. a) 1st b) 2nd c) 3rd d) 4th — Answer c).
+], points: 2)
+
+#question(40, [
+  $-135 degree + 360 = 225 degree$ → 3rd. a) 1st b) 2nd c) 3rd d) 4th — Answer c).
+], points: 1)
+
+#question(41, [
+  $-850 degree + 1080 = 230 degree$ → 3rd. a) 1st b) 2nd c) 3rd d) 4th — Answer c).
+], points: 2)
+
+#question(42, [
+  Arc $152 degree 26' 17''$, $r=10.5$ cm: $152.438° dot pi/180 dot 10.5 approx 28$ cm (nearest cm).
+], points: 3)
+
+#question(43, [
+  Inscribed $30 degree$ subtends 5cm. Central $=60 degree=pi/3$. $C = 5 dot 360/60 = 30$ cm? Recompute: arc 5cm for 60° central → $C=5*6=30$ cm.
+], points: 3)
+
+#question(44, [
+  Essay: Circle radius 5cm, inscribed $angle A=45 degree$ subtends $"arc"(B C)$. Find $"arc"(B C)$: central $=90 degree=pi/2$, $l=pi/2 dot 5=7.85$ cm. Show steps.
+], figure: canvas({
+  import draw: *
+  circle((0,0), radius: 1.3, stroke: 1.0pt)
+  line((0, -0.4), (-0.9, 0.4), stroke: 0.9pt)
+  line((0, -0.4), (0.9, 0.4), stroke: 0.9pt)
+  content((0, 1.3), [$A$], anchor: "south", padding: .1)
+  content((-0.9, 0.4), [$C$], anchor: "east", padding: .1)
+  content((0.9, 0.4), [$B$], anchor: "west", padding: .1)
+}), points: 3)
+
+#question(45, [
+  Essay: $r=6.2$ cm, arc $17$ cm. Find $m(angle A)$ inscribed: central $=17/6.2=2.742$ rad $=157.1°$, inscribed $=78.55° = 78°33'$. Show steps.
+], points: 3)
