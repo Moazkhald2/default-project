@@ -180,3 +180,43 @@
 #question(30, [
   $d=12$ cm ($r=6$), central $60 degree = pi/3$. $l = pi/3 dot 6 = 2 pi$ cm — Answer d).
 ], points: 2)
+
+#question(31, [
+  $132 degree$ lies in 2nd quadrant ($90 < 132 < 180$).
+], figure: canvas({
+  import draw: *
+  line((-1.5, 0), (1.5, 0), stroke: 0.9pt)
+  line((0, -1.2), (0, 1.2), stroke: 0.9pt)
+  line((0,0), (-0.9, 0.7), stroke: 1.1pt)
+  content((0,0), [$O$], anchor: "north-east", padding: .1)
+  content((1.5, 0), [$0 degree$], anchor: "west", padding: .1)
+  content((0, 1.2), [$90 degree$], anchor: "south", padding: .1)
+}), points: 1)
+
+#question(32, [
+  $964 degree - 720 degree = 244 degree$ → 3rd quadrant.
+], points: 2)
+
+#question(33, [
+  $-12 degree + 360 degree = 348 degree$ → 4th quadrant.
+], points: 1)
+
+#question(34, [
+  $-1070 degree + 1080 degree = 10 degree$ → 1st quadrant.
+], points: 2)
+
+#question(35, [
+  $5 pi/3 = 300 degree$ → 4th. $-0.3 pi = -54 degree → 306 degree$ → 4th? No: $-54+360=306$ 4th. Correction: $-0.3 pi$ → 3rd? Recompute: $-0.3*180=-54$ → 4th. Keep 4th (spec said 3rd — verify: $-0.3 pi = -54°$ is 4th; use 4th).
+], points: 2)
+
+#question(36, [
+  $5.7^"rad" = 326.6 degree$ → 4th. $-6.4^"rad" = -366.7 degree + 720 = 353.3 degree$ → 4th? Recompute: $-6.4+2pi= -0.117$ rad → 4th? Actually $-6.4+4pi=6.166$ rad $=353.4°$ 4th. Note spec said 1st — use computed 4th, flag for teacher review.
+], points: 3)
+
+#question(37, [
+  $-7.3^"rad" + 4pi = 5.266$ rad $=301.7°$ → 4th. $5 pi/4 = 225°$ → 3rd. $2.02^"rad"=115.7°$ → 2nd.
+], points: 3)
+
+#question(38, [
+  $25 pi/9 = 500° - 360 = 140°$ → 2nd? Recompute: $25*20=500$, $500-360=140$ → 2nd. $-9 pi/4 = -405° + 720 = 315°$ → 4th.
+], points: 2)
