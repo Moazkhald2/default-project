@@ -205,10 +205,12 @@
   $-1070 degree + 1080 degree = 10 degree$ → 1st quadrant.
 ], points: 2)
 
+% teacher-verify: scan key said 3rd for -0.3π; recomputed (-54+360)=306° → 4th via ((θ%360)+360)%360; kept computed.
 #question(35, [
   $5 pi/3 = 300 degree$ → 4th. $-0.3 pi = -54 degree → 306 degree$ → 4th? No: $-54+360=306$ 4th. Correction: $-0.3 pi$ → 3rd? Recompute: $-0.3*180=-54$ → 4th. Keep 4th (spec said 3rd — verify: $-0.3 pi = -54°$ is 4th; use 4th).
 ], points: 2)
 
+% teacher-verify: scan key said 1st for -6.4rad; recomputed -366.7+720=353.3° → 4th via ((θ%360)+360)%360; kept computed.
 #question(36, [
   $5.7^"rad" = 326.6 degree$ → 4th. $-6.4^"rad" = -366.7 degree + 720 = 353.3 degree$ → 4th? Recompute: $-6.4+2pi= -0.117$ rad → 4th? Actually $-6.4+4pi=6.166$ rad $=353.4°$ 4th. Note spec said 1st — use computed 4th, flag for teacher review.
 ], points: 3)
