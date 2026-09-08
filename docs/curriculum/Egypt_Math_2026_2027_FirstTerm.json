@@ -1,0 +1,1608 @@
+{
+  "framework": "Egypt Basic Education Mathematics — Learning Outcomes Map — First Semester 2026-2027",
+  "source": {
+    "originalDocument": "Learning Outcomes Map 2027 M.pdf",
+    "academicYear": "2026-2027",
+    "term": "First semester",
+    "subject": "Mathematics",
+    "coverage": "All stages of basic education",
+    "sourceFormat": "49-page scanned PDF",
+    "sourcePagesTotal": 49,
+    "preparedBy": "Master Teacher Ahmed Mostafa Ahmed",
+    "position": "Mathematics Teacher",
+    "directorate": "Assiut Governorate – El-Fateh Educational Administration",
+    "dedication": "This work is offered solely for the sake of God as an ongoing charity for the preparer's late father, may God have mercy on him.",
+    "translationNote": "English translation of source tables; structure preserved. Where scan/OCR numerals were unclear, range not reconstructed.",
+    "coverPage": 1
+  },
+  "processingGuidance": {
+    "hierarchy": "grade heading + source-page range is primary hierarchy",
+    "eachNumberedItemIsOutcome": true,
+    "doNotInferMissingRanges": true,
+    "sharedListsAttachedPerOutcome": [
+      "teachingStrategies",
+      "activities",
+      "assessmentMethods",
+      "evidence"
+    ],
+    "mathNotation": "preserve when explicitly present; otherwise keep verbal description"
+  },
+  "grades": [
+    {
+      "grade": "1",
+      "stage": "Primary",
+      "label": "Grade 1 – Primary",
+      "sourcePages": "3-5",
+      "totalOutcomes": 42,
+      "outcomes": [
+        { "id": "G1-01", "n": 1, "text": "Writes numbers from 1 to 5." },
+        { "id": "G1-02", "n": 2, "text": "Decomposes a number into its different components." },
+        { "id": "G1-03", "n": 3, "text": "Writes numbers from 5 to 10." },
+        { "id": "G1-04", "n": 4, "text": "Counts objects within 10." },
+        {
+          "id": "G1-05",
+          "n": 5,
+          "text": "Decomposes the numbers 6, 7, and 8 into their different components."
+        },
+        {
+          "id": "G1-06",
+          "n": 6,
+          "text": "Decomposes the numbers 8, 9, and 10 into their different components."
+        },
+        {
+          "id": "G1-07",
+          "n": 7,
+          "text": "Compares two numbers using greater than, less than, and equal to."
+        },
+        { "id": "G1-08", "n": 8, "text": "Recognizes and writes zero." },
+        { "id": "G1-09", "n": 9, "text": "Recognizes ordinal numbers." },
+        { "id": "G1-10", "n": 10, "text": "Locates an object using front/behind." },
+        { "id": "G1-11", "n": 11, "text": "Locates an object using right/left." },
+        { "id": "G1-12", "n": 12, "text": "Locates an object using above/below." },
+        { "id": "G1-13", "n": 13, "text": "Recognizes the concept of addition." },
+        { "id": "G1-14", "n": 14, "text": "Adds two numbers within 10." },
+        { "id": "G1-15", "n": 15, "text": "Solves word problems involving addition within 10." },
+        { "id": "G1-16", "n": 16, "text": "Adds any number to zero." },
+        { "id": "G1-17", "n": 17, "text": "Recognizes the concept of subtraction." },
+        { "id": "G1-18", "n": 18, "text": "Subtracts two numbers within 10." },
+        { "id": "G1-19", "n": 19, "text": "Subtracts zero from any number." },
+        {
+          "id": "G1-20",
+          "n": 20,
+          "text": "Finds the difference between quantities of different objects."
+        },
+        {
+          "id": "G1-21",
+          "n": 21,
+          "text": "Identifies the longer and shorter object using alignment."
+        },
+        {
+          "id": "G1-22",
+          "n": 22,
+          "text": "Arranges objects from longest to shortest, or vice versa."
+        },
+        { "id": "G1-23", "n": 23, "text": "Measures object lengths using non-standard units." },
+        { "id": "G1-24", "n": 24, "text": "Compares object lengths using length units." },
+        { "id": "G1-25", "n": 25, "text": "Represents data using pictures." },
+        { "id": "G1-26", "n": 26, "text": "Compares different results using pictures." },
+        { "id": "G1-27", "n": 27, "text": "Writes numbers from 11 to 20." },
+        { "id": "G1-28", "n": 28, "text": "Identifies the components of numbers up to 10." },
+        { "id": "G1-29", "n": 29, "text": "Recognizes the number line." },
+        { "id": "G1-30", "n": 30, "text": "Completes missing numbers on the number line." },
+        { "id": "G1-31", "n": 31, "text": "Compares and orders numbers within 10." },
+        {
+          "id": "G1-32",
+          "n": 32,
+          "text": "Adds 10 to a number (within the stated range in the source)."
+        },
+        {
+          "id": "G1-33",
+          "n": 33,
+          "text": "Subtracts numbers from 1 to 4 from numbers in the stated teen range."
+        },
+        { "id": "G1-34", "n": 34, "text": "Adds two numbers within 10." },
+        { "id": "G1-35", "n": 35, "text": "Subtracts two numbers within 10." },
+        { "id": "G1-36", "n": 36, "text": "Writes numbers greater than 10." },
+        { "id": "G1-37", "n": 37, "text": "Writes the components of numbers greater than 10." },
+        { "id": "G1-38", "n": 38, "text": "Reads the time on an analog clock." },
+        { "id": "G1-39", "n": 39, "text": "Draws the clock hands." },
+        { "id": "G1-40", "n": 40, "text": "Adds three numbers within 10." },
+        { "id": "G1-41", "n": 41, "text": "Subtracts three numbers within 10." },
+        { "id": "G1-42", "n": 42, "text": "Adds and subtracts three numbers within 10." }
+      ],
+      "teachingStrategies": [
+        "Think–Pair–Share",
+        "Peer teaching",
+        "Demonstration",
+        "Role-play",
+        "Name sticks / random name selection",
+        "Brainstorming",
+        "Cooperative learning",
+        "Discovery learning",
+        "Modeling",
+        "Storytelling",
+        "Numbered heads",
+        "Observation and imitation"
+      ],
+      "educationalActivities": [
+        "Each student completes a set of exercises related to the lesson.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Lesson exercises",
+        "Monitoring student performance"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "2",
+      "stage": "Primary",
+      "label": "Grade 2 – Primary",
+      "sourcePages": "7-9",
+      "totalOutcomes": 43,
+      "outcomes": [
+        { "id": "G2-01", "n": 1, "text": "Represents data using a pictograph." },
+        { "id": "G2-02", "n": 2, "text": "Transfers data from a graph to a table." },
+        {
+          "id": "G2-03",
+          "n": 3,
+          "text": "Answers questions about most, least, and difference using a graph or table."
+        },
+        { "id": "G2-04", "n": 4, "text": "Adds two numbers vertically using ones and tens." },
+        { "id": "G2-05", "n": 5, "text": "Recognizes the commutative property of addition." },
+        { "id": "G2-06", "n": 6, "text": "Subtracts two numbers vertically using ones and tens." },
+        { "id": "G2-07", "n": 7, "text": "Subtracts two numbers using regrouping from the tens." },
+        {
+          "id": "G2-08",
+          "n": 8,
+          "text": "Explains the relationship between subtraction and addition."
+        },
+        { "id": "G2-09", "n": 9, "text": "Checks subtraction using addition." },
+        { "id": "G2-10", "n": 10, "text": "Reads an analog clock." },
+        { "id": "G2-11", "n": 11, "text": "Calculates the time duration between two times." },
+        {
+          "id": "G2-12",
+          "n": 12,
+          "text": "Distinguishes times of day: morning, noon, and evening."
+        },
+        { "id": "G2-13", "n": 13, "text": "Measures object lengths using a ruler." },
+        { "id": "G2-14", "n": 14, "text": "Distinguishes between centimeters and millimeters." },
+        {
+          "id": "G2-15",
+          "n": 15,
+          "text": "Selects the appropriate unit for measuring object lengths."
+        },
+        { "id": "G2-16", "n": 16, "text": "Converts between centimeters and millimeters." },
+        { "id": "G2-17", "n": 17, "text": "Draws lines of specified lengths using a ruler." },
+        { "id": "G2-18", "n": 18, "text": "Adds, subtracts, and compares two lengths." },
+        { "id": "G2-19", "n": 19, "text": "Decomposes a number into ones, tens, and hundreds." },
+        { "id": "G2-20", "n": 20, "text": "Forms numbers from ones, tens, and hundreds." },
+        { "id": "G2-21", "n": 21, "text": "Writes a number as the sum of its place values." },
+        { "id": "G2-22", "n": 22, "text": "Determines the number of tens contained in a number." },
+        { "id": "G2-23", "n": 23, "text": "Locates numbers on the number line." },
+        { "id": "G2-24", "n": 24, "text": "Reads and writes numbers within the stated range." },
+        { "id": "G2-25", "n": 25, "text": "Represents a number in different ways." },
+        { "id": "G2-26", "n": 26, "text": "Adds and subtracts multiples of ten." },
+        { "id": "G2-27", "n": 27, "text": "Adds and subtracts multiples of one hundred." },
+        { "id": "G2-28", "n": 28, "text": "Adds multiples of one hundred to multiples of ten." },
+        { "id": "G2-29", "n": 29, "text": "Subtracts multiples of ten from a two-digit number." },
+        { "id": "G2-30", "n": 30, "text": "Uses the comparison symbols > and < correctly." },
+        {
+          "id": "G2-31",
+          "n": 31,
+          "text": "Recognizes the deciliter (dL) as a unit for measuring capacity."
+        },
+        { "id": "G2-32", "n": 32, "text": "Compares capacity in deciliters." },
+        {
+          "id": "G2-33",
+          "n": 33,
+          "text": "Recognizes the liter (L) as a unit for measuring capacity."
+        },
+        { "id": "G2-34", "n": 34, "text": "Converts between liters and deciliters." },
+        {
+          "id": "G2-35",
+          "n": 35,
+          "text": "Recognizes the relationship between liters, deciliters, and milliliters."
+        },
+        { "id": "G2-36", "n": 36, "text": "Converts between capacity units." },
+        { "id": "G2-37", "n": 37, "text": "Adds and subtracts capacity units." },
+        { "id": "G2-38", "n": 38, "text": "Adds two numbers vertically using regrouping." },
+        {
+          "id": "G2-39",
+          "n": 39,
+          "text": "Subtracts two numbers vertically using borrowing/regrouping."
+        },
+        { "id": "G2-40", "n": 40, "text": "Uses the commutative property in addition." },
+        {
+          "id": "G2-41",
+          "n": 41,
+          "text": "Uses parentheses to determine what is calculated first."
+        },
+        {
+          "id": "G2-42",
+          "n": 42,
+          "text": "Decomposes numbers to simplify addition and subtraction."
+        },
+        { "id": "G2-43", "n": 43, "text": "Uses making-ten strategies in mental calculation." }
+      ],
+      "teachingStrategies": [
+        "Think–Pair–Share",
+        "Peer teaching",
+        "Demonstration",
+        "Role-play",
+        "Name sticks / random name selection",
+        "Brainstorming",
+        "Cooperative learning",
+        "Discovery learning",
+        "Modeling",
+        "Storytelling",
+        "Numbered heads",
+        "Observation and imitation"
+      ],
+      "educationalActivities": [
+        "Each student completes a set of exercises related to the lesson.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Lesson exercises",
+        "Monitoring student performance"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "3",
+      "stage": "Primary",
+      "label": "Grade 3 – Primary",
+      "sourcePages": "11-14",
+      "totalOutcomes": 49,
+      "outcomes": [
+        {
+          "id": "G3-01",
+          "n": 1,
+          "text": "Explains the effect of increasing or decreasing a factor on the product."
+        },
+        { "id": "G3-02", "n": 2, "text": "Applies the commutative property of multiplication." },
+        {
+          "id": "G3-03",
+          "n": 3,
+          "text": "Finds the product of two numbers using the distributive property."
+        },
+        { "id": "G3-04", "n": 4, "text": "Recognizes the multiplication table up to 10." },
+        { "id": "G3-05", "n": 5, "text": "Multiplies any number by zero." },
+        {
+          "id": "G3-06",
+          "n": 6,
+          "text": "Uses a clock or number line to find the time before or after a given number of minutes."
+        },
+        {
+          "id": "G3-07",
+          "n": 7,
+          "text": "Calculates the finishing time when the starting time and duration are known, and vice versa."
+        },
+        { "id": "G3-08", "n": 8, "text": "Calculates elapsed time between two times." },
+        { "id": "G3-09", "n": 9, "text": "Recognizes the second as a unit for measuring time." },
+        { "id": "G3-10", "n": 10, "text": "Selects the appropriate unit for each situation." },
+        { "id": "G3-11", "n": 11, "text": "Identifies the components of division." },
+        { "id": "G3-12", "n": 12, "text": "Uses the multiplication table to find a quotient." },
+        {
+          "id": "G3-13",
+          "n": 13,
+          "text": "Identifies types of word problems in which division is used."
+        },
+        { "id": "G3-14", "n": 14, "text": "Compares two numbers or quantities using division." },
+        {
+          "id": "G3-15",
+          "n": 15,
+          "text": "Determines how many times one number contains another."
+        },
+        {
+          "id": "G3-16",
+          "n": 16,
+          "text": "Subtracts numbers containing two or three digits vertically."
+        },
+        {
+          "id": "G3-17",
+          "n": 17,
+          "text": "Distinguishes between addition and subtraction word problems."
+        },
+        { "id": "G3-18", "n": 18, "text": "Recognizes units for measuring length/distance." },
+        { "id": "G3-19", "n": 19, "text": "Converts between length units." },
+        { "id": "G3-20", "n": 20, "text": "Reads the length indicated on a measuring strip." },
+        {
+          "id": "G3-21",
+          "n": 21,
+          "text": "Selects the appropriate length unit for measuring objects."
+        },
+        { "id": "G3-22", "n": 22, "text": "Collects and organizes data using tally marks." },
+        {
+          "id": "G3-23",
+          "n": 23,
+          "text": "Converts tally marks into numerical values in a table."
+        },
+        { "id": "G3-24", "n": 24, "text": "Interprets a graph and extracts information from it." },
+        { "id": "G3-25", "n": 25, "text": "Answers questions related to a graph." },
+        { "id": "G3-26", "n": 26, "text": "Recognizes the components of a bar graph." },
+        {
+          "id": "G3-27",
+          "n": 27,
+          "text": "Draws bars with lengths proportional to the given data."
+        },
+        { "id": "G3-28", "n": 28, "text": "Recognizes how data are organized in tables." },
+        {
+          "id": "G3-29",
+          "n": 29,
+          "text": "Understands mental-calculation strategies for addition."
+        },
+        {
+          "id": "G3-30",
+          "n": 30,
+          "text": "Uses decomposition and regrouping to facilitate addition."
+        },
+        {
+          "id": "G3-31",
+          "n": 31,
+          "text": "Understands mental-calculation strategies for subtraction."
+        },
+        {
+          "id": "G3-32",
+          "n": 32,
+          "text": "Uses decomposition and regrouping to facilitate subtraction."
+        },
+        { "id": "G3-33", "n": 33, "text": "Uses the multiplication table to find a quotient." },
+        { "id": "G3-34", "n": 34, "text": "Checks the quotient." },
+        { "id": "G3-35", "n": 35, "text": "Separates a number into groups of three digits." },
+        {
+          "id": "G3-36",
+          "n": 36,
+          "text": "Reads and writes large numbers using numerals and words."
+        },
+        { "id": "G3-37", "n": 37, "text": "Determines the place value of each digit in a number." },
+        { "id": "G3-38", "n": 38, "text": "Recognizes the number line." },
+        { "id": "G3-39", "n": 39, "text": "Locates a number on the number line." },
+        { "id": "G3-40", "n": 40, "text": "Adds and subtracts large numbers." },
+        { "id": "G3-41", "n": 41, "text": "Recognizes comparison symbols (> and <)." },
+        { "id": "G3-42", "n": 42, "text": "Compares two numbers using comparison symbols." },
+        { "id": "G3-43", "n": 43, "text": "Finds the product of a number by 10 or 100." },
+        { "id": "G3-44", "n": 44, "text": "Finds the quotient when a number is divided by 10." },
+        { "id": "G3-45", "n": 45, "text": "Multiplies by 10, 100, and their multiples." },
+        {
+          "id": "G3-46",
+          "n": 46,
+          "text": "Multiplies a two-digit number by a one-digit number using the vertical algorithm."
+        },
+        {
+          "id": "G3-47",
+          "n": 47,
+          "text": "Multiplies a three-digit number by a one-digit number using the vertical algorithm."
+        },
+        {
+          "id": "G3-48",
+          "n": 48,
+          "text": "Multiplies three numbers using the associative/grouping property."
+        },
+        { "id": "G3-49", "n": 49, "text": "Solves word problems using multiplication." }
+      ],
+      "teachingStrategies": [
+        "Think–Pair–Share",
+        "Peer teaching",
+        "Demonstration",
+        "Role-play",
+        "Name sticks / random name selection",
+        "Brainstorming",
+        "Cooperative learning",
+        "Discovery learning",
+        "Modeling",
+        "Storytelling",
+        "Numbered heads",
+        "Observation and imitation"
+      ],
+      "educationalActivities": [
+        "Each student completes a set of exercises related to the lesson.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Lesson exercises",
+        "Monitoring student performance"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "4",
+      "stage": "Primary",
+      "label": "Grade 4 – Primary",
+      "sourcePages": "16-19",
+      "totalOutcomes": 58,
+      "outcomes": [
+        {
+          "id": "G4-01",
+          "n": 1,
+          "text": "Identifies the place values of whole numbers up to the billions."
+        },
+        {
+          "id": "G4-02",
+          "n": 2,
+          "text": "Explains how the position of a digit affects its value."
+        },
+        {
+          "id": "G4-03",
+          "n": 3,
+          "text": "Explains how a digit's value changes when it moves to the left in a number."
+        },
+        { "id": "G4-04", "n": 4, "text": "Writes a number in standard, word, and expanded form." },
+        { "id": "G4-05", "n": 5, "text": "Uses symbols to compare large-number forms." },
+        { "id": "G4-06", "n": 6, "text": "Applies different strategies for rounding numbers." },
+        { "id": "G4-07", "n": 7, "text": "Identifies properties of addition." },
+        { "id": "G4-08", "n": 8, "text": "Adds multi-digit whole numbers." },
+        { "id": "G4-09", "n": 9, "text": "Subtracts multi-digit whole numbers." },
+        {
+          "id": "G4-10",
+          "n": 10,
+          "text": "Uses symbols in equations to represent unknown values."
+        },
+        { "id": "G4-11", "n": 11, "text": "Uses bar models to represent and solve word problems." },
+        { "id": "G4-12", "n": 12, "text": "Solves equations containing variables." },
+        { "id": "G4-13", "n": 13, "text": "Solves multi-step word problems." },
+        {
+          "id": "G4-14",
+          "n": 14,
+          "text": "Explains relationships between metric units for measuring length."
+        },
+        { "id": "G4-15", "n": 15, "text": "Converts between metric length units." },
+        {
+          "id": "G4-16",
+          "n": 16,
+          "text": "Explains relationships between metric units for measuring mass."
+        },
+        { "id": "G4-17", "n": 17, "text": "Converts between metric mass units." },
+        {
+          "id": "G4-18",
+          "n": 18,
+          "text": "Explains relationships between metric units for measuring capacity."
+        },
+        { "id": "G4-19", "n": 19, "text": "Converts between metric capacity units." },
+        { "id": "G4-20", "n": 20, "text": "Reads the time in minutes." },
+        { "id": "G4-21", "n": 21, "text": "Explains relationships between units of time." },
+        { "id": "G4-22", "n": 22, "text": "Explains the meaning of elapsed time." },
+        { "id": "G4-23", "n": 23, "text": "Solves elapsed-time problems." },
+        {
+          "id": "G4-24",
+          "n": 24,
+          "text": "Uses multiplication and division to solve measurement problems."
+        },
+        { "id": "G4-25", "n": 25, "text": "Solves word problems involving measurement." },
+        { "id": "G4-26", "n": 26, "text": "Calculates the perimeter of rectangles and squares." },
+        { "id": "G4-27", "n": 27, "text": "Calculates the area of rectangles and squares." },
+        { "id": "G4-28", "n": 28, "text": "Finds an unknown dimension in a rectangle or square." },
+        {
+          "id": "G4-29",
+          "n": 29,
+          "text": "Calculates the area and perimeter of composite geometric shapes."
+        },
+        { "id": "G4-30", "n": 30, "text": "Compares numbers using multiplication." },
+        {
+          "id": "G4-31",
+          "n": 31,
+          "text": "Forms multiplication equations to represent comparisons."
+        },
+        {
+          "id": "G4-32",
+          "n": 32,
+          "text": "Solves multiplication equations representing comparisons."
+        },
+        { "id": "G4-33", "n": 33, "text": "Explains properties of multiplication." },
+        { "id": "G4-34", "n": 34, "text": "Applies multiplication properties to solve problems." },
+        {
+          "id": "G4-35",
+          "n": 35,
+          "text": "Identifies patterns when multiplying by multiples of 10."
+        },
+        { "id": "G4-36", "n": 36, "text": "Explains the associative property of multiplication." },
+        {
+          "id": "G4-37",
+          "n": 37,
+          "text": "Applies the associative property of multiplication to solve problems."
+        },
+        {
+          "id": "G4-38",
+          "n": 38,
+          "text": "Uses factorization and the associative property to solve equations involving multiples of 10."
+        },
+        { "id": "G4-39", "n": 39, "text": "Identifies factors of any whole number." },
+        { "id": "G4-40", "n": 40, "text": "Identifies prime and composite numbers." },
+        { "id": "G4-41", "n": 41, "text": "Identifies common factors of two whole numbers." },
+        {
+          "id": "G4-42",
+          "n": 42,
+          "text": "Identifies the greatest common factor of two whole numbers."
+        },
+        { "id": "G4-43", "n": 43, "text": "Identifies multiples of whole numbers." },
+        { "id": "G4-44", "n": 44, "text": "Identifies common multiples of two numbers." },
+        {
+          "id": "G4-45",
+          "n": 45,
+          "text": "Explains the relationship between factors and multiples."
+        },
+        {
+          "id": "G4-46",
+          "n": 46,
+          "text": "Multiplies a number by a digit using a rectangle-area model."
+        },
+        { "id": "G4-47", "n": 47, "text": "Multiplies a number by a digit using decomposition." },
+        {
+          "id": "G4-48",
+          "n": 48,
+          "text": "Multiplies a number by a digit using the standard algorithm."
+        },
+        { "id": "G4-49", "n": 49, "text": "Multiplies a two-digit number by multiples of 10." },
+        {
+          "id": "G4-50",
+          "n": 50,
+          "text": "Identifies the dividend, divisor, and quotient in a division problem."
+        },
+        {
+          "id": "G4-51",
+          "n": 51,
+          "text": "Identifies the remainder of a division problem, when present."
+        },
+        { "id": "G4-52", "n": 52, "text": "Divides multiples of 10, 100, or 1,000 by a digit." },
+        {
+          "id": "G4-53",
+          "n": 53,
+          "text": "Divides a number by a digit using a rectangle-area model."
+        },
+        { "id": "G4-54", "n": 54, "text": "Divides a number by a digit using decomposition." },
+        {
+          "id": "G4-55",
+          "n": 55,
+          "text": "Divides a number by a digit using the standard algorithm."
+        },
+        { "id": "G4-56", "n": 56, "text": "Checks the quotient using multiplication." },
+        { "id": "G4-57", "n": 57, "text": "Recognizes the order of operations." },
+        {
+          "id": "G4-58",
+          "n": 58,
+          "text": "Writes an equation representing a multi-step word problem and solves it."
+        }
+      ],
+      "teachingStrategies": [
+        "Think–Pair–Share",
+        "Peer teaching",
+        "Demonstration",
+        "Role-play",
+        "Name sticks / random name selection",
+        "Brainstorming",
+        "Cooperative learning",
+        "Discovery learning",
+        "Modeling",
+        "Storytelling",
+        "Numbered heads",
+        "Observation and imitation"
+      ],
+      "educationalActivities": [
+        "Each student completes a set of exercises related to the lesson.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Lesson exercises",
+        "Monitoring student performance"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "5",
+      "stage": "Primary",
+      "label": "Grade 5 – Primary",
+      "sourcePages": "21-24",
+      "totalOutcomes": 43,
+      "outcomes": [
+        {
+          "id": "G5-01",
+          "n": 1,
+          "text": "Explains how a digit's value changes when it moves left or right in a decimal or whole number."
+        },
+        { "id": "G5-02", "n": 2, "text": "Forms and decomposes decimals in multiple ways." },
+        {
+          "id": "G5-03",
+          "n": 3,
+          "text": "Rounds decimals to the nearest tenth, hundredth, thousandth, or whole number."
+        },
+        { "id": "G5-04", "n": 4, "text": "Estimates the sum of two decimals." },
+        { "id": "G5-05", "n": 5, "text": "Adds two decimals using the standard algorithm." },
+        { "id": "G5-06", "n": 6, "text": "Estimates the difference between two decimals." },
+        { "id": "G5-07", "n": 7, "text": "Subtracts two decimals using the standard algorithm." },
+        {
+          "id": "G5-08",
+          "n": 8,
+          "text": "Solves word problems involving addition and subtraction."
+        },
+        {
+          "id": "G5-09",
+          "n": 9,
+          "text": "Explains the difference between mathematical expressions and equations."
+        },
+        {
+          "id": "G5-10",
+          "n": 10,
+          "text": "Uses the relationship between addition and subtraction to find an unknown in an equation."
+        },
+        {
+          "id": "G5-11",
+          "n": 11,
+          "text": "Solves equations involving decimals through the stated decimal place."
+        },
+        { "id": "G5-12", "n": 12, "text": "Uses a factor tree to determine prime factors." },
+        {
+          "id": "G5-13",
+          "n": 13,
+          "text": "Finds common factors of two numbers using a factor tree."
+        },
+        {
+          "id": "G5-14",
+          "n": 14,
+          "text": "Finds the greatest common factor of two whole numbers."
+        },
+        { "id": "G5-15", "n": 15, "text": "Finds common multiples of two whole numbers." },
+        {
+          "id": "G5-16",
+          "n": 16,
+          "text": "Explains the difference between factors and multiples."
+        },
+        {
+          "id": "G5-17",
+          "n": 17,
+          "text": "Finds the greatest common factor and least common multiple of two numbers."
+        },
+        {
+          "id": "G5-18",
+          "n": 18,
+          "text": "Multiplies a two-digit number using a rectangle-area model."
+        },
+        {
+          "id": "G5-19",
+          "n": 19,
+          "text": "Explains the relationship between the rectangle-area multiplication model and the distributive property."
+        },
+        {
+          "id": "G5-20",
+          "n": 20,
+          "text": "Multiplies a two-digit number using the standard algorithm."
+        },
+        {
+          "id": "G5-21",
+          "n": 21,
+          "text": "Solves multi-step word problems involving multiplication."
+        },
+        { "id": "G5-22", "n": 22, "text": "Divides two numbers using a rectangle-area model." },
+        { "id": "G5-23", "n": 23, "text": "Divides two numbers using the standard algorithm." },
+        { "id": "G5-24", "n": 24, "text": "Uses multiplication to verify a quotient." },
+        { "id": "G5-25", "n": 25, "text": "Solves multi-step word problems." },
+        {
+          "id": "G5-26",
+          "n": 26,
+          "text": "Explains patterns when multiplying by powers of 10 (0.001, 0.01, 0.1, 10, 100, 1,000)."
+        },
+        { "id": "G5-27", "n": 27, "text": "Multiplies a decimal fraction by a whole number." },
+        { "id": "G5-28", "n": 28, "text": "Multiplies a decimal by a decimal." },
+        {
+          "id": "G5-29",
+          "n": 29,
+          "text": "Multiplies whole numbers and decimals using a rectangle-area model."
+        },
+        {
+          "id": "G5-30",
+          "n": 30,
+          "text": "Multiplies whole numbers and decimals using the standard algorithm."
+        },
+        {
+          "id": "G5-31",
+          "n": 31,
+          "text": "Converts measurement units by multiplying by powers of 10."
+        },
+        {
+          "id": "G5-32",
+          "n": 32,
+          "text": "Explains patterns observed when dividing by powers of 10."
+        },
+        {
+          "id": "G5-33",
+          "n": 33,
+          "text": "Connects multiplication by powers of 10 with division by powers of 10."
+        },
+        {
+          "id": "G5-34",
+          "n": 34,
+          "text": "Divides by a whole number using the standard algorithm."
+        },
+        { "id": "G5-35", "n": 35, "text": "Divides by a decimal using the standard algorithm." },
+        { "id": "G5-36", "n": 36, "text": "Recognizes the order of arithmetic operations." },
+        {
+          "id": "G5-37",
+          "n": 37,
+          "text": "Evaluates a numerical expression containing parentheses."
+        },
+        {
+          "id": "G5-38",
+          "n": 38,
+          "text": "Writes a numerical expression to represent a written situation."
+        },
+        { "id": "G5-39", "n": 39, "text": "Identifies a numerical pattern." },
+        { "id": "G5-40", "n": 40, "text": "Finds unknown values in a numerical pattern." },
+        {
+          "id": "G5-41",
+          "n": 41,
+          "text": "Finds the rule of a numerical pattern and writes it using symbols and numbers."
+        },
+        {
+          "id": "G5-42",
+          "n": 42,
+          "text": "Finds the rule of a pattern when the input and output are known."
+        },
+        {
+          "id": "G5-43",
+          "n": 43,
+          "text": "Finds the next number in a pattern when the previous number and the rule are known."
+        }
+      ],
+      "teachingStrategies": [
+        "Think–Pair–Share",
+        "Peer teaching",
+        "Demonstration",
+        "Role-play",
+        "Name sticks / random name selection",
+        "Brainstorming",
+        "Cooperative learning",
+        "Discovery learning",
+        "Modeling",
+        "Storytelling",
+        "Numbered heads",
+        "Observation and imitation"
+      ],
+      "educationalActivities": [
+        "Each student completes a set of exercises related to the lesson.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Lesson exercises",
+        "Monitoring student performance"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "6",
+      "stage": "Primary",
+      "label": "Grade 6 – Primary",
+      "sourcePages": "26-29",
+      "totalOutcomes": 46,
+      "outcomes": [
+        { "id": "G6-01", "n": 1, "text": "Recognizes divisibility by 2, 3, 4, 5, 6, and 10." },
+        {
+          "id": "G6-02",
+          "n": 2,
+          "text": "Uses prime factorization and a Venn diagram to find the greatest common factor and least common multiple."
+        },
+        { "id": "G6-03", "n": 3, "text": "Recognizes relatively prime numbers." },
+        {
+          "id": "G6-04",
+          "n": 4,
+          "text": "Writes numerical expressions using the greatest common factor."
+        },
+        {
+          "id": "G6-05",
+          "n": 5,
+          "text": "Finds a solution to a real-life situation using the greatest common factor and writes a numerical expression representing the situation."
+        },
+        {
+          "id": "G6-06",
+          "n": 6,
+          "text": "Uses the least common multiple to form a common denominator."
+        },
+        {
+          "id": "G6-07",
+          "n": 7,
+          "text": "Finds the result of adding or subtracting unlike fractions."
+        },
+        {
+          "id": "G6-08",
+          "n": 8,
+          "text": "Recognizes negative numbers and represents them in real-life situations."
+        },
+        { "id": "G6-09", "n": 9, "text": "Recognizes the number line for the set of integers." },
+        { "id": "G6-10", "n": 10, "text": "Finds the next and previous integers." },
+        { "id": "G6-11", "n": 11, "text": "Identifies opposite numbers." },
+        { "id": "G6-12", "n": 12, "text": "Compares and orders integers." },
+        { "id": "G6-13", "n": 13, "text": "Recognizes the set of rational numbers." },
+        { "id": "G6-14", "n": 14, "text": "Writes a rational number as a common fraction." },
+        { "id": "G6-15", "n": 15, "text": "Represents a rational number on the number line." },
+        { "id": "G6-16", "n": 16, "text": "Compares and orders rational numbers." },
+        { "id": "G6-17", "n": 17, "text": "Compares absolute values using symbols." },
+        {
+          "id": "G6-18",
+          "n": 18,
+          "text": "Distinguishes between a numerical expression and a symbolic expression."
+        },
+        {
+          "id": "G6-19",
+          "n": 19,
+          "text": "Identifies the elements of an algebraic expression: term, variable, constant, and coefficient."
+        },
+        { "id": "G6-20", "n": 20, "text": "Identifies like algebraic terms." },
+        {
+          "id": "G6-21",
+          "n": 21,
+          "text": "Writes a verbal expression representing an algebraic expression."
+        },
+        { "id": "G6-22", "n": 22, "text": "Recognizes exponential form." },
+        {
+          "id": "G6-23",
+          "n": 23,
+          "text": "Simplifies numerical expressions containing exponents."
+        },
+        {
+          "id": "G6-24",
+          "n": 24,
+          "text": "Evaluates an algebraic expression for a given value of the variable."
+        },
+        { "id": "G6-25", "n": 25, "text": "Identifies equivalent algebraic expressions." },
+        { "id": "G6-26", "n": 26, "text": "Recognizes an equation." },
+        {
+          "id": "G6-27",
+          "n": 27,
+          "text": "Solves an equation using a balance model or inverse operation."
+        },
+        { "id": "G6-28", "n": 28, "text": "Distinguishes among the symbols >, ≥, <, and ≤." },
+        {
+          "id": "G6-29",
+          "n": 29,
+          "text": "Analyzes real-life situations and identifies allowed and disallowed values."
+        },
+        {
+          "id": "G6-30",
+          "n": 30,
+          "text": "Solves an inequality and represents its solution on the number line."
+        },
+        {
+          "id": "G6-31",
+          "n": 31,
+          "text": "Distinguishes between an independent variable and a dependent variable."
+        },
+        { "id": "G6-32", "n": 32, "text": "Writes an equation when the rule is known." },
+        { "id": "G6-33", "n": 33, "text": "Distinguishes between input and output." },
+        {
+          "id": "G6-34",
+          "n": 34,
+          "text": "Represents dependent and independent variables on the coordinate plane."
+        },
+        {
+          "id": "G6-35",
+          "n": 35,
+          "text": "Distinguishes between statistical and non-statistical questions."
+        },
+        { "id": "G6-36", "n": 36, "text": "Distinguishes between numerical and categorical data." },
+        {
+          "id": "G6-37",
+          "n": 37,
+          "text": "Explores the histogram, its components, and its properties."
+        },
+        { "id": "G6-38", "n": 38, "text": "Draws a histogram for a set of data." },
+        { "id": "G6-39", "n": 39, "text": "Calculates the median of a set of values." },
+        { "id": "G6-40", "n": 40, "text": "Explores the box-and-whisker plot and its components." },
+        { "id": "G6-41", "n": 41, "text": "Draws a box-and-whisker plot for a set of values." },
+        { "id": "G6-42", "n": 42, "text": "Explores the balance point of a dot plot." },
+        { "id": "G6-43", "n": 43, "text": "Finds the mode of a set of values." },
+        { "id": "G6-44", "n": 44, "text": "Recognizes an outlier." },
+        {
+          "id": "G6-45",
+          "n": 45,
+          "text": "Determines the effect of an outlier on the mean and median."
+        },
+        { "id": "G6-46", "n": 46, "text": "Calculates the range of a set of values." }
+      ],
+      "teachingStrategies": [
+        "Think–Pair–Share",
+        "Peer teaching",
+        "Demonstration",
+        "Role-play",
+        "Name sticks / random name selection",
+        "Brainstorming",
+        "Cooperative learning",
+        "Discovery learning",
+        "Modeling",
+        "Storytelling",
+        "Numbered heads",
+        "Observation and imitation"
+      ],
+      "educationalActivities": [
+        "Each student completes a set of exercises related to the lesson.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Lesson exercises",
+        "Monitoring student performance"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "7",
+      "stage": "Preparatory",
+      "label": "Grade 7 – Preparatory (First Preparatory)",
+      "sourcePages": "31-36",
+      "totalOutcomes": 58,
+      "outcomes": [
+        {
+          "id": "G7-01",
+          "n": 1,
+          "text": "Identifies proportional and non-proportional relationships."
+        },
+        {
+          "id": "G7-02",
+          "n": 2,
+          "text": "Uses the concept of proportion to solve real-life problems."
+        },
+        { "id": "G7-03", "n": 3, "text": "Defines scale." },
+        {
+          "id": "G7-04",
+          "n": 4,
+          "text": "Calculates actual length or drawing length using scale."
+        },
+        {
+          "id": "G7-05",
+          "n": 5,
+          "text": "Uses ratio and proportion in applications such as scale, proportional division, buying, and selling."
+        },
+        { "id": "G7-06", "n": 6, "text": "Defines the concept of a set." },
+        { "id": "G7-07", "n": 7, "text": "Distinguishes membership and subset symbols." },
+        { "id": "G7-08", "n": 8, "text": "Distinguishes intersection and union symbols." },
+        { "id": "G7-09", "n": 9, "text": "Finds the union or intersection of two sets." },
+        { "id": "G7-10", "n": 10, "text": "Finds the sum or difference of two integers." },
+        {
+          "id": "G7-11",
+          "n": 11,
+          "text": "Uses properties of addition and subtraction to solve integer exercises."
+        },
+        { "id": "G7-12", "n": 12, "text": "Finds the product of two integers." },
+        { "id": "G7-13", "n": 13, "text": "Finds the quotient of two integers." },
+        {
+          "id": "G7-14",
+          "n": 14,
+          "text": "Knows the properties of multiplication and division of integers."
+        },
+        { "id": "G7-15", "n": 15, "text": "Recognizes different forms of rational numbers." },
+        { "id": "G7-16", "n": 16, "text": "Finds the sum or difference of two rational numbers." },
+        {
+          "id": "G7-17",
+          "n": 17,
+          "text": "Uses properties of addition and subtraction to solve rational-number exercises."
+        },
+        { "id": "G7-18", "n": 18, "text": "Finds the product of two rational numbers." },
+        {
+          "id": "G7-19",
+          "n": 19,
+          "text": "Knows the properties of multiplication and division of rational numbers."
+        },
+        { "id": "G7-20", "n": 20, "text": "Represents variables using symbols." },
+        { "id": "G7-21", "n": 21, "text": "Defines a term and an algebraic expression." },
+        {
+          "id": "G7-22",
+          "n": 22,
+          "text": "Defines a mathematical expression and a mathematical formula."
+        },
+        {
+          "id": "G7-23",
+          "n": 23,
+          "text": "Distinguishes between a mathematical expression and a mathematical formula."
+        },
+        { "id": "G7-24", "n": 24, "text": "Defines an equation and an inequality." },
+        { "id": "G7-25", "n": 25, "text": "Forms a linear equation in one unknown." },
+        {
+          "id": "G7-26",
+          "n": 26,
+          "text": "Distinguishes the relationship between the substitution set and the solution set."
+        },
+        {
+          "id": "G7-27",
+          "n": 27,
+          "text": "Solves a linear equation in one unknown over the natural, integer, and rational number sets."
+        },
+        { "id": "G7-28", "n": 28, "text": "Defines an angle and its units of measurement." },
+        {
+          "id": "G7-29",
+          "n": 29,
+          "text": "Identifies types of angles and distinguishes among them."
+        },
+        { "id": "G7-30", "n": 30, "text": "Identifies complementary and supplementary angles." },
+        { "id": "G7-31", "n": 31, "text": "Identifies vertically opposite angles." },
+        { "id": "G7-32", "n": 32, "text": "Defines parallelism." },
+        {
+          "id": "G7-33",
+          "n": 33,
+          "text": "Identifies corresponding, alternate, and same-side interior angles formed by a transversal."
+        },
+        { "id": "G7-34", "n": 34, "text": "Proves that two lines are parallel." },
+        { "id": "G7-35", "n": 35, "text": "Develops the skill of writing a geometric proof." },
+        {
+          "id": "G7-36",
+          "n": 36,
+          "text": "Finds the sum of the measures of the interior angles of a triangle."
+        },
+        { "id": "G7-37", "n": 37, "text": "Defines an exterior angle of a triangle." },
+        {
+          "id": "G7-38",
+          "n": 38,
+          "text": "Derives the relationship between an exterior angle and the interior angles of a triangle."
+        },
+        {
+          "id": "G7-39",
+          "n": 39,
+          "text": "Finds the sum of the measures of the interior angles of a quadrilateral."
+        },
+        { "id": "G7-40", "n": 40, "text": "Distinguishes special quadrilaterals." },
+        { "id": "G7-41", "n": 41, "text": "Proves that a quadrilateral is a parallelogram." },
+        {
+          "id": "G7-42",
+          "n": 42,
+          "text": "Identifies the relationship among families of quadrilaterals."
+        },
+        {
+          "id": "G7-43",
+          "n": 43,
+          "text": "Determines when a parallelogram is a rectangle, rhombus, or square."
+        },
+        { "id": "G7-44", "n": 44, "text": "Defines a polygon." },
+        { "id": "G7-45", "n": 45, "text": "Distinguishes convex and concave polygons." },
+        {
+          "id": "G7-46",
+          "n": 46,
+          "text": "Finds the sum of the measures of the interior angles of a polygon."
+        },
+        { "id": "G7-47", "n": 47, "text": "Defines a regular polygon." },
+        { "id": "G7-48", "n": 48, "text": "Identifies axes of symmetry in polygons." },
+        {
+          "id": "G7-49",
+          "n": 49,
+          "text": "Represents the coordinates of a point on the coordinate plane."
+        },
+        { "id": "G7-50", "n": 50, "text": "Identifies the quadrant containing a point." },
+        {
+          "id": "G7-51",
+          "n": 51,
+          "text": "Determines the projection of a point or line segment on the axes."
+        },
+        {
+          "id": "G7-52",
+          "n": 52,
+          "text": "Determines the coordinates of the midpoint of a line segment."
+        },
+        { "id": "G7-53", "n": 53, "text": "Represents data using a stem-and-leaf plot." },
+        { "id": "G7-54", "n": 54, "text": "Distinguishes misleading and non-misleading graphs." },
+        {
+          "id": "G7-55",
+          "n": 55,
+          "text": "Calculates the arithmetic mean from a frequency table."
+        },
+        { "id": "G7-56", "n": 56, "text": "Defines misleading statistical data." },
+        { "id": "G7-57", "n": 57, "text": "Defines a pie chart." },
+        { "id": "G7-58", "n": 58, "text": "Represents data using pie charts." }
+      ],
+      "teachingStrategies": [
+        "Observation and imitation",
+        "Brainstorming",
+        "Peer teaching",
+        "Discussion and dialogue",
+        "Cooperative learning",
+        "Discovery learning",
+        "Problem solving"
+      ],
+      "educationalActivities": [
+        "Students complete a set of lesson exercises.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Written questions",
+        "Monitoring student performance",
+        "End-of-unit test"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "8",
+      "stage": "Preparatory",
+      "label": "Grade 8 – Preparatory (Second Preparatory)",
+      "sourcePages": "39-43",
+      "totalOutcomes": 48,
+      "outcomes": [
+        {
+          "id": "G8-01",
+          "n": 1,
+          "text": "Knows the laws for multiplying and dividing square roots."
+        },
+        {
+          "id": "G8-02",
+          "n": 2,
+          "text": "Knows the laws for multiplying and dividing cube roots."
+        },
+        { "id": "G8-03", "n": 3, "text": "Uses radical laws to simplify numbers." },
+        { "id": "G8-04", "n": 4, "text": "Uses radical laws to solve real-life problems." },
+        {
+          "id": "G8-05",
+          "n": 5,
+          "text": "Recognizes repeated multiplication in the set of real numbers."
+        },
+        { "id": "G8-06", "n": 6, "text": "Knows laws of exponents in the real numbers." },
+        {
+          "id": "G8-07",
+          "n": 7,
+          "text": "Uses exponent laws to simplify mathematical expressions."
+        },
+        {
+          "id": "G8-08",
+          "n": 8,
+          "text": "Defines factorization by taking out the greatest common factor."
+        },
+        {
+          "id": "G8-09",
+          "n": 9,
+          "text": "Factors a polynomial by taking out the greatest common factor."
+        },
+        {
+          "id": "G8-10",
+          "n": 10,
+          "text": "Uses greatest-common-factor factorization in solving problems."
+        },
+        {
+          "id": "G8-11",
+          "n": 11,
+          "text": "Solves equations using greatest-common-factor factorization."
+        },
+        { "id": "G8-12", "n": 12, "text": "Factors trinomials of the stated standard forms." },
+        { "id": "G8-13", "n": 13, "text": "Uses factorization to solve real-life problems." },
+        {
+          "id": "G8-14",
+          "n": 14,
+          "text": "Recognizes when a trinomial represents a perfect square."
+        },
+        { "id": "G8-15", "n": 15, "text": "Factors a perfect-square trinomial." },
+        { "id": "G8-16", "n": 16, "text": "Factors the difference of two squares." },
+        { "id": "G8-17", "n": 17, "text": "Factors the sum and difference of two cubes." },
+        { "id": "G8-18", "n": 18, "text": "Uses factorization to simplify arithmetic operations." },
+        { "id": "G8-19", "n": 19, "text": "Factors a polynomial by grouping." },
+        { "id": "G8-20", "n": 20, "text": "Recognizes completing the square." },
+        {
+          "id": "G8-21",
+          "n": 21,
+          "text": "Uses completing the square in factorization and solving equations."
+        },
+        { "id": "G8-22", "n": 22, "text": "Recognizes congruence of plane geometric figures." },
+        { "id": "G8-23", "n": 23, "text": "Knows the conditions for congruence of two polygons." },
+        { "id": "G8-24", "n": 24, "text": "Knows the congruence cases for two triangles." },
+        {
+          "id": "G8-25",
+          "n": 25,
+          "text": "Uses congruence to find angle measures and side lengths."
+        },
+        { "id": "G8-26", "n": 26, "text": "Proves two triangles congruent." },
+        {
+          "id": "G8-27",
+          "n": 27,
+          "text": "Knows the relationship among the side lengths of a right triangle."
+        },
+        {
+          "id": "G8-28",
+          "n": 28,
+          "text": "Finds an unknown side when the other two sides are known."
+        },
+        {
+          "id": "G8-29",
+          "n": 29,
+          "text": "Proves that a triangle is right-angled when its three sides are known."
+        },
+        {
+          "id": "G8-30",
+          "n": 30,
+          "text": "Determines the type of triangle by its angles when its side lengths are known."
+        },
+        {
+          "id": "G8-31",
+          "n": 31,
+          "text": "Knows the relationship among the lengths of intercepts between parallel lines."
+        },
+        {
+          "id": "G8-32",
+          "n": 32,
+          "text": "Knows the relationship between a midsegment and its opposite side."
+        },
+        {
+          "id": "G8-33",
+          "n": 33,
+          "text": "Identifies the intersection point of the medians of a triangle."
+        },
+        {
+          "id": "G8-34",
+          "n": 34,
+          "text": "Knows the ratio in which the centroid divides a triangle's median."
+        },
+        {
+          "id": "G8-35",
+          "n": 35,
+          "text": "Knows the median to the hypotenuse in a right triangle."
+        },
+        { "id": "G8-36", "n": 36, "text": "Knows the properties of an isosceles triangle." },
+        { "id": "G8-37", "n": 37, "text": "Knows the properties of an equilateral triangle." },
+        { "id": "G8-38", "n": 38, "text": "Knows the axis of symmetry of an isosceles triangle." },
+        {
+          "id": "G8-39",
+          "n": 39,
+          "text": "Knows the relationship among the side lengths of a 30-degree triangle."
+        },
+        {
+          "id": "G8-40",
+          "n": 40,
+          "text": "Knows the formula for the sum of the interior angles of a polygon."
+        },
+        { "id": "G8-41", "n": 41, "text": "Knows the sum of the exterior angles of a polygon." },
+        {
+          "id": "G8-42",
+          "n": 42,
+          "text": "Knows the formula for the measure of an interior angle of a regular polygon."
+        },
+        {
+          "id": "G8-43",
+          "n": 43,
+          "text": "Knows the formula for the number of diagonals of a polygon."
+        },
+        {
+          "id": "G8-44",
+          "n": 44,
+          "text": "Constructs an ascending cumulative-frequency table from a grouped frequency table."
+        },
+        { "id": "G8-45", "n": 45, "text": "Draws the ascending cumulative-frequency curve." },
+        { "id": "G8-46", "n": 46, "text": "Estimates the mean of a grouped frequency table." },
+        { "id": "G8-47", "n": 47, "text": "Estimates the median of a grouped frequency table." },
+        { "id": "G8-48", "n": 48, "text": "Estimates the mode of a grouped frequency table." }
+      ],
+      "teachingStrategies": [
+        "Observation and imitation",
+        "Brainstorming",
+        "Peer teaching",
+        "Discussion and dialogue",
+        "Cooperative learning",
+        "Discovery learning",
+        "Problem solving"
+      ],
+      "educationalActivities": [
+        "Students complete a set of lesson exercises.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Written questions",
+        "Monitoring student performance",
+        "End-of-unit test"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    },
+    {
+      "grade": "9",
+      "stage": "Preparatory",
+      "label": "Grade 9 – Preparatory (Third Preparatory)",
+      "sourcePages": "45-49",
+      "totalOutcomes": 54,
+      "outcomes": [
+        { "id": "G9-01", "n": 1, "text": "Defines the concept of a power of a power." },
+        { "id": "G9-02", "n": 2, "text": "Finds a power of a power for a real number." },
+        {
+          "id": "G9-03",
+          "n": 3,
+          "text": "Uses the power-of-a-power law to simplify mathematical expressions."
+        },
+        {
+          "id": "G9-04",
+          "n": 4,
+          "text": "Uses the law for the power of a product or quotient of powers."
+        },
+        { "id": "G9-05", "n": 5, "text": "Solves exponential equations using the same base." },
+        { "id": "G9-06", "n": 6, "text": "Solves exponential equations using the same exponent." },
+        {
+          "id": "G9-07",
+          "n": 7,
+          "text": "Uses exponential equations to solve real-life problems."
+        },
+        { "id": "G9-08", "n": 8, "text": "Recognizes the standard form of a quadratic function." },
+        { "id": "G9-09", "n": 9, "text": "Recognizes the vertex form of a quadratic function." },
+        {
+          "id": "G9-10",
+          "n": 10,
+          "text": "Identifies the vertex and axis of symmetry of a quadratic function."
+        },
+        { "id": "G9-11", "n": 11, "text": "Represents a quadratic function graphically." },
+        {
+          "id": "G9-12",
+          "n": 12,
+          "text": "Finds the maximum or minimum value of a quadratic function."
+        },
+        {
+          "id": "G9-13",
+          "n": 13,
+          "text": "Uses a calculator to create a table for a graphical representation."
+        },
+        {
+          "id": "G9-14",
+          "n": 14,
+          "text": "Finds the set of real zeros of polynomial functions algebraically."
+        },
+        { "id": "G9-15", "n": 15, "text": "Finds the set of real zeros of polynomial functions." },
+        {
+          "id": "G9-16",
+          "n": 16,
+          "text": "Uses real zeros of polynomial functions to solve real-life problems."
+        },
+        { "id": "G9-17", "n": 17, "text": "Defines a rational algebraic function." },
+        { "id": "G9-18", "n": 18, "text": "Defines the domain of a rational algebraic function." },
+        {
+          "id": "G9-19",
+          "n": 19,
+          "text": "Simplifies a rational algebraic fraction to simplest form."
+        },
+        { "id": "G9-20", "n": 20, "text": "Finds the zero set of a rational algebraic function." },
+        {
+          "id": "G9-21",
+          "n": 21,
+          "text": "Finds the common domain of two or more rational algebraic functions."
+        },
+        {
+          "id": "G9-22",
+          "n": 22,
+          "text": "Knows the conditions for equality of rational algebraic functions."
+        },
+        { "id": "G9-23", "n": 23, "text": "Performs operations on rational algebraic fractions." },
+        { "id": "G9-24", "n": 24, "text": "Defines additive and multiplicative inverses." },
+        { "id": "G9-25", "n": 25, "text": "Knows the conditions for similarity of two polygons." },
+        { "id": "G9-26", "n": 26, "text": "Defines the scale factor of similarity." },
+        { "id": "G9-27", "n": 27, "text": "Knows the conditions for similarity of two triangles." },
+        {
+          "id": "G9-28",
+          "n": 28,
+          "text": "Uses triangle similarity to find angle measures and side lengths."
+        },
+        { "id": "G9-29", "n": 29, "text": "Proves two triangles similar." },
+        { "id": "G9-30", "n": 30, "text": "Uses triangle similarity to solve real-life problems." },
+        { "id": "G9-31", "n": 31, "text": "Defines dilation." },
+        { "id": "G9-32", "n": 32, "text": "Defines positive dilation." },
+        {
+          "id": "G9-33",
+          "n": 33,
+          "text": "Recognizes the trigonometric ratios of an acute angle in a right triangle."
+        },
+        {
+          "id": "G9-34",
+          "n": 34,
+          "text": "Finds sine, cosine, and tangent of an angle in a right triangle."
+        },
+        { "id": "G9-35", "n": 35, "text": "Knows the trigonometric ratios of 30°, 45°, and 60°." },
+        {
+          "id": "G9-36",
+          "n": 36,
+          "text": "Uses a calculator to find trigonometric ratios when the angle measure is known."
+        },
+        {
+          "id": "G9-37",
+          "n": 37,
+          "text": "Finds an angle measure when one of its trigonometric ratios is known, using a calculator."
+        },
+        {
+          "id": "G9-38",
+          "n": 38,
+          "text": "Derives the slope of a straight line from the tangent of its angle of inclination."
+        },
+        {
+          "id": "G9-39",
+          "n": 39,
+          "text": "Knows the relationship between the slopes of parallel lines."
+        },
+        {
+          "id": "G9-40",
+          "n": 40,
+          "text": "Knows the relationship between the slopes of perpendicular lines."
+        },
+        {
+          "id": "G9-41",
+          "n": 41,
+          "text": "Solves real-life problems using the slope of a straight line."
+        },
+        {
+          "id": "G9-42",
+          "n": 42,
+          "text": "Finds the equation of a straight line in slope-intercept form."
+        },
+        {
+          "id": "G9-43",
+          "n": 43,
+          "text": "Finds the equation of a straight line in point-slope form."
+        },
+        {
+          "id": "G9-44",
+          "n": 44,
+          "text": "Recognizes the standard form of the equation of a straight line."
+        },
+        {
+          "id": "G9-45",
+          "n": 45,
+          "text": "Uses the slope and y-intercept to represent the straight-line equation."
+        },
+        {
+          "id": "G9-46",
+          "n": 46,
+          "text": "Uses the equation of a straight line to solve real-life problems."
+        },
+        { "id": "G9-47", "n": 47, "text": "Defines dispersion." },
+        { "id": "G9-48", "n": 48, "text": "Defines range." },
+        { "id": "G9-49", "n": 49, "text": "Defines interquartile range." },
+        { "id": "G9-50", "n": 50, "text": "Defines standard deviation." },
+        {
+          "id": "G9-51",
+          "n": 51,
+          "text": "Finds the range and interquartile range for a data set."
+        },
+        {
+          "id": "G9-52",
+          "n": 52,
+          "text": "Finds the standard deviation for a set of observations."
+        },
+        {
+          "id": "G9-53",
+          "n": 53,
+          "text": "Finds the standard deviation for a simple frequency distribution."
+        },
+        {
+          "id": "G9-54",
+          "n": 54,
+          "text": "Finds the standard deviation for a grouped frequency distribution."
+        }
+      ],
+      "teachingStrategies": [
+        "Observation and imitation",
+        "Brainstorming",
+        "Peer teaching",
+        "Discussion and dialogue",
+        "Cooperative learning",
+        "Discovery learning",
+        "Problem solving"
+      ],
+      "educationalActivities": [
+        "Students complete a set of lesson exercises.",
+        "Students work in groups; each group completes exercises and checks/corrects the work of another group.",
+        "Students exchange roles under the teacher's supervision."
+      ],
+      "assessmentMethods": [
+        "Observation checklists",
+        "Oral questions",
+        "Written questions",
+        "Monitoring student performance",
+        "End-of-unit test"
+      ],
+      "evidence": [
+        "Student textbook",
+        "Student notebooks",
+        "Student participation",
+        "Teacher's guide",
+        "Student portfolio",
+        "Visual strips",
+        "Boards and cards"
+      ]
+    }
+  ],
+  "sourceTraceability": {
+    "cover": "source page 1",
+    "grade1": "source pages 2-5",
+    "grade2": "source pages 6-9",
+    "grade3": "source pages 10-14",
+    "grade4": "source pages 15-19",
+    "grade5": "source pages 20-24",
+    "grade6": "source pages 25-29",
+    "firstPreparatory": "source pages 30-36",
+    "secondPreparatory": "source pages 37-43",
+    "thirdPreparatory": "source pages 44-49"
+  },
+  "stats": {
+    "totalGrades": 9,
+    "totalOutcomes": 441,
+    "byGrade": {
+      "1": 42,
+      "2": 43,
+      "3": 49,
+      "4": 58,
+      "5": 43,
+      "6": 46,
+      "7": 58,
+      "8": 48,
+      "9": 54
+    }
+  },
+  "updated": "2026-08-29"
+}

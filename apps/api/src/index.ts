@@ -3,12 +3,12 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
-import health from "./routes/health";
-import exams from "./routes/exams";
-import auth from "./routes/auth";
-import hrms from "./routes/hrms";
-import stripe from "./routes/stripe";
-import students from "./routes/students";
+import health from "./routes/health.js";
+import exams from "./routes/exams.js";
+import auth from "./routes/auth.js";
+import hrms from "./routes/hrms.js";
+import stripe from "./routes/stripe.js";
+import students from "./routes/students.js";
 
 const app = new Hono();
 
@@ -72,15 +72,22 @@ app.route("/api/exams", exams);
 app.route("/api/hrms", hrms);
 app.route("/api/stripe", stripe);
 app.route("/api/students", students);
+// Browsers request /favicon.ico automatically — return empty 204 instead of 404 spam.
+app.get("/favicon.ico", (c) => c.body(null, 204));
 app.get("/", (c) => c.text("api ok — try /api/health"));
 
 export default app;
 
 // Node adapter — only run in Node, never on Workers (Workers have `caches` global)
+// Skip when imported (vitest, hono/client) — only auto-listen when run directly via tsx.
 try {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   const isWorkers = typeof caches !== "undefined";
-  if (!isWorkers) {
+  const isTest = !!process.env.VITEST || process.env.NODE_ENV === "test";
+  const runDirectly =
+    (process.argv[1] ?? "").replaceAll("\\", "/").endsWith("apps/api/src/index.ts") ||
+    (process.argv[1] ?? "").replaceAll("\\", "/").endsWith("src/index.ts");
+  if (!isWorkers && !isTest && runDirectly) {
     const { serve } = await import("@hono/node-server");
     serve({ fetch: app.fetch, port: 3000 }, (info) =>
       // eslint-disable-next-line no-console

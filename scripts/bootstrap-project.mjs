@@ -67,13 +67,13 @@ write('package.json', `{
   "type": "module",
   "scripts": {
     "dev": "concurrently \\"npm run dev -w apps/api\\" \\"npm run dev -w apps/web\\"",
-    "build": "npm run build -ws --if-present",
+    "build": "npm run build --ws --if-present",
     "verify": "node scripts/verify.mjs",
     "spec:init": "uvx --from git+https://github.com/github/spec-kit.git specify init . --here --force --integration opencode --non-interactive",
     "spec:feature": "powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/create-new-feature.ps1",
     "spec:check": "uvx --from git+https://github.com/github/spec-kit.git specify check",
     "spec:upgrade": "uvx --from git+https://github.com/github/spec-kit.git specify self upgrade",
-    "typecheck": "npm run typecheck -ws --if-present",
+    "typecheck": "npm run typecheck --ws --if-present",
     "lint": "oxlint --type-aware --type-check",
     "lint:fix": "oxlint --fix --type-aware",
     "format": "oxfmt .",
@@ -207,8 +207,8 @@ const cmds = [
   ...(webPkg ? [\`npm run typecheck -w \${webPkg}\`] : []),
   ...(apiPkg ? [\`npm run typecheck -w \${apiPkg}\`] : []),
   "npm run lint",
-  "npm run test -ws --if-present",
-  "npm run build -ws --if-present",
+  "npm run test --ws --if-present",
+  "npm run build --ws --if-present",
 ];
 
 for (const c of cmds) {

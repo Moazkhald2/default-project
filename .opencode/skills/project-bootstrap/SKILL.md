@@ -47,12 +47,12 @@ Scaffold a new workspace package or full slice so `npm install` + `npm run verif
 4. **Install and verify**
 
    ```bash
-   npm install
-   npm run typecheck   # tsc --noEmit -p tsconfig.base.json — must PASS
-   npm run lint        # oxlint --type-aware --type-check — 0 errors
-   npm run format:check # oxfmt --check . — must PASS (run oxfmt . if fails)
-   npm run test -ws --if-present
-   npm run build -ws --if-present
+    npm install
+    npm run typecheck   # tsc --noEmit per workspace — must PASS
+    npm run lint        # oxlint --type-aware --type-check — 0 errors
+    npm run format:check # oxfmt --check . — must PASS (run oxfmt . if fails)
+    npm run test --ws --if-present
+    npm run build --ws --if-present
    npm run verify      # typecheck && lint && build && test — must exit 0
    ```
 

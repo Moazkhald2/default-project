@@ -39,8 +39,8 @@ Open http://localhost:5173 — web proxies `/api` to the Hono server. Check `cur
 | `npm run typecheck -w @app/api` | `tsc --noEmit -p apps/api/tsconfig.json`                           |
 | `npm run lint`                  | `oxlint --type-aware --type-check` (tsgo)                          |
 | `npm run format`                | `oxfmt .`                                                          |
-| `npm run test -ws`              | vitest per workspace (web: jsdom, api: hono request)               |
-| `npm run build -ws`             | `vite build` (web → `dist/`) + `tsc -p` (api → `dist/`)            |
+| `npm run test --ws`             | vitest per workspace (web: jsdom, api: hono request)               |
+| `npm run build --ws`            | `vite build` (web → `dist/`) + `tsc -p` (api → `dist/`)            |
 | `npm run verify`                | `node scripts/verify.mjs` — ordered, fail-fast                     |
 | `npm run build -w @app/web`     | static build only                                                  |
 | `npm run deploy -w @app/api`    | `wrangler deploy` (CF Workers)                                     |
@@ -65,14 +65,14 @@ server: { port: 5173, proxy: { "/api": "http://localhost:3000" } }
 npm run typecheck -w @app/web
 npm run typecheck -w @app/api
 npm run lint
-npm run test -ws --if-present
-npm run build -ws --if-present
+npm run test --ws --if-present
+npm run build --ws --if-present
 ✓ verify passed — all layers integrated
 ```
 
 Why workspace typechecks? Root `tsconfig.base.json` is base only (no `jsx`), so `tsc -p tsconfig.base.json` would error on `*.tsx`. Verify runs each workspace's `tsconfig.json` instead.
 
-Performance budgets (`lighthouserc.json`) enforce `LCP < 2500ms`, `CLS < 0.1`, `JS < 220kB`, `performance >= 0.9` in CI. Verify checks that `vite build` succeeds; Lighthouse assert runs in CI against built `dist/`.
+Performance budgets (`lighthouserc.json`) enforce `LCP < 2500ms`, `CLS < 0.1`, `JS < 520kB`, `performance >= 0.9` in CI. Verify checks that `vite build` succeeds; Lighthouse assert runs in CI against built `dist/`.
 
 ```bash
 npm run verify
@@ -97,6 +97,7 @@ Hono `apps/api/src/index.ts` exports `default app` for Workers; Node adapter (`@
 
 - **Oxlint** type-aware via `oxlint-tsgolint` (no parallel ESLint).
 - **Oxfmt** formats `*.{ts,tsx,js,jsx,json,md}`.
+- TODO(you): `npm run format:check` currently reports diffs on Windows checkouts because tracked files use CRLF while oxfmt defaults to LF. Decide line-ending policy (recommended: add `.gitattributes` with `* text=auto eol=lf`, run `git add --renormalize .`, re-checkout), then run `npm run format` once.
 - **lint-staged** + `scripts/setup-hooks.mjs` installs `pre-commit` (<40s) — `oxlint --fix`, `oxfmt` on staged files only. `pre-push` <90s, CI is source of truth.
 - `node scripts/setup-hooks.mjs` to reinstall hooks.
 

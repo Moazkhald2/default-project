@@ -1,0 +1,31 @@
+{
+  "frameworks": [
+    {
+      "id": "egypt-grade10-2026",
+      "file": "Egypt_Grade10_Math_2026.json",
+      "title": "Egypt Grade 10 Math 2026 — New Curriculum (full-year)",
+      "grades": ["10"],
+      "term": "full-year"
+    },
+    {
+      "id": "egypt-basic-2026-2027-first",
+      "file": "Egypt_Math_2026_2027_FirstTerm.json",
+      "markdown": "Egypt_Math_2026_2027_LearningOutcomes.md",
+      "title": "Egypt Basic Education Mathematics — Learning Outcomes Map — First Semester 2026-2027",
+      "grades": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      "stages": ["Primary (G1-G6)", "Preparatory (G7-G9)"],
+      "term": "First semester",
+      "source": "Learning Outcomes Map 2027 M.pdf (49 pages)",
+      "preparedBy": "Ahmed Mostafa Ahmed — Assiut / El-Fateh",
+      "totalOutcomes": 441,
+      "copies": [
+        "Local_Math_Vault/Curriculum_Frameworks/Egypt_Math_2026_2027_FirstTerm.json",
+        "Local_Math_Vault/Curriculum_Frameworks/Egypt_Math_2026_2027_LearningOutcomes.md",
+        "docs/curriculum/Egypt_Math_2026_2027_FirstTerm.json",
+        "docs/curriculum/Egypt_Math_2026_2027_LearningOutcomes.md",
+        "D:/learning_outcomes_map_2026_2027_english.md"
+      ],
+      "updated": "2026-08-29"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e9]:
+      - heading "Navigation Menu" [level=2] [ref=e10]
+      - generic [ref=e11]:
+        - link "Homepage" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e16]:
+          - navigation "Global" [ref=e17]:
+            - list [ref=e18]:
+              - listitem [ref=e19]:
+                - button "Platform" [ref=e21] [cursor=pointer]
+              - listitem [ref=e24]:
+                - button "Solutions" [ref=e26] [cursor=pointer]
+              - listitem [ref=e29]:
+                - button "Resources" [ref=e31] [cursor=pointer]
+              - listitem [ref=e34]:
+                - button "Open Source" [ref=e36] [cursor=pointer]
+              - listitem [ref=e39]:
+                - button "Enterprise" [ref=e41] [cursor=pointer]
+              - listitem [ref=e44]:
+                - link "Pricing" [ref=e45] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+          - generic [ref=e46]:
+            - button "Search or jump to, type / to search" [ref=e48] [cursor=pointer]
+            - link "Sign in" [ref=e55] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FMoazkhald2%2Fdefault-project%2Fpull%2F9
+            - link "Sign up" [ref=e58] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fvoltron%2Fpull_requests_fragments%2Fpull_request_layout&source=header-repo&source_repo=Moazkhald2%2Fdefault-project
+            - button "Appearance settings" [ref=e61] [cursor=pointer]
+  - main [ref=e68]:
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - generic [ref=e72]:
+          - link "Moazkhald2" [ref=e76] [cursor=pointer]:
+            - /url: /Moazkhald2
+          - generic [ref=e77]: /
+          - strong [ref=e78]:
+            - link "default-project" [ref=e79] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project
+          - generic [ref=e80]: Public
+        - generic [ref=e81]:
+          - list:
+            - listitem [ref=e82]:
+              - link "You must be signed in to change notification settings" [ref=e83] [cursor=pointer]:
+                - /url: /login?return_to=%2FMoazkhald2%2Fdefault-project
+                - text: Notifications
+            - listitem [ref=e86]:
+              - link "Fork 0" [ref=e87] [cursor=pointer]:
+                - /url: /login?return_to=%2FMoazkhald2%2Fdefault-project
+                - text: Fork
+                - generic "0" [ref=e90]
+            - listitem [ref=e91]:
+              - link "You must be signed in to star a repository" [ref=e93] [cursor=pointer]:
+                - /url: /login?return_to=%2FMoazkhald2%2Fdefault-project
+                - text: Star
+                - generic "0 users starred this repository" [ref=e96]: "0"
+      - navigation "Repository" [ref=e97]:
+        - list [ref=e98]:
+          - listitem [ref=e99]:
+            - link "Code" [ref=e100] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project
+          - listitem [ref=e104]:
+            - link "Issues" [ref=e105] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/issues
+          - listitem [ref=e110]:
+            - link "Pull requests 4" [ref=e111] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/pulls
+              - generic [ref=e114]: Pull requests
+              - generic "4" [ref=e115]
+          - listitem [ref=e116]:
+            - link "Actions" [ref=e117] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/actions
+          - listitem [ref=e121]:
+            - link "Projects" [ref=e122] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/projects
+          - listitem [ref=e126]:
+            - link "Security and quality" [ref=e127] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/security
+          - listitem [ref=e131]:
+            - link "Insights" [ref=e132] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/pulse
+    - generic [ref=e142]:
+      - generic [ref=e146]:
+        - generic [ref=e148]:
+          - 'heading "fix(security): CodeQL paths-ignore data/archify + scrypt for backup - #9" [level=1] [ref=e149]':
+            - text: "fix(security): CodeQL paths-ignore data/archify + scrypt for backup"
+            - generic [ref=e150]: "- #9"
+          - generic [ref=e151]: "#9"
+        - generic [ref=e154]:
+          - generic [ref=e156]:
+            - img "Pull request" [ref=e157]
+            - text: Open
+          - generic [ref=e160]:
+            - link "Moazkhald2" [ref=e161] [cursor=pointer]:
+              - /url: /Moazkhald2
+            - text: wants to merge 1 commit into
+            - generic [ref=e162]:
+              - link "master" [ref=e163] [cursor=pointer]:
+                - /url: /Moazkhald2/default-project/tree/master
+              - generic [ref=e164]: from
+              - generic [ref=e165]:
+                - link "fix/codeql-chrome" [ref=e166] [cursor=pointer]:
+                  - /url: /Moazkhald2/default-project/tree/fix/codeql-chrome
+                - button "Copy head branch name to clipboard" [ref=e167] [cursor=pointer]
+        - navigation "Pull request navigation" [ref=e175]:
+          - generic [ref=e176]:
+            - link "Conversation" [ref=e177] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/pull/9
+            - link "Commits (1)" [ref=e180] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/pull/9/commits
+              - text: Commits
+              - generic [ref=e183]: "1"
+              - generic [ref=e184]: (1)
+            - link "Checks" [ref=e185] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/pull/9/checks
+            - link "Files changed" [ref=e188] [cursor=pointer]:
+              - /url: /Moazkhald2/default-project/pull/9/files
+      - generic [ref=e195]:
+        - generic [ref=e197]:
+          - heading "Conversation" [level=2] [ref=e198]
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e202]:
+                - link [ref=e203] [cursor=pointer]:
+                  - /url: /Moazkhald2
+                  - img "@Moazkhald2" [ref=e204]
+                - generic [ref=e206]:
+                  - generic [ref=e207]:
+                    - heading [level=3] [ref=e208]:
+                      - generic [ref=e209]:
+                        - strong [ref=e210]:
+                          - link "Moazkhald2" [ref=e211] [cursor=pointer]:
+                            - /url: /Moazkhald2
+                        - text: commented
+                        - link "Aug 30, 20265 minutes ago" [ref=e212] [cursor=pointer]:
+                          - /url: "#issue-5290845945"
+                    - generic [ref=e213]:
+                      - group [ref=e215]:
+                        - button [ref=e216] [cursor=pointer]:
+                          - img "Show options" [ref=e219]
+                      - generic "This user is the owner of the default-project repository." [ref=e222]: Owner
+                  - generic [ref=e227]:
+                    - paragraph [ref=e228]: Closes CodeQL 38 High remote-property-injection false positives from data/archify HTML 730kB generated JS
+                    - list [ref=e229]:
+                      - listitem [ref=e230]: codeql.yml paths-ignore data/archify/** + .agents/**
+                      - listitem [ref=e231]:
+                        - text: encrypt/decrypt scryptSync vs sha256
+                        - 'link "chore(deps-dev): bump concurrently from 9.2.4 to 10.0.5 #1" [ref=e235] [cursor=pointer]':
+                          - /url: https://github.com/Moazkhald2/default-project/pull/1
+                        - text: /
+                        - 'link "chore(deps-dev): bump typescript from 5.9.3 to 7.0.2 #2" [ref=e239] [cursor=pointer]':
+                          - /url: https://github.com/Moazkhald2/default-project/pull/2
+                      - listitem [ref=e240]: "fetch_libraries lgtm #12"
+                      - listitem [ref=e241]: chrome->chromium 1234 OK
+                    - paragraph [ref=e242]:
+                      - text: Merge before
+                      - link "#8" [ref=e243] [cursor=pointer]:
+                        - /url: https://github.com/Moazkhald2/default-project/pull/8
+                      - text: to clear 16 High.
+              - generic [ref=e244]:
+                - generic [ref=e255]:
+                  - img "opencode" [ref=e258]
+                  - generic [ref=e259]:
+                    - code [ref=e260]:
+                      - 'link "fix(security): CodeQL paths-ignore data/archify + scrypt for backup p…" [ref=e261] [cursor=pointer]':
+                        - /url: /Moazkhald2/default-project/pull/9/commits/0409a01256cb2986b16e0dc910740c6e8fd2df44
+                    - button "Commit message body" [ref=e263] [cursor=pointer]: …
+                  - code [ref=e273]:
+                    - link "0409a01" [ref=e274] [cursor=pointer]:
+                      - /url: /Moazkhald2/default-project/pull/9/commits/0409a01256cb2986b16e0dc910740c6e8fd2df44
+                - generic [ref=e277]:
+                  - generic [ref=e278]:
+                    - link [ref=e279] [cursor=pointer]:
+                      - /url: /apps/github-advanced-security
+                      - img "github-advanced-security[bot]" [ref=e280]
+                    - generic "Only reviews by reviewers with write access count toward mergeability" [ref=e281]
+                    - generic [ref=e284]:
+                      - generic [ref=e285]:
+                        - strong [ref=e286]:
+                          - link "github-advanced-security" [ref=e287] [cursor=pointer]:
+                            - /url: /apps/github-advanced-security
+                          - generic [ref=e288]: Bot
+                        - text: found potential problems
+                        - link "Aug 30, 20264 minutes ago" [ref=e290] [cursor=pointer]:
+                          - /url: "#pullrequestreview-5060185448"
+                      - link "View reviewed changes" [ref=e292] [cursor=pointer]:
+                        - /url: /Moazkhald2/default-project/pull/9/files/0409a01256cb2986b16e0dc910740c6e8fd2df44
+                  - generic [ref=e296]:
+                    - generic [ref=e298]:
+                      - generic [ref=e299]:
+                        - button "Comment thread" [expanded] [ref=e300] [cursor=pointer]
+                        - link "scripts/decrypt-backup.mjs" [ref=e302] [cursor=pointer]:
+                          - /url: /Moazkhald2/default-project/pull/9/files/0409a01256cb2986b16e0dc910740c6e8fd2df44#diff-0695fe279e5fed0d5caee3f7a7e8d90112e6ba84e9874a64c320c3577acc1cd3
+                      - table [ref=e306]:
+                        - rowgroup [ref=e307]:
+                          - row [ref=e308]:
+                            - cell "9" [ref=e309] [cursor=pointer]
+                            - cell [ref=e310] [cursor=pointer]
+                            - cell "- if (process.env.BACKUP_PASSPHRASE) return createHash(\"sha256\").update(process.env.BACKUP_PASSPHRASE).digest();" [ref=e311]
+                          - row [ref=e313]:
+                            - cell [ref=e314] [cursor=pointer]
+                            - cell "9" [ref=e315] [cursor=pointer]
+                            - 'cell "+ if (process.env.BACKUP_PASSPHRASE) {" [ref=e316]'
+                          - row [ref=e318]:
+                            - cell [ref=e319] [cursor=pointer]
+                            - cell "10" [ref=e320] [cursor=pointer]
+                            - 'cell "+ const salt = (() => { try { return readFileSync(join(os.homedir(), \".secrets\", \"backup.salt\"), \"utf8\").trim().slice(0, 32); } catch { return \"math-academy-scrypt-salt-v1\"; } })();" [ref=e321]'
+                          - row [ref=e323]:
+                            - cell [ref=e324] [cursor=pointer]
+                            - cell "11" [ref=e325] [cursor=pointer]
+                            - 'cell "+ try { return scryptSync(process.env.BACKUP_PASSPHRASE, salt, 32); } catch { return createHash(\"sha256\").update(process.env.BACKUP_PASSPHRASE).digest(); }" [ref=e326]'
+                    - generic [ref=e331]:
+                      - generic [ref=e332]:
+                        - button "Comment thread" [expanded] [ref=e333] [cursor=pointer]
+                        - link "scripts/encrypt-backup.mjs" [ref=e335] [cursor=pointer]:
+                          - /url: /Moazkhald2/default-project/pull/9/files/0409a01256cb2986b16e0dc910740c6e8fd2df44#diff-5a0dd1142f73d42149c5fe1210999e49511206345722b6c2da208ac2b2010d9c
+                      - table [ref=e339]:
+                        - rowgroup [ref=e340]:
+                          - row [ref=e341]:
+                            - cell [ref=e342] [cursor=pointer]
+                            - cell "13" [ref=e343] [cursor=pointer]
+                            - 'cell "+ try {" [ref=e344]'
+                          - row [ref=e346]:
+                            - cell [ref=e347] [cursor=pointer]
+                            - cell "14" [ref=e348] [cursor=pointer]
+                            - cell "+ return scryptSync(process.env.BACKUP_PASSPHRASE, salt, 32);" [ref=e349]
+                          - row [ref=e351]:
+                            - cell [ref=e352] [cursor=pointer]
+                            - cell "15" [ref=e353] [cursor=pointer]
+                            - 'cell "+ } catch {" [ref=e354]'
+                          - row [ref=e356]:
+                            - cell [ref=e357] [cursor=pointer]
+                            - cell "16" [ref=e358] [cursor=pointer]
+                            - cell "+ return createHash(\"sha256\").update(process.env.BACKUP_PASSPHRASE).digest(); // fallback" [ref=e359]
+            - generic [ref=e366]:
+              - link "Sign up for free" [ref=e367] [cursor=pointer]:
+                - /url: /join?source=comment-repo
+              - strong [ref=e368]: to join this conversation on GitHub
+              - text: . Already have an account?
+              - link "Sign in to comment" [ref=e369] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FMoazkhald2%2Fdefault-project%2Fpull%2F9
+        - generic [ref=e373]:
+          - form "Select reviewers" [ref=e375]:
+            - heading "Reviewers" [level=3] [ref=e376]
+            - generic [ref=e377]:
+              - group [ref=e378]:
+                - generic [ref=e379] [cursor=pointer]
+                - generic [ref=e384]:
+                  - generic [ref=e385]:
+                    - link [ref=e386] [cursor=pointer]:
+                      - /url: /apps/github-advanced-security
+                      - img "@github-advanced-security" [ref=e387]
+                    - link "github-advanced-security[bot]" [ref=e388] [cursor=pointer]:
+                      - /url: /apps/github-advanced-security
+                  - link "github-advanced-security[bot] left review comments" [ref=e389] [cursor=pointer]:
+                    - /url: /Moazkhald2/default-project/pull/9/files/0409a01256cb2986b16e0dc910740c6e8fd2df44
+              - paragraph [ref=e393]: At least 1 approving review is required to merge this pull request.
+          - form "Select assignees" [ref=e395]:
+            - heading "Assignees" [level=3] [ref=e396]
+            - text: No one assigned
+          - generic [ref=e397]:
+            - heading "Labels" [level=3] [ref=e398]
+            - generic [ref=e399]: None yet
+          - form "Select projects" [ref=e401]:
+            - heading "Projects" [level=3] [ref=e402]
+            - text: None yet
+          - form "Select milestones" [ref=e404]:
+            - heading "Milestone" [level=3] [ref=e405]
+            - text: No milestone
+          - form "Link issues" [ref=e411]:
+            - heading "Development" [level=3] [ref=e412]
+            - paragraph [ref=e413]: Successfully merging this pull request may close these issues.
+          - generic [ref=e415]:
+            - heading "2 participants" [level=3] [ref=e416]
+            - generic [ref=e417]:
+              - link [ref=e418] [cursor=pointer]:
+                - /url: /Moazkhald2
+                - img "@Moazkhald2" [ref=e419]
+              - link [ref=e420] [cursor=pointer]:
+                - /url: /apps/github-advanced-security
+                - img "@github-advanced-security" [ref=e421]
+  - contentinfo [ref=e422]:
+    - heading "Footer" [level=2] [ref=e423]
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - link "GitHub Homepage" [ref=e426] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=e429]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e430]:
+        - heading "Footer navigation" [level=3] [ref=e431]
+        - list "Footer navigation" [ref=e432]:
+          - listitem [ref=e433]:
+            - link "Terms" [ref=e434] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e435]:
+            - link "Privacy" [ref=e436] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e437]:
+            - link "Security" [ref=e438] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e439]:
+            - link "Status" [ref=e440] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e441]:
+            - link "Community" [ref=e442] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e443]:
+            - link "Docs" [ref=e444] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e445]:
+            - link "Contact" [ref=e446] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e447]:
+            - button "Manage cookies" [ref=e449] [cursor=pointer]
+          - listitem [ref=e450]:
+            - button "Do not share my personal information" [ref=e452] [cursor=pointer]

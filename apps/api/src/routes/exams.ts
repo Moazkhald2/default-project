@@ -4,8 +4,19 @@ import { zValidator } from "@hono/zod-validator";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
 const exams = new Hono();
+
+// Repo-root resolution (works when CWD is apps/api via `npm run dev -w`, or root, or Workers test).
+// Pattern matches apps/api/src/db/seed.ts vaultRoots().
+const here = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(here, "../../../../");
+function resolveFromRoot(rel: string): string {
+  // Allow override via env for custom deployments; default to repo root.
+  const base = process.env.REPO_ROOT ?? repoRoot;
+  return path.resolve(base, rel);
+}
 
 type BankQ = {
   id: string;
@@ -54,7 +65,7 @@ async function loadBank(): Promise<BankQ[]> {
   const roots = ["Local_Math_Vault/Question_Bank", "content/bank"];
   const files: string[] = [];
   for (const r of roots) {
-    const abs = path.resolve(r);
+    const abs = resolveFromRoot(r);
     await collect(abs, files);
   }
   const seen = new Set<string>();
@@ -143,7 +154,7 @@ exams.get("/bank/:id", async (c) => {
 // Curriculum framework exposure
 exams.get("/curriculum/:grade", async (c) => {
   const grade = c.req.param("grade");
-  const cfPath = path.resolve(
+  const cfPath = resolveFromRoot(
     `Local_Math_Vault/Curriculum_Frameworks/Egypt_Grade${grade}_Math_2026.json`,
   );
   if (!existsSync(cfPath)) return c.json({ error: "curriculum not found" }, 404);

@@ -2,38 +2,38 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
         { "model": "opencode/big-pickle" },
-        { "model": "opencode/north-mini-code-free" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "openrouter/cohere/north-mini-code:free" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "auto-build": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
         { "model": "opencode/big-pickle" },
-        { "model": "opencode/gpt-5.5", "variant": "medium" }
+        { "model": "github-copilot/gpt-5.5", "variant": "medium" }
       ]
     },
     "deep-debug": {
       "model": "opencode/big-pickle",
       "fallback_models": [
-        { "model": "opencode/gpt-5.5", "variant": "high" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "github-copilot/gpt-5.5", "variant": "high" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "explore": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
-        { "model": "opencode/north-mini-code-free" },
+        { "model": "openrouter/cohere/north-mini-code:free" },
         { "model": "opencode/mimo-v2.5-free" }
       ]
     },
     "multimodal-looker": {
-      "model": "opencode/qwen3.6-plus",
+      "model": "openrouter/qwen/qwen3.6-plus",
       "fallback_models": [
-        { "model": "opencode/gemini-3.1-pro" },
+        { "model": "openrouter/google/gemini-3.1-pro-preview" },
         { "model": "opencode/nemotron-3-ultra-free" }
       ]
     },
@@ -41,46 +41,46 @@
       "model": "opencode/big-pickle",
       "variant": "high",
       "fallback_models": [
-        { "model": "opencode/gpt-5.5", "variant": "high" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "github-copilot/gpt-5.5", "variant": "high" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "metis": {
       "model": "opencode/big-pickle",
       "fallback_models": [
-        { "model": "opencode/gpt-5.5", "variant": "high" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "github-copilot/gpt-5.5", "variant": "high" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "momus": {
       "model": "opencode/big-pickle",
       "variant": "high",
       "fallback_models": [
-        { "model": "opencode/gpt-5.5", "variant": "xhigh" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "github-copilot/gpt-5.5", "variant": "xhigh" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "code-search": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
         { "model": "opencode/big-pickle" },
-        { "model": "opencode/gpt-5.5", "variant": "medium" }
+        { "model": "github-copilot/gpt-5.5", "variant": "medium" }
       ]
     },
     "sisyphus-junior": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
         { "model": "opencode/big-pickle" },
-        { "model": "opencode/north-mini-code-free" },
-        { "model": "opencode/gpt-5.5", "variant": "medium" }
+        { "model": "openrouter/cohere/north-mini-code:free" },
+        { "model": "github-copilot/gpt-5.5", "variant": "medium" }
       ]
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/qwen3.6-plus",
+      "model": "openrouter/qwen/qwen3.6-plus",
       "fallback_models": [
-        { "model": "opencode/gemini-3.1-pro", "variant": "high" },
+        { "model": "openrouter/google/gemini-3.1-pro-preview", "variant": "high" },
         { "model": "opencode/nemotron-3-ultra-free" }
       ]
     },
@@ -88,48 +88,48 @@
       "model": "opencode/big-pickle",
       "variant": "high",
       "fallback_models": [
-        { "model": "opencode/gpt-5.5", "variant": "xhigh" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "github-copilot/gpt-5.5", "variant": "xhigh" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "deep": {
       "model": "opencode/big-pickle",
       "fallback_models": [
-        { "model": "opencode/gpt-5.5", "variant": "medium" },
-        { "model": "opencode/claude-opus-4-7", "variant": "max" }
+        { "model": "github-copilot/gpt-5.5", "variant": "medium" },
+        { "model": "github-copilot/claude-opus-4.7", "variant": "max" }
       ]
     },
     "artistry": {
-      "model": "opencode/gemini-3.1-pro",
+      "model": "openrouter/google/gemini-3.1-pro-preview",
       "variant": "high",
-      "fallback_models": [{ "model": "opencode/big-pickle" }, { "model": "opencode/gpt-5.5" }]
+      "fallback_models": [{ "model": "opencode/big-pickle" }, { "model": "github-copilot/gpt-5.5" }]
     },
     "quick": {
-      "model": "opencode/north-mini-code-free",
+      "model": "openrouter/cohere/north-mini-code:free",
       "fallback_models": [
-        { "model": "opencode/deepseek-v4-flash-free" },
+        { "model": "opencode/mimo-v2.5-free" },
         { "model": "opencode/mimo-v2.5-free" }
       ]
     },
     "unspecified-low": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
-        { "model": "opencode/north-mini-code-free" },
+        { "model": "openrouter/cohere/north-mini-code:free" },
         { "model": "opencode/big-pickle" }
       ]
     },
     "unspecified-high": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
         { "model": "opencode/big-pickle" },
         { "model": "opencode/nemotron-3-ultra-free" },
-        { "model": "opencode/gpt-5.5", "variant": "medium" }
+        { "model": "github-copilot/gpt-5.5", "variant": "medium" }
       ]
     },
     "writing": {
-      "model": "opencode/deepseek-v4-flash-free",
+      "model": "opencode/mimo-v2.5-free",
       "fallback_models": [
-        { "model": "opencode/north-mini-code-free" },
+        { "model": "openrouter/cohere/north-mini-code:free" },
         { "model": "opencode/mimo-v2.5-free" }
       ]
     }

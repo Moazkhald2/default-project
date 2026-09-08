@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
-    "build": "npm run build -ws --if-present",
+    "build": "npm run build --ws --if-present",
     "verify": "node scripts/verify.mjs",
     "kit:bootstrap": "powershell -ExecutionPolicy Bypass -File agent-kit/bootstrap.ps1",
     "fetch:libs": "node scripts/fetch_libraries.mjs all",
@@ -25,7 +25,7 @@
     "backup:memories": "node scripts/backup-system.mjs --level memories --no-projects",
     "backup:restore": "node scripts/restore.mjs",
     "backup:list": "node scripts/restore.mjs --list",
-    "typecheck": "npm run typecheck -ws --if-present",
+    "typecheck": "npm run typecheck --ws --if-present",
     "lint": "oxlint --type-aware --type-check",
     "lint:fix": "oxlint --fix --type-aware",
     "format": "oxfmt .",

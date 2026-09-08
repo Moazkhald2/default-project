@@ -29,17 +29,17 @@ Review checklist for this stack (strict TS, Oxlint type-aware, Hono WinterCG, pe
 ## Hono API
 
 - [ ] WinterCG compliant — same `src/index.ts` runs on Node (`@hono/node-server`) and Workers (`wrangler`); only one adapter line changes
-- [ ] Routes use `zValidator` with Zod — never raw `c.req.json()` without validation
+- [ ] Routes use `zValidator` with Zod — never raw `c.req.json()` without validation (exception: `POST /vitals` parses `text()` manually to accept `text/plain` sendBeacon legacy, with strict `{name:string,value:number}` checks + 400s)
 - [ ] `hc<typeof app>` typed client exported from `apps/api/src/client.ts` — web uses it, no `any` fetch wrappers
-- [ ] CORS scoped to `/api/*`, `logger` mounted, `/api/health` returns `{status:"ok"}`, `/api/vitals` validates `{name,value}` passthrough
+- [ ] CORS scoped to `/api/*`, `logger` mounted, `/api/health` returns `{status:"ok"}`, `/api/vitals` validates `{name:string,value:number}` (JSON + `text/plain`, 400 on invalid)
 
 ## Tooling
 
-- [ ] `npm run typecheck` PASS (`tsc --noEmit -p tsconfig.base.json`)
+- [ ] `npm run typecheck` PASS (`tsc --noEmit` per workspace — root `tsconfig.base.json` is base only, no `jsx`)
 - [ ] `npm run lint` PASS (`oxlint --type-aware --type-check`, 0 warnings, no ESLint parallel process)
 - [ ] `npm run format:check` PASS (`oxfmt --check .`, idempotent)
 - [ ] `lint-staged` covers `*.{ts,tsx,js,jsx}` via `oxlint --fix --type-aware` + `oxfmt`, `*.{json,md}` via `oxfmt`
-- [ ] `lighthouserc.json` budgets unchanged unless justified (perf 0.9, LCP 2500, CLS 0.1, script 200000)
+- [ ] `lighthouserc.json` budgets unchanged unless justified (perf 0.9, LCP 2500, CLS 0.1, script 520000)
 
 ## Security
 
