@@ -5,7 +5,6 @@ import { execSync } from "node:child_process";
 const root = path.resolve(import.meta.dirname + "/..");
 const START = Date.now();
 const BUDGET_MS = 15 * 60 * 1000;
-const SEARCH_MS = 4 * 60 * 1000;
 function budgetLeft() { return BUDGET_MS - (Date.now() - START); }
 export function shouldRunToday(today, guard) { return today !== (guard ?? "").trim(); }
 const ALLOW = [/^github\.com$/, /^raw\.githubusercontent\.com$/, /^docs\./, /^.*\.docs\..*$/, /^nvd\.nist\.gov$/, /^cve\.mitre\.org$/, /^stackoverflow\.com$/];
