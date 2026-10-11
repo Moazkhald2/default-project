@@ -1,42 +1,44 @@
 import { useEffect, useState } from "react";
-
+import { api, apiGet } from "../lib/api";
 type Payment = { id: string; month: string; amount: number; status: string };
-
 export function PaymentsPanel({ studentId = "s1" }: { studentId?: string }) {
   const [payments, setPayments] = useState<Payment[]>([]);
   const [overview, setOverview] = useState<{
     pendingPayments: number;
+    overduePayments: number;
     attendanceToday: number;
   } | null>(null);
-
   const load = () => {
-    void fetch(`/api/hrms/payments/${studentId}`)
-      .then((r) => r.json())
-      .then(setPayments);
-    void fetch("/api/hrms/overview")
-      .then((r) => r.json())
-      .then(setOverview);
+    void apiGet<Payment[]>(`/api/hrms/payments/${studentId}`)
+      .then(setPayments)
+      .catch(() => {});
+    void apiGet<{ pendingPayments: number; overduePayments: number; attendanceToday: number }>(
+      "/api/hrms/overview",
+    )
+      .then(setOverview)
+      .catch(() => {});
   };
-
   useEffect(load, [studentId]);
-
   const markPaid = (id: string) => {
-    // stub: in real app PATCH; here just POST new
-    void fetch("/api/hrms/payments", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ studentId, amount: 500, month: "2026-10", status: "paid" }),
-    }).then(load);
-    // visual
     setPayments((p) => p.map((x) => (x.id === id ? { ...x, status: "paid" } : x)));
+    void api<Payment>(`/api/hrms/payments/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ status: "paid" }),
+    }).then(load);
   };
-
+  const sweep = () => {
+    void api<{ changed: number }>("/api/hrms/payments/sweep", { method: "POST" }).then(load);
+  };
   return (
     <div className="rounded-xl border border-border bg-surface p-5 shadow-sm">
       <h3 className="font-semibold text-ink">Payments & Attendance — HRMS</h3>
       {overview ? (
         <p className="text-sm text-muted">
-          Pending: {overview.pendingPayments} • Today present: {overview.attendanceToday}
+          Pending: {overview.pendingPayments} • Overdue: {overview.overduePayments} • Today present:{" "}
+          {overview.attendanceToday}{" "}
+          <button onClick={sweep} className="ml-2 underline underline-offset-4 hover:text-ink">
+            sweep overdue
+          </button>
         </p>
       ) : null}
       <div className="mt-3 grid gap-2">

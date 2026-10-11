@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { api } from "../lib/api";
 export function StripeButton({
   studentId = "s1",
   month = "2026-10",
@@ -11,30 +11,22 @@ export function StripeButton({
 }) {
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
-
   const pay = () => {
     setLoading(true);
-    void fetch("/api/stripe/checkout", {
+    void api<{ demo?: boolean; url?: string }>(`/api/stripe/checkout`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ studentId, month, amount }),
     })
-      .then((r) => r.json())
       .then((j) => {
         if (j.demo) {
-          // stub → mark paid via hrms
-          void fetch("/api/hrms/payments", {
+          void api("/api/stripe/webhook", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ studentId, month, amount, status: "paid" }),
-          }).then(() =>
-            setMsg(`Demo paid ${month} — ${amount} EGP (set STRIPE_SECRET_KEY for real)`),
-          );
+            body: JSON.stringify({ studentId, month, amount }),
+          }).then(() => setMsg(`Demo paid ${month} — ${amount} EGP (webhook wired)`));
         } else if (j.url) window.location.href = j.url;
       })
       .finally(() => setLoading(false));
   };
-
   return (
     <div className="rounded-xl border border-border bg-surface p-3 shadow-sm">
       <button

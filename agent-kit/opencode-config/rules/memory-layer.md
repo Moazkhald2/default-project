@@ -28,6 +28,8 @@ Search by error keywords, component names, or symptoms. If found: summarize the 
 ## Tags
 Lowercase, 1-3 words, `#` prefix, ≥2 per memory (domain + type). Categories: domain (#auth #api #database #ui #deploy), type (#bug #performance #security #refactor), priority (#critical #nice-to-have), stack (#react #node #typescript #python), status (#wip #blocked #review #done). Use existing tags; don't invent new ones.
 
+**IMPORTANT: Tags must always be passed as an array** when calling `memory_save`, e.g. `tags=["#bug", "#performance"]` — never as a space-separated string like `"#bug #performance"`.
+
 ## What NOT to save
 - Code snippets, temporary debug state, info already in code/git history, duplicates (search first), trivial facts.
 

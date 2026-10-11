@@ -86,7 +86,7 @@ describe("decideAction", () => {
   });
 });
 describe("localMain", () => {
-  it("dryRun returns applied status", async () => {
+  it("dryRun returns applied status", { timeout: 15000 }, async () => {
     const r = await localMain({ dryRun: true });
     expect(r).toHaveProperty("status");
     expect(["applied", "skipped", "backup-check"]).toContain(r.status);

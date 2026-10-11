@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { PerfImage } from "./components/PerfImage";
 import { Math, BlockMath } from "./components/Math";
 import { GebraEmbed } from "./components/GebraEmbed";
@@ -8,11 +8,25 @@ const TeacherDashboard = lazy(() =>
 );
 const MathExam = lazy(() => import("./components/MathExam").then((m) => ({ default: m.MathExam })));
 const Heavy = lazy(() => import("./components/Heavy"));
+// Teacher-only panels stay out of the initial bundle — they load with the
+// teacher view instead of bloating first paint for students.
+const PaymentsPanel = lazy(() =>
+  import("./components/PaymentsPanel").then((m) => ({ default: m.PaymentsPanel })),
+);
+const GradebookPanel = lazy(() =>
+  import("./components/GradebookPanel").then((m) => ({ default: m.GradebookPanel })),
+);
+const StripeButton = lazy(() =>
+  import("./components/StripeButton").then((m) => ({ default: m.StripeButton })),
+);
+const CsvImport = lazy(() =>
+  import("./components/CsvImport").then((m) => ({ default: m.CsvImport })),
+);
+const AttendancePanel = lazy(() =>
+  import("./components/AttendancePanel").then((m) => ({ default: m.AttendancePanel })),
+);
 import { AuthBar } from "./components/AuthBar";
-import { PaymentsPanel } from "./components/PaymentsPanel";
-import { GradebookPanel } from "./components/GradebookPanel";
-import { StripeButton } from "./components/StripeButton";
-import { CsvImport } from "./components/CsvImport";
+import { api, apiGet } from "./lib/api";
 
 const DEMO_QS: Question[] = [
   {
@@ -48,9 +62,10 @@ export default function App() {
   const [bank, setBank] = useState<Question[] | null>(null);
 
   useEffect(() => {
-    fetch("/api/exams/bank?grade=10")
-      .then((r) => (r.ok ? r.json() : null))
+    const ctl = new AbortController();
+    void apiGet<Record<string, string>[]>("/api/exams/bank?grade=10")
       .then((j) => {
+        if (ctl.signal.aborted) return;
         if (Array.isArray(j) && j.length) {
           // map API shape -> Question
           setBank(
@@ -73,10 +88,24 @@ export default function App() {
         }
       })
       .catch(() => {});
+    return () => ctl.abort();
   }, []);
 
   const qs = bank ?? DEMO_QS;
   const [view, setView] = useState<"student" | "teacher" | "exam">("student");
+  // Rebuilt only when the bank changes — was re-sliced/re-mapped on every render.
+  const examQuestions = useMemo(
+    () =>
+      qs.slice(0, 3).map((q) => ({
+        id: q.id,
+        prompt: q.promptTex,
+        mathTeX: q.promptTex,
+        materialId: q.figure?.materialId,
+        figureSvg: q.figure?.svg.split("/").pop(),
+        options: q.choices ?? [q.answerTex ?? ""],
+      })),
+    [qs],
+  );
 
   return (
     <main className="mx-auto max-w-3xl p-6 bg-canvas min-h-screen">
@@ -129,6 +158,7 @@ export default function App() {
           <section className="mt-8 grid gap-4">
             <TeacherDashboard />
             <PaymentsPanel />
+            <AttendancePanel />
             <StripeButton />
             <CsvImport />
             <GradebookPanel />
@@ -139,26 +169,16 @@ export default function App() {
           <section className="mt-8">
             <MathExam
               title="Weekly Exam — Grade 10"
-              questions={qs.slice(0, 3).map((q) => ({
-                id: q.id,
-                prompt: q.promptTex,
-                mathTeX: q.promptTex,
-                materialId: q.figure?.materialId,
-                figureSvg: q.figure?.svg.split("/").pop(),
-                options: q.choices ?? [q.answerTex ?? ""],
-              }))}
+              questions={examQuestions}
               onSubmit={(a) => {
-                void fetch("/api/exams/submit", {
+                void api<{ submission?: { score: number; total: number } }>("/api/exams/submit", {
                   method: "POST",
-                  headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({ examId: "demo", studentId: "s1", answers: a }),
-                })
-                  .then((r) => r.json())
-                  .then((j) =>
-                    alert(
-                      `Submitted score: ${j.submission?.score ?? "?"}/${j.submission?.total ?? "?"}`,
-                    ),
-                  );
+                }).then((j) =>
+                  alert(
+                    `Submitted score: ${j.submission?.score ?? "?"}/${j.submission?.total ?? "?"}`,
+                  ),
+                );
               }}
             />
           </section>

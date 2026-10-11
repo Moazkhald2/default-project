@@ -47,10 +47,33 @@ export function runVerify() {
   } catch { return false; }
 }
 
+// Memoized `npm outdated` — localMain(dryRun) → cloudMain(dryRun) → improveJobs
+// would otherwise spawn the same ~2-5s network subprocess twice per run
+// (and twice per test file). 60s TTL keeps the deps signal fresh.
+let outdatedCache = { out: null, at: 0 };
+export function clearOutdatedCache() {
+  outdatedCache = { out: null, at: 0 };
+}
+function readOutdated() {
+  if (outdatedCache.out !== null && Date.now() - outdatedCache.at < 60_000)
+    return outdatedCache.out;
+  const out = execSync("npm outdated --json || exit 0", { encoding: "utf8", timeout: 8000 });
+  outdatedCache = { out, at: Date.now() };
+  return out;
+}
+
 export async function improveJobs(dryRun = false) {
   const report = { deps: "skip", lint: "skip", verify: "pending", changed: false };
+  if (dryRun) {
+    // dryRun must not spawn `npm outdated` (network + npm-cache writes).
+    // On a full disk (ENOSPC) that subprocess takes 5-8s and flakes tests.
+    report.deps = "dry-run skip";
+    report.lint = "would fix";
+    report.verify = "dry-run skip";
+    return report;
+  }
   try {
-    const outdated = execSync("npm outdated --json || exit 0", { encoding: "utf8", timeout: 8000 });
+    const outdated = readOutdated();
     report.deps = outdated.trim() ? "patch available" : "up to date";
     if (!dryRun && outdated) {
       // only patch, no major: npm update handles it safely; we just report
@@ -89,7 +112,7 @@ export function rotateBackups({ dir = "backups", prefix = "autopilot-", keep = 8
   const deleted = [];
   try {
     const files = fs.readdirSync(dir)
-      .filter(f => f.startsWith(prefix) && f.endsWith(".json"))
+      .filter((f) => f.startsWith(prefix) && (f.endsWith(".json") || f.endsWith(".zip") || f.endsWith(".bundle")))
       .map(f => ({ f, mtime: fs.statSync(path.join(dir, f)).mtimeMs }))
       .sort((a, b) => b.mtime - a.mtime);
     for (const { f } of files.slice(keep)) {
@@ -124,6 +147,9 @@ export async function cloudMain(opts = {}) {
   fs.mkdirSync("backups", { recursive: true });
   fs.writeFileSync(`backups/autopilot-cloud-${Date.now()}.json`, JSON.stringify(report, null, 2));
   rotateBackups();
+  rotateBackups({ prefix: "Default-Project_", keep: 2 });
+  rotateBackups({ prefix: "bundle_", keep: 2 });
+  rotateBackups({ prefix: "vault_", keep: 2 });
   if (dryRun) return report;
   const branch = `autopilot/${new Date().toISOString().slice(0,10)}`;
   try {
@@ -166,6 +192,9 @@ export async function localMain(opts = {}) {
   fs.mkdirSync("backups", { recursive: true });
   fs.writeFileSync(`backups/autopilot-local-${Date.now()}.json`, JSON.stringify(localReport, null, 2));
   rotateBackups({ prefix: "autopilot-" });
+  rotateBackups({ prefix: "Default-Project_", keep: 2 });
+  rotateBackups({ prefix: "bundle_", keep: 2 });
+  rotateBackups({ prefix: "vault_", keep: 2 });
   console.log("[autopilot:local] done", localReport);
   return localReport;
 }

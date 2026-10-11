@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algebra 3rd Prep 2nd Term — Sheet (6) Algebraic Fractional Function + Sheet (7) Equality | The Math Mentor</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+  :root{
+    --teal:#0A9396; --navy:#1A1A2E; --gold:#D4A373; --terra:#E76F51;
+    --sage:#84A98C; --ink:#1F2937; --muted:#6B7280; --paper:#FAF9F6;
+    --blue:#2563EB; --green:#059669; --purple:#6D28D9; --orange:#C2410C; --red:#DC2626;
+  }
+  *{box-sizing:border-box}
+  @page{size:A4; margin:0.4in; @bottom-center{content:"Page " counter(page); font-size:9pt; color:#6B7280;}}
+  body{font-family:'Lato',Arial,Helvetica,sans-serif; font-size:12pt; line-height:1.6; color:var(--ink); background:var(--paper); margin:0; padding:0;}
+  .page{max-width:8.27in; margin:0 auto; background:#fff; padding:0.4in; box-shadow:0 0 12px rgba(0,0,0,.08);}
+  @media print{
+    body{background:#fff;} .page{box-shadow:none; padding:0; max-width:none; margin:0;}
+    .no-print{display:none;} a{color:inherit; text-decoration:none;}
+    .problem,.def-box,.example-box,.rule-box,.p-text,.choices,.choice{break-inside:avoid; page-break-inside:avoid; orphans:3; widows:3;}
+    .footer-page{position:fixed; bottom:0.4in; left:0; right:0; text-align:center; font-size:9pt; color:#6B7280;}
+  }
+  /* Brand header */
+  .brand-bar{background:var(--navy); color:#fff; border-radius:10px 10px 0 0; padding:12px 18px; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--gold);}
+  .brand-bar .academy{font-weight:900; font-size:15pt; letter-spacing:.3px;}
+  .brand-bar .academy span{color:var(--gold);}
+  .brand-bar .unit{font-size:10pt; color:#CBD5E1;}
+  .title-block{text-align:center; padding:16px 10px 8px;}
+  .title-block h1{font-size:18pt; color:var(--navy); margin:0 0 4px;}
+  .title-block h2{font-size:13pt; color:var(--teal); margin:0;}
+  .title-block .term{font-size:10pt; color:var(--muted);}
+  .info-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; border:2px solid #E5E7EB; border-radius:8px; padding:10px 14px; margin:12px 0 16px; font-size:11pt; background:#F9FAFB;}
+  .info-grid .field{border-bottom:2px dotted #9CA3AF; min-height:1.4em; padding-bottom:2px;}
+  .info-grid label{font-weight:700; color:var(--navy); font-size:10pt; text-transform:uppercase; letter-spacing:.5px;}
+  /* Boxes: color-meaning consistent */
+  .def-box{background:#EFF6FF; border:1px solid #BFDBFE; border-left:5px solid var(--blue); border-radius:8px; padding:12px 14px; margin:12px 0;}
+  .def-box .tag{background:var(--blue); color:#fff; font-size:9pt; font-weight:900; padding:2px 8px; border-radius:4px; letter-spacing:1px;}
+  .example-box{background:#ECFDF5; border:1px solid #A7F3D0; border-left:5px solid var(--green); border-radius:8px; padding:12px 14px; margin:12px 0;}
+  .example-box .tag{background:var(--green); color:#fff; font-size:9pt; font-weight:900; padding:2px 8px; border-radius:4px; letter-spacing:1px;}
+  .rule-box{background:#F5F3FF; border:1px solid #DDD6FE; border-left:5px solid var(--purple); border-radius:8px; padding:12px 14px; margin:12px 0;}
+  .rule-box .tag{background:var(--purple); color:#fff; font-size:9pt; font-weight:900; padding:2px 8px; border-radius:4px; letter-spacing:1px;}
+  .note-box{background:#F9FAFB; border:1px solid #E5E7EB; border-left:5px solid #9CA3AF; border-radius:8px; padding:10px 14px; margin:10px 0; font-size:11pt; color:#374151;}
+  .challenge-box{background:#FFF7ED; border:1px solid #FDBA74; border-left:5px solid var(--orange); border-radius:8px; padding:10px 14px; margin:10px 0;}
+  .section-divider{border:none; border-top:3px solid var(--navy); margin:22px 0 6px; position:relative;}
+  .section-head{display:flex; align-items:center; gap:10px; margin:6px 0 12px;}
+  .section-head .badge{background:var(--navy); color:#fff; font-weight:900; font-size:11pt; padding:4px 12px; border-radius:20px;}
+  .section-head h3{margin:0; font-size:14pt; color:var(--navy);}
+  .section-head .src{font-size:9pt; color:var(--muted); margin-left:auto;}
+  .gov{display:block; text-align:right; font-size:9pt; color:#6B7280; font-style:italic; margin-top:6px;}
+  .pts{margin-left:6px;}
+  .problems{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:10px 0; align-items:start;}
+  .problems.single{grid-template-columns:1fr;}
+  .problem{border:1px solid #E2E8F0; border-radius:8px; padding:14px; background:#fff; position:relative;}
+  .problem.full{grid-column:1 / -1;}
+  .p-num{display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--teal); color:#fff; font-weight:900; font-size:11pt; margin-right:8px; vertical-align:middle;}
+  .problem.essay .p-num{background:var(--navy);}
+  .problem.homework .p-num{background:var(--gold); color:var(--navy);}
+  .pts{font-size:9pt; color:#718096;}
+  .p-text{font-size:14pt; line-height:1.8; margin:8px 0 12px; break-inside:avoid; orphans:3; widows:3;}
+  .p-text.small{font-size:13pt; line-height:1.8;}
+  .p-text .math-frag, .choice .katex{display:inline-block; white-space:nowrap;}
+  .choices{margin-top:14px; display:grid; grid-template-columns:1fr; gap:6px; row-gap:6px; line-height:2.2; break-inside:avoid; orphans:3; widows:3;}
+  .choices.stacked{grid-template-columns:1fr;}
+  .choice{display:block; padding:6px 0; line-height:2.2; break-inside:avoid; page-break-inside:avoid; orphans:3; widows:3;}
+  .p-text,.choice,.statement{text-wrap:pretty; overflow-wrap:normal;}
+  .statement{break-inside:avoid; orphans:3; widows:3;}
+  .def-box p,.example-box p,.rule-box p{break-inside:avoid; orphans:3; widows:3;}
+  .problem{break-inside:avoid; page-break-inside:avoid; orphans:3; widows:3;}
+  .answer-line{border-bottom:2px dotted #A0AEC0; margin-top:16px; min-height:1.6em;}
+  .workspace{min-height:70px; background:#F7FAFC; border-radius:4px; margin-top:14px; border:1px dashed #CBD5E1;}
+  .workspace.tall{min-height:90px;}
+  .check{display:inline-block; width:16px; height:16px; border:2px solid #4A5568; border-radius:3px; margin-right:6px; vertical-align:middle;}
+  .footer-page{text-align:center; font-size:9pt; color:#6B7280; padding:14px 0 4px; border-top:1px solid #E5E7EB; margin-top:18px;}
+  .brand-foot{text-align:center; font-size:9pt; color:var(--teal); font-weight:700; margin-top:4px;}
+  .instr{font-weight:700; font-size:12pt; color:var(--navy); margin:8px 0;}
+  @media (max-width:700px){.problems{grid-template-columns:1fr;} .info-grid{grid-template-columns:1fr;} .page{padding:12px;} .choices{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brand-bar">
+    <div>
+      <div class="academy">The Math Mentor <span>Σ</span></div>
+      <div class="unit">Algebra • 3rd Prep • 2nd Term</div>
+    </div>
+    <div class="unit" style="text-align:right">Sheet (6) + Sheet (7)<br>Algebraic Fractions</div>
+  </div>
+
+  <div class="title-block">
+    <h1>Algebraic Fractional Function &amp; Equality of Two Algebraic Functions</h1>
+    <h2>Sheet (6) • Sheet (7) — Rewritten in House Branding</h2>
+    <div class="term">Algebra — 3rd Prep — 2nd Term &nbsp;|&nbsp; Source pp. 23–30 &nbsp;|&nbsp; Faithful rewrite (no solutions)</div>
+  </div>
+
+  <div class="info-grid">
+    <div><label>Topic</label><div style="font-weight:700">Algebraic Fractions</div></div>
+    <div><label>Name</label><div class="field">&nbsp;</div></div>
+    <div><label>Date</label><div class="field">&nbsp;</div></div>
+    <div><label>Class</label><div class="field">&nbsp;</div></div>
+    <div><label>Score</label><div><span style="border:1.5px solid #111827; border-radius:6px; padding:2px 14px;">____ / ____</span></div></div>
+    <div><label>Time</label><div class="field">&nbsp;</div></div>
+  </div>
+
+  <div class="note-box"><strong>Instructions:</strong> Show all steps. Write restrictions (domain) <em>before</em> cancelling any factor. Keep governorate/year labels for reference only — they do not change the question.</div>
+
+  <!-- ============ SHEET 6 THEORY ============ -->
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge">Sheet (6)</span><h3>Algebraic Fractional Function — Key Theory (p. 23)</h3></div>
+
+  <div class="def-box">
+    <span class="tag">DEFINITION — BLUE</span>
+    <p style="margin:8px 0 0">If $p$ and $k$ are two polynomial functions, and $Z(k)$ is the set of zeroes of $k$, then</p>
+    <p style="text-align:center">$$n: \mathbb{R} - Z(k) \longrightarrow \mathbb{R}, \qquad n(x) = \frac{p(x)}{k(x)}$$</p>
+    <p style="margin:0">is called a <strong>real algebraic fractional function</strong>. Its <strong>domain</strong> is $\mathbb{R}$ minus the zeroes of the denominator.</p>
+  </div>
+
+  <div class="rule-box">
+    <span class="tag">RULE — ZEROES OF n</span>
+    <p style="margin:8px 0 0">The set of zeroes of $n$ = values making the <strong>numerator zero</strong> and the <strong>denominator non-zero</strong>.</p>
+    <p style="text-align:center; margin:6px 0">$$Z(n) = Z(\text{numerator}) - Z(\text{denominator})$$</p>
+  </div>
+
+  <div class="example-box">
+    <span class="tag">EXAMPLE — GREEN</span>
+    <p style="margin:8px 0 4px"><strong>(a)</strong> $n(x) = \dfrac{x^2+3x}{x^2-9} = \dfrac{x(x+3)}{(x-3)(x+3)}$</p>
+    <p style="margin:0 0 0 18px">$Z(n) = \{0,-3\} - \{3,-3\} = \{0\}$</p>
+    <p style="margin:8px 0 4px"><strong>(b)</strong> $n(x) = \dfrac{3x+6}{x^2+x-2} = \dfrac{3(x+2)}{(x-1)(x+2)}$</p>
+    <p style="margin:0 0 0 18px">$Z(n) = \{-2\} - \{1,-2\} = \varnothing$</p>
+  </div>
+
+  <div class="rule-box">
+    <span class="tag">RULE — COMMON DOMAIN</span>
+    <p style="margin:8px 0 0">The <strong>common domain</strong> of two algebraic fractions or more = $\mathbb{R}$ minus the zeroes of <strong>all</strong> denominators.</p>
+    <p style="margin:6px 0 0"><strong>Example:</strong> $n_1(x)=\dfrac{3}{x-2}$, $n_2(x)=\dfrac{5x}{x^2-1}$. Then $m_1 = \mathbb{R}-\{2\}$, $m_2 = \mathbb{R}-\{1,-1\}$, so common domain $= \mathbb{R}-\{2,1,-1\}$.</p>
+  </div>
+
+  <!-- ============ SHEET 6 CHOOSE ============ -->
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge">Sheet (6)</span><h3>Choose the Correct Answer (p. 24)</h3><span class="src">☐ tick as you finish</span></div>
+  <p class="instr">Choose the correct answer:</p>
+  <div class="problems">
+    <div class="problem"><span class="check"></span><span class="p-num">1</span><div class="p-text small">Domain of $n(x)=\dfrac{2x-1}{x^2+1}$ is …</div><div class="choices stacked"><div class="choice">(a) $\mathbb{R}$</div><div class="choice">(b) $\mathbb{R}-\{-1\}$</div><div class="choice">(c) $\mathbb{R}-\{-\frac12\}$</div><div class="choice">(d) $\mathbb{R}-\{\frac12\}$</div></div><span class="gov">[North Sinai 2013]</span><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">2</span><div class="p-text small">Domain of $\dfrac{x-5}{3}$ equals domain of …</div><div class="choices stacked"><div class="choice">(a) $\dfrac{x}{x^2+1}$</div><div class="choice">(b) $\dfrac{x}{x-3}$</div><div class="choice">(c) $\dfrac{3}{x-5}$</div><div class="choice">(d) $\dfrac{x-5}{x-3}$</div></div><span class="gov">[El-Kalyoubia 2016]</span><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">3</span><div class="p-text small">If $f(x)=\dfrac{x}{x-2}$, then $f(2) = $ …</div><div class="choices stacked"><div class="choice">(a) $2$</div><div class="choice">(b) $1$</div><div class="choice">(c) zero</div><div class="choice">(d) undefined</div></div><span class="gov">[Qena 2006]</span><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">4</span><div class="p-text small">If domain of $p(x)=\dfrac{3x}{x^2-4x+\ell}$ is $\mathbb{R}-\{2\}$, then $\ell = $ …</div><div class="choices stacked"><div class="choice">(a) $4$</div><div class="choice">(b) $2$</div><div class="choice">(c) $-2$</div><div class="choice">(d) $-4$</div></div><span class="gov">[Port Said 2003]</span><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">5</span><div class="p-text small">Domain of $f(x)=\dfrac{2x-4}{x^3-4x}$ is …</div><div class="choices stacked"><div class="choice">(a) $\mathbb{R}$</div><div class="choice">(b) $\{-2,2\}$</div><div class="choice">(c) $\mathbb{R}-\{-2,2\}$</div><div class="choice">(d) $\mathbb{R}-\{-2,0,2\}$</div></div><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">6</span><div class="p-text small">Common domain of $\dfrac{7}{x-5}$, $\dfrac{9}{2x-10}$ is …</div><div class="choices stacked"><div class="choice">(a) $\mathbb{R}$</div><div class="choice">(b) $\mathbb{R}-\{5\}$</div><div class="choice">(c) $\mathbb{R}-\{2\}$</div><div class="choice">(d) $\mathbb{R}-\{2,5\}$</div></div><span class="gov">[El-Menia 2014]</span><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">7</span><div class="p-text small">Common domain of $n_1(x)=3x-15$, $n_2(x)=x^2-4$ is …</div><div class="choices stacked"><div class="choice">(a) $\mathbb{R}-\{5\}$</div><div class="choice">(b) $\mathbb{R}-\{2,-2\}$</div><div class="choice">(c) $\mathbb{R}-\{5,2,-2\}$</div><div class="choice">(d) $\mathbb{R}$</div></div><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">8</span><div class="p-text small">If domain of $n(x)=\dfrac{x-2}{x^2+a}$ is $\mathbb{R}$, then $a$ … $0$</div><div class="choices stacked"><div class="choice">(a) $=$</div><div class="choice">(b) $>$</div><div class="choice">(c) $\le$</div><div class="choice">(d) $<$</div></div><span class="gov">[El-Dakahlia 2016]</span><div class="answer-line"></div></div>
+  </div>
+
+  <!-- ============ SHEET 6 ESSAY ============ -->
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge">Sheet (6)</span><h3>Essay — Domain (p. 25)</h3></div>
+  <p class="instr">Essay (1): Determine the domain of each of the following:</p>
+  <div class="problems">
+    <div class="problem essay"><span class="p-num">1</span><div class="p-text">$n(x)=\dfrac{x+1}{x-2}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">2</span><div class="p-text">$\dfrac{1}{x+2}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">3</span><div class="p-text">$\dfrac{x+3}{4}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">4</span><div class="p-text">$\dfrac{x-6}{x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">5</span><div class="p-text">$\dfrac{x-2}{2x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">6</span><div class="p-text">$\dfrac{x^2+1}{x^2-x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">7</span><div class="p-text">$\dfrac{x^2+9}{x^2-16}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">8</span><div class="p-text">$\dfrac{x^2-1}{x^2+1}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">9</span><div class="p-text">$\dfrac{x^2+25}{x^3+25x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">10</span><div class="p-text">$\dfrac{x^2-4}{x^2-x-6}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">11</span><div class="p-text">$\dfrac{x^2-4x+3}{8x^3+8}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">12</span><div class="p-text">$\dfrac{x^2-5x+6}{x^4-81}$</div><div class="workspace"></div></div>
+  </div>
+
+  <div class="problems single" style="margin-top:14px">
+    <div class="problem essay full"><span class="p-num">E2</span><div class="p-text small">Essay (2): If the domain of $f(x)=\dfrac{x+b}{x+a}$ is $\mathbb{R}-\{-2\}$ and $f(0)=3$, find $a$ and $b$. <span class="gov">[El-Fayoum 2016]</span></div><div class="workspace tall"></div></div>
+    <div class="problem essay full"><span class="p-num">E3</span><div class="p-text small">Essay (3): If the zeroes of $f(x)=\dfrac{ax^2-6x+8}{bx-4}$ is $\{4\}$ and its domain is $\mathbb{R}-\{2\}$, find $a$ and $b$. <span class="gov">[El-Sharkia 2017]</span></div><div class="workspace tall"></div></div>
+  </div>
+
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge" style="background:#D4A373; color:#1A1A2E">HW</span><h3>Homework — Sheet (6) (pp. 25–26)</h3></div>
+  <p class="instr">Choose:</p>
+  <div class="problems">
+    <div class="problem homework"><span class="p-num">1</span><div class="p-text small">Domain of $\dfrac{x-5}{3}$ equals domain of …</div><div class="choices stacked"><div class="choice">(a) $\dfrac{x}{x^2+1}$</div><div class="choice">(b) $\dfrac{x}{x-3}$</div><div class="choice">(c) $\dfrac{3}{x-5}$</div><div class="choice">(d) $\dfrac{x-5}{x-3}$</div></div><span class="gov">[Kafr El-Sheikh 2014]</span><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">2</span><div class="p-text small">If domain of $p(x)=\dfrac{3x}{x^2-4x+\ell}$ is $\mathbb{R}-\{2\}$, then $\ell = $ …</div><div class="choices stacked"><div class="choice">(a) $4$</div><div class="choice">(b) $2$</div><div class="choice">(c) $-2$</div><div class="choice">(d) $-4$</div></div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">3</span><div class="p-text small">Domain of $n(x)=\dfrac{2x-1}{x^2+1}$ is …</div><div class="choices stacked"><div class="choice">(a) $\mathbb{R}$</div><div class="choice">(b) $\mathbb{R}-\{-1\}$</div><div class="choice">(c) $\mathbb{R}-\{-\frac12\}$</div><div class="choice">(d) $\mathbb{R}-\{\frac12\}$</div></div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">4</span><div class="p-text small">If $f(x)=\dfrac{7+x}{7-x}$, $x \in \mathbb{R}-\{7,-7\}$, then $f(-2) = $ …</div><div class="choices stacked"><div class="choice">(a) $-\dfrac{1}{f(-2)}$</div><div class="choice">(b) $-\dfrac{1}{f(2)}$</div><div class="choice">(c) $\dfrac{1}{f(2)}$</div><div class="choice">(d) $\dfrac{1}{f(-2)}$</div></div><span class="gov">[El-Dakahlia 2016]</span><div class="answer-line"></div></div>
+  </div>
+  <p class="instr">Essay (1): Find the common domain of each pair:</p>
+  <div class="problems">
+    <div class="problem homework"><span class="p-num">1</span><div class="p-text small">$\dfrac{x}{3}$ , $\dfrac{3}{x}$</div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">2</span><div class="p-text small">$\dfrac{x+2}{x+5}$ , $\dfrac{x-4}{x-7}$</div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">3</span><div class="p-text small">$\dfrac{3x}{x-2}$ , $\dfrac{x+3}{x^2-9}$ <span class="gov">[North Sinai 2009]</span></div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">4</span><div class="p-text small">$\dfrac{x^2+x+1}{2x}$ , $\dfrac{x^2-1}{x^2-x}$ <span class="gov">[Port Said 2003]</span></div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">5</span><div class="p-text small">$\dfrac{x}{x^2-4}$ , $\dfrac{3}{2-x}$</div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">6</span><div class="p-text small">$\dfrac{x^2+3x}{x^3-9x}$ , $\dfrac{x^2+3x+9}{x^3-27}$</div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">7</span><div class="p-text small">$\dfrac{x-4}{x^2-5x+6}$ , $\dfrac{2x}{x^3-9x}$</div><div class="workspace"></div></div>
+    <div class="problem homework"><span class="p-num">8</span><div class="p-text small">$\dfrac{x^2+4}{x^2-4}$ , $\dfrac{7}{x^2+4x+4}$</div><div class="workspace"></div></div>
+  </div>
+  <div class="problems single" style="margin-top:14px">
+    <div class="problem homework full"><span class="p-num">E2</span><div class="p-text small">Essay (2): Domain of $n(x)=\dfrac{2x+1}{x^2-5x+6}$, then find $n(0)$ and $n(2)$. <span class="gov">[New Valley 2008]</span></div><div class="workspace"></div></div>
+    <div class="problem homework full"><span class="p-num">E3</span><div class="p-text small">Essay (3): If the domain of $n(x)=\dfrac{x-1}{x^2-ax+9}$ is $\mathbb{R}-\{3\}$, find $a$. <span class="gov">[Beni Suef 2017]</span></div><div class="workspace"></div></div>
+    <div class="problem homework full"><span class="p-num">E4</span><div class="p-text small">Essay (4): If $n(x)=\dfrac{11}{4x^2-12x+9}$ and $n(a)$ is undefined, find $a$.</div><div class="workspace"></div></div>
+  </div>
+
+  <!-- ============ SHEET 7 THEORY ============ -->
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge">Sheet (7)</span><h3>Equality of Two Algebraic Functions — Theory (p. 27)</h3></div>
+
+  <div class="def-box">
+    <span class="tag">DEFINITION — REDUCING</span>
+    <p style="margin:8px 0 0"><strong>Reducing</strong> an algebraic fraction to its simplest form means dividing both numerator and denominator by their <strong>highest common factor (HCF)</strong>.</p>
+  </div>
+  <div class="rule-box">
+    <span class="tag">RULE — 3 STEPS</span>
+    <ol style="margin:8px 0 0; padding-left:20px">
+      <li>Factorize the numerator and the denominator.</li>
+      <li>Identify the domain <strong>before</strong> cancelling.</li>
+      <li>Remove the common factors.</li>
+    </ol>
+  </div>
+  <div class="def-box">
+    <span class="tag">DEFINITION — EQUALITY</span>
+    <p style="margin:8px 0 0">Two algebraic functions $n_1, n_2$ are <strong>equal</strong> iff:</p>
+    <p style="text-align:center">$$\text{domain}_1 = \text{domain}_2 \quad \text{AND} \quad n_1(x) = n_2(x)\ \ \forall\, x \in \text{common domain}$$</p>
+  </div>
+
+  <p class="instr">Choose the correct answer:</p>
+  <div class="problems">
+    <div class="problem"><span class="check"></span><span class="p-num">1</span><div class="p-text small">If domain of $n_1(x)=\dfrac{5}{x-8}$ equals domain of $n_2(x)=\dfrac{x-3}{x+k}$, then $k = $ …</div><div class="choices stacked"><div class="choice">(a) $8$</div><div class="choice">(b) $-8$</div><div class="choice">(c) $-3$</div><div class="choice">(d) $24$</div></div><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">2</span><div class="p-text small">If $n_1(x)=\dfrac{x^2-4}{x-2}$, $n_2(x)=x+2$, then $n_1=n_2$ when they have the same domain which is …</div><div class="choices stacked"><div class="choice">(a) $\mathbb{R}$</div><div class="choice">(b) $\mathbb{R}-\{2\}$</div><div class="choice">(c) $\mathbb{R}-\{-2\}$</div><div class="choice">(d) $\mathbb{R}-\{1\}$</div></div><span class="gov">[El-Fayoum 2003]</span><div class="answer-line"></div></div>
+    <div class="problem"><span class="check"></span><span class="p-num">3</span><div class="p-text small">If $n_1(x)=\dfrac{1}{x-3}$, $n_2(x)=\dfrac{1}{3-x}$, then $n_1 \ne n_2$ because …</div><div class="choices stacked"><div class="choice">(a) $n_1=n_2$</div><div class="choice">(b) the two domains are equal</div><div class="choice">(c) $n_1(x)\ne n_2(x)$</div><div class="choice">(d) the two domains are not equal</div></div><div class="answer-line"></div></div>
+  </div>
+
+  <!-- ============ SHEET 7 ESSAY 1-2-3 ============ -->
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge">Sheet (7)</span><h3>Essay — Reduce / Prove Equality (p. 28)</h3></div>
+  <p class="instr">Essay (1): Reduce each to its simplest form, showing the domain:</p>
+  <div class="problems">
+    <div class="problem essay"><span class="p-num">1</span><div class="p-text">$\dfrac{2x+8}{x+4}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">2</span><div class="p-text">$\dfrac{x^2-2x}{x^2+3x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">3</span><div class="p-text">$\dfrac{x^2-4x}{x^2-16}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">4</span><div class="p-text">$\dfrac{x^2-4}{x^3-8}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">5</span><div class="p-text">$\dfrac{12x^2-8x}{6x^2-4x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">6</span><div class="p-text">$\dfrac{x^2-4}{x^2-5x+6}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">7</span><div class="p-text">$\dfrac{x^2-6x+9}{2x^3-18x}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">8</span><div class="p-text">$\dfrac{x^2+x-6}{x^2-2x-15}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">9</span><div class="p-text">$\dfrac{2x^2+7x+6}{4x^2+4x-3}$</div><div class="workspace"></div></div>
+    <div class="problem essay"><span class="p-num">10</span><div class="p-text">$\dfrac{x^3+1}{x^3-x^2+x}$</div><div class="workspace"></div></div>
+  </div>
+
+  <p class="instr">Essay (2): Prove $n_1(x) = n_2(x)$ for the common domain, and find that domain:</p>
+  <div class="problems single">
+    <div class="problem essay full"><span class="p-num">1</span><div class="p-text small">$\dfrac{4x^2-9}{6x-9}$ , $\dfrac{2x^2+3x}{3x}$ <span class="gov">[Port Said 2015]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">2</span><div class="p-text small">$\dfrac{x^2-x-2}{x^2+2x+1}$ , $\dfrac{x^2-3x+2}{x^2-1}$</div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">3</span><div class="p-text small">$\dfrac{x^2-3x+9}{x^3+27}$ , $\dfrac{2}{2x+6}$ <span class="gov">[El-Sharkia 2017]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">4</span><div class="p-text small">$\dfrac{x^2-4}{x^2+x-6}$ , $\dfrac{x^3-x^2-6x}{x^3-9x}$ <span class="gov">[El-Monofia 2017]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">5</span><div class="p-text small">$\dfrac{x^2+x-12}{x^2+5x+4}$ , $\dfrac{x^2-2x-3}{x^2+2x+1}$ <span class="gov">[Damietta 2017]</span></div><div class="workspace"></div></div>
+  </div>
+
+  <p class="instr">Essay (3): Show whether $n_1(x) = n_2(x)$ (give a reason):</p>
+  <div class="problems single">
+    <div class="problem essay full"><span class="p-num">1</span><div class="p-text small">$\dfrac{x-1}{x}$ , $\dfrac{(x-1)(x^2+1)}{x(x^2+1)}$</div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">2</span><div class="p-text small">$\dfrac{2x^3+6x}{(x-1)(x^2+3)}$ , $\dfrac{2x}{x-1}$</div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">3</span><div class="p-text small">$\dfrac{x+5}{x^2-25}$ , $\dfrac{2}{2x-10}$ <span class="gov">[Ismailia 2002]</span></div><div class="workspace"></div></div>
+  </div>
+
+  <!-- ============ SHEET 7 ESSAY 4 + HW ============ -->
+  <hr class="section-divider">
+  <div class="section-head"><span class="badge">Sheet (7)</span><h3>Essay (4) + Homework (pp. 29–30)</h3></div>
+  <p class="instr">Essay (4): Prove $n_1(x) = n_2(x)$:</p>
+  <div class="problems single">
+    <div class="problem essay full"><span class="p-num">1</span><div class="p-text small">$\dfrac{3x}{3x-6}$ , $\dfrac{2x}{2x-4}$ <span class="gov">[Souhag 2006]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">2</span><div class="p-text small">$\dfrac{x}{x^2-1}$ , $\dfrac{5x}{5x^2-5}$</div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">3</span><div class="p-text small">$\dfrac{2x}{2x+4}$ , $\dfrac{x^2+2x}{x^2+4x+4}$ <span class="gov">[El-Menia 2017]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">4</span><div class="p-text small">$\dfrac{x^3-1}{x^3+x^2+x}$ , $\dfrac{(x-1)(x^2+1)}{x^3+x}$</div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">5</span><div class="p-text small">$\dfrac{x^2-x}{x^3-2x^2}$ , $\dfrac{x^2-3x+2}{x^3-4x^2+4x}$ <span class="gov">[Beni Suef 2008]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">6</span><div class="p-text small">$\dfrac{x^2}{x^3-x^2}$ , $\dfrac{x^3+x^2+x}{x^4-x}$ <span class="gov">[El-Beheira 2017]</span></div><div class="workspace"></div></div>
+    <div class="problem essay full"><span class="p-num">7</span><div class="p-text small">$\dfrac{x^3+x}{x^3+x^2+x+1}$ , $\dfrac{x}{x+1}$</div><div class="workspace"></div></div>
+  </div>
+
+  <p class="instr">Homework — Choose:</p>
+  <div class="problems">
+    <div class="problem homework"><span class="p-num">1</span><div class="p-text small">$n_1(x)=x$, $n_2(x)=\dfrac{x^2}{x}$, $n_3(x)=\dfrac{x(x^2+4)}{x^2+4}$, $n_4(x)=\dfrac{x+5}{x^2}$ — the two equal functions are …</div><div class="choices stacked"><div class="choice">(a) $n_1,n_2$</div><div class="choice">(b) $n_1,n_3$</div><div class="choice">(c) $n_1,n_4$</div><div class="choice">(d) $n_2,n_3$</div></div><span class="gov">[Damietta 2003]</span><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">2</span><div class="p-text small">If $p(x)=\dfrac{x^2-2x}{(x+2)(x-2)}$, $q(x)=\dfrac{x}{x+2}$, then $p=q$ when …</div><div class="choices stacked"><div class="choice">(a) $p=q$ for each $x\in\mathbb{R}-\{-2\}$</div><div class="choice">(b) in simplest form</div><div class="choice">(c) for each $x\in\mathbb{R}-\{2,-2\}$</div><div class="choice">(d) for each $x\in\mathbb{R}$</div></div><span class="gov">[El-Sharkia 2003]</span><div class="answer-line"></div></div>
+  </div>
+
+  <p class="instr">Complete:</p>
+  <div class="problems">
+    <div class="problem homework"><span class="p-num">1</span><div class="p-text small">If $x \ne 2$, the simplest form of $n(x)=\dfrac{2-x}{x-2}$ is …</div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">2</span><div class="p-text small">The simplest form of $n(x)=\dfrac{4x^2-2x}{2x}$, $x \ne 0$ is …</div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">3</span><div class="p-text small">If $n_1(x)=\dfrac{x+1}{x-2}$, $n_2(x)=\dfrac{x^2+x}{x^2-2x}$, the common domain where $n_1=n_2$ is … <span class="gov">[Kafr El-Sheikh 2011]</span></div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">4</span><div class="p-text small">If $n_1(x)=\dfrac{x}{x^2+x}$, $n_2(x)=\dfrac{1}{x+1}$, then $n_1=n_2$ when $x \in $ … <span class="gov">[New Valley 2009]</span></div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">5</span><div class="p-text small">If $n_1(x)=\dfrac{1+a}{x-2}$, $n_2(x)=\dfrac{4}{x-2}$ and $n_1=n_2$, then $a = $ …</div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">6</span><div class="p-text small">If the simplest form of $n(x)=\dfrac{x(x-2)}{x+a}$, $x \ne 2$ is $n(x)=x$, then $a = $ …</div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">7</span><div class="p-text small">If the simplest form of $n(x)=\dfrac{x^2-4x+4}{x^2-a}$ is $\dfrac{x-2}{x+2}$, then $a = $ …</div><div class="answer-line"></div></div>
+    <div class="problem homework"><span class="p-num">8</span><div class="p-text small">Is $n_1(x)=n_2(x)$? Why?<br>(1) $\dfrac{2x^2+4}{x^3+2x}$ , $\dfrac{4x^2+8}{2x^3+4x}$<br>(2) $\dfrac{x^2-2x}{x^2+x-6}$ , $\dfrac{x^2-3x}{x^2-9}$</div><div class="workspace"></div></div>
+  </div>
+
+  <div class="challenge-box"><strong>Self-check ☐</strong> — Did I write the domain <em>before</em> cancelling? Did I check numerator zeroes vs denominator zeroes? Did I state the common domain for every equality proof?</div>
+
+  <div class="footer-page">The Math Mentor — Algebra 3rd Prep 2nd Term — Sheets (6)+(7) — Rewritten faithful to pp. 23–30 — Print: A4, margins 0.4in</div>
+  <div class="brand-foot">Primary #0A9396 • Navy #1A1A2E • Gold #D4A373 • Lato/Arial 12pt body • 14pt problems • 18pt title</div>
+
+</div>
+</body>
+</html>

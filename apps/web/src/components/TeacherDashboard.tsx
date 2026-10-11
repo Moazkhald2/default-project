@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiGet } from "../lib/api";
 import { QuestionCard, type Question } from "./QuestionCard";
 
 type Unit = {
@@ -16,52 +17,56 @@ type Curriculum = {
   units: Unit[];
 };
 
+// In-memory topic cache — switching back to a visited week reuses data
+// instead of refetching the same bank query on every click.
+const topicCache = new Map<string, Question[]>();
+
 export function TeacherDashboard() {
   const [curriculum, setCurriculum] = useState<Curriculum | null>(null);
   const [week, setWeek] = useState(1);
-  const [qs, setQs] = useState<Question[] | null>(null);
+  const [fetched, setFetched] = useState<Map<string, Question[]>>(new Map());
   const [submissions, setSubmissions] = useState<unknown[]>([]);
 
   useEffect(() => {
-    fetch("/api/exams/curriculum/10")
-      .then((r) => (r.ok ? r.json() : null))
+    void apiGet<Curriculum>("/api/exams/curriculum/10")
       .then(setCurriculum)
       .catch(() => {});
-    fetch("/api/exams/submissions")
-      .then((r) => (r.ok ? r.json() : []))
+    void apiGet<unknown[]>("/api/exams/submissions")
       .then(setSubmissions)
       .catch(() => {});
   }, []);
 
-  useEffect(() => {
-    if (!curriculum) return;
-    const unit = curriculum.units.find((u) => u.weeks.includes(week));
-    const topic = unit?.topics[0]?.replaceAll("_", "-") ?? "";
-    if (!topic) return;
-    void fetch(`/api/exams/bank?topic=${topic}&grade=10`)
-      .then((r) => (r.ok ? r.json() : []))
-      .then((j) => {
-        setQs(
-          j.map((q: Record<string, string>) => ({
-            id: q.id,
-            grade: q.grade,
-            topic: q.topic,
-            difficulty: q.difficulty as Question["difficulty"],
-            promptTex: q.promptTex,
-            figure: q.figureSvg
-              ? {
-                  svg: `/assets/geometry_templates/${q.figureSvg}`,
-                  alt: q.topic,
-                  materialId: q.materialId,
-                }
-              : undefined,
-            answerTex: q.answerTex,
-          })),
-        );
-      });
-  }, [curriculum, week]);
-
+  // Derived during render (not set in an effect): cache hits resolve
+  // synchronously with zero extra renders or refetches.
   const unit = curriculum?.units.find((u) => u.weeks.includes(week));
+  const topic = unit?.topics[0]?.replaceAll("_", "-") ?? "";
+  const cacheKey = topic ? `${topic}:10` : null;
+  const qs = cacheKey ? (fetched.get(cacheKey) ?? topicCache.get(cacheKey) ?? null) : null;
+
+  useEffect(() => {
+    if (!cacheKey || !topic || fetched.has(cacheKey) || topicCache.has(cacheKey)) return;
+    void apiGet<Record<string, string>[]>(`/api/exams/bank?topic=${topic}&grade=10`)
+      .then((j) => {
+        const mapped: Question[] = j.map((q: Record<string, string>) => ({
+          id: q.id,
+          grade: q.grade,
+          topic: q.topic,
+          difficulty: q.difficulty as Question["difficulty"],
+          promptTex: q.promptTex,
+          figure: q.figureSvg
+            ? {
+                svg: `/assets/geometry_templates/${q.figureSvg}`,
+                alt: q.topic,
+                materialId: q.materialId,
+              }
+            : undefined,
+          answerTex: q.answerTex,
+        }));
+        topicCache.set(cacheKey, mapped);
+        setFetched((prev) => new Map(prev).set(cacheKey, mapped));
+      })
+      .catch(() => {});
+  }, [cacheKey, topic, fetched]);
 
   return (
     <div className="space-y-6">

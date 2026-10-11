@@ -1,4 +1,4 @@
-import { useEffect, useRef, useId } from "react";
+import { useEffect, useRef, useId, useState } from "react";
 
 declare global {
   interface Window {
@@ -51,8 +51,29 @@ export function GebraEmbed({
   const id = useId().replaceAll(":", "-");
   const containerId = `ggb-${id}`;
   const ref = useRef<HTMLDivElement>(null);
+  // Defer the heavy applet inject until the embed scrolls into view —
+  // question lists render N embeds but only ~1 is visible. Falls back to
+  // immediate load where IntersectionObserver is unavailable (tests, old browsers).
+  const [visible, setVisible] = useState(() => typeof IntersectionObserver === "undefined");
 
   useEffect(() => {
+    if (visible || !ref.current || typeof IntersectionObserver === "undefined") return;
+    const el = ref.current;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [visible]);
+
+  useEffect(() => {
+    if (!visible) return;
     let cancelled = false;
     loadGgbScript()
       .then(() => {
@@ -79,6 +100,7 @@ export function GebraEmbed({
       cancelled = true;
     };
   }, [
+    visible,
     materialId,
     appName,
     width,

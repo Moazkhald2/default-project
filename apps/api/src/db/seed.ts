@@ -35,11 +35,13 @@ function parseFrontmatter(src: string) {
 async function collect(dir: string, out: string[] = []) {
   if (!existsSync(dir)) return out;
   const entries = await readdir(dir, { withFileTypes: true });
-  for (const e of entries) {
-    const full = path.join(dir, e.name);
-    if (e.isDirectory()) await collect(full, out);
-    else if (e.name.endsWith(".md")) out.push(full);
-  }
+  await Promise.all(
+    entries.map(async (e) => {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) await collect(full, out);
+      else if (e.name.endsWith(".md")) out.push(full);
+    }),
+  );
   return out;
 }
 
@@ -51,11 +53,15 @@ async function main() {
 
   const roots = existingVaultRoots();
   const files: string[] = [];
-  for (const r of roots) await collect(r, files);
+  // Scan roots concurrently; collect() is IO-bound recursion.
+  await Promise.all(roots.map((r) => collect(r, files)));
+
+  // Read all files concurrently (IO-bound), then insert serially —
+  // SQLite serializes writes anyway, so parallel inserts only risk BUSY.
+  const sources = await Promise.all(files.map((f) => readFile(f, "utf8").catch(() => null)));
 
   let inserted = 0;
-  for (const f of files) {
-    const src = await readFile(f, "utf8").catch(() => null);
+  for (const src of sources) {
     if (!src) continue;
     const p = parseFrontmatter(src);
     if (!p?.fm.id) continue;

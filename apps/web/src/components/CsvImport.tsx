@@ -1,24 +1,19 @@
 import { useState } from "react";
-
+import { api } from "../lib/api";
 export function CsvImport({ onDone }: { onDone?: () => void }) {
   const [csv, setCsv] = useState(
     "name,grade,email\nSara,10,sara@example.com\nOmar,10,omar@example.com",
   );
   const [res, setRes] = useState("");
-
   const send = () => {
-    void fetch("/api/students/import", {
+    void api<{ added: number; total: number }>("/api/students/import", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ csv }),
-    })
-      .then((r) => r.json())
-      .then((j) => {
-        setRes(`Added ${j.added}, total ${j.total}`);
-        onDone?.();
-      });
+    }).then((j) => {
+      setRes(`Added ${j.added}, total ${j.total}`);
+      onDone?.();
+    });
   };
-
   return (
     <div className="rounded-xl border border-border bg-surface p-5 shadow-sm">
       <h3 className="font-semibold text-ink">Bulk import students (CSV)</h3>

@@ -46,10 +46,22 @@ async function main() {
     console.log(`No .md files in ${dir}`);
     return;
   }
+  // Read concurrently — ingest is IO-bound; serial await is linear in file count.
+  const sources = await Promise.all(
+    files.map((full) => readFile(full, "utf8").then(
+      (src) => ({ full, src }),
+      () => ({ full, src: null }),
+    )),
+  );
   let ok = 0, fail = 0;
-  for (const full of files) {
+  for (const { full, src } of sources) {
     const f = path.relative(dir, full);
-    const src = await readFile(full, "utf8");
+    if (src === null) {
+      console.log(`✗ ${f}`);
+      console.log(`  - unreadable file`);
+      fail++;
+      continue;
+    }
     const parsed = parseFrontmatter(src);
     const errs = [];
     if (!parsed) errs.push("Missing YAML frontmatter ---");

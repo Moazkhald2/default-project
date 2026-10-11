@@ -1,33 +1,27 @@
 import { useState, useEffect } from "react";
-
+import { api, apiGet } from "../lib/api";
 export function AuthBar() {
   const [user, setUser] = useState<{ name: string; role: string; email: string } | null>(null);
-  const [email, setEmail] = useState("teacher@math.academy");
-  const [pass, setPass] = useState("teacher123");
-
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
   useEffect(() => {
     const t = localStorage.getItem("token");
     if (!t) return;
-    void fetch("/api/auth/me", { headers: { Authorization: `Bearer ${t}` } })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((j) => j?.user && setUser(j.user));
+    void apiGet<{ user: { name: string; role: string; email: string } }>("/api/auth/me")
+      .then((j) => j?.user && setUser(j.user))
+      .catch(() => {});
   }, []);
-
   const login = () => {
-    void fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password: pass }),
-    })
-      .then((r) => r.json())
-      .then((j) => {
-        if (j.token) {
-          localStorage.setItem("token", j.token);
-          setUser(j.user);
-        } else alert(j.error ?? "login failed");
-      });
+    void api<{ token: string; user: { name: string; role: string; email: string } }>(
+      "/api/auth/login",
+      { method: "POST", body: JSON.stringify({ email, password: pass }) },
+    ).then((j) => {
+      if (j.token) {
+        localStorage.setItem("token", j.token);
+        setUser(j.user);
+      }
+    });
   };
-
   if (user) {
     return (
       <div className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-2 text-sm shadow-sm">
@@ -45,7 +39,6 @@ export function AuthBar() {
       </div>
     );
   }
-
   return (
     <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-surface p-3 shadow-sm">
       <input
@@ -67,7 +60,7 @@ export function AuthBar() {
       >
         Login
       </button>
-      <span className="text-xs text-muted">demo: teacher@math.academy / teacher123</span>
+      <span className="text-xs text-muted">demo login — ask teacher</span>
     </div>
   );
 }

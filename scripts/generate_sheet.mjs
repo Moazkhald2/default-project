@@ -51,9 +51,12 @@ function escapeTypst(s) {
 
 async function main() {
   const files = (await readdir(bankDir)).filter((f) => f.endsWith(".md") && !f.startsWith("openstax"));
+  // Read concurrently — serial await scales linearly with bank size.
+  const sources = await Promise.all(
+    files.map((f) => readFile(path.join(bankDir, f), "utf8").then((src) => ({ src, f }))),
+  );
   const picked = [];
-  for (const f of files) {
-    const src = await readFile(path.join(bankDir, f), "utf8");
+  for (const { src, f } of sources) {
     const { fm, body } = parseFrontmatter(src);
     if (topic && fm.topic !== topic) continue;
     if (grade && fm.grade !== grade) continue;

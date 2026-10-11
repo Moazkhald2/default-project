@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
-
+import { apiGet } from "../lib/api";
 type Gradebook = {
   average: number;
+  count?: number;
   byTopic: { topic: string; avg: number; count: number }[];
   recent: { examId: string; score: number; total: number }[];
 };
-
 export function GradebookPanel({ studentId = "s1" }: { studentId?: string }) {
   const [gb, setGb] = useState<Gradebook | null>(null);
   useEffect(() => {
-    void fetch(`/api/hrms/gradebook/${studentId}`)
-      .then((r) => r.json())
-      .then(setGb);
+    void apiGet<Gradebook>(`/api/hrms/gradebook/${studentId}`)
+      .then(setGb)
+      .catch(() => {});
   }, [studentId]);
   if (!gb) return <p className="text-sm text-muted">Loading gradebook...</p>;
   return (
     <div className="rounded-xl border border-border bg-surface p-5 shadow-sm">
       <h3 className="font-semibold text-ink">Gradebook — {studentId}</h3>
       <p className="text-2xl font-bold text-ink">{gb.average}% avg</p>
+      <p className="text-xs text-muted">{gb.count ?? gb.recent.length} submissions (live)</p>
       <div className="mt-3 grid gap-2">
         {gb.byTopic.map((t) => (
           <div
@@ -32,7 +33,8 @@ export function GradebookPanel({ studentId = "s1" }: { studentId?: string }) {
         ))}
       </div>
       <p className="mt-3 text-xs text-muted">
-        Recent: {gb.recent.map((r) => `${r.score}/${r.total}`).join(", ")}
+        Recent:{" "}
+        {gb.recent.map((r) => `${r.score}/${r.total}`).join(", ") || "— submit an exam to populate"}
       </p>
     </div>
   );

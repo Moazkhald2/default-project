@@ -16,6 +16,28 @@ export default defineConfig({
       "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
     },
   },
-  build: { target: "es2022", sourcemap: true },
+  build: {
+    target: "es2022",
+    // No sourcemaps in prod — the old `true` emitted a 1.8MB index.js.map
+    // (4x the JS payload) on every deploy for zero runtime benefit.
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        // Split stable vendor chunks so repeat visits reuse cached
+        // react/katex across deploys instead of re-downloading one 475KB blob.
+        // (Rolldown requires function form — object form fails the build.)
+        manualChunks(id) {
+          if (id.includes("node_modules/katex")) return "katex";
+          if (
+            id.includes("node_modules/react-dom") ||
+            id.includes("node_modules/react/") ||
+            id.includes("node_modules/scheduler")
+          )
+            return "vendor";
+          return undefined;
+        },
+      },
+    },
+  },
   test: { environment: "jsdom", globals: true },
 });

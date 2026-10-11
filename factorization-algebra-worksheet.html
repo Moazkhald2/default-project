@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factorization & Algebraic Expressions - Practice Sheet</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, Lato, sans-serif; margin: 0.5in 0.75in; font-size: 12pt; color: #1a202c; line-height: 1.5; }
+  @media print { body { margin: 0.5in; } .no-print { display: none; } .problem, .section, .answer-key { break-inside: avoid; } }
+  .header { border: 3px double #2c5282; border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; background: #ebf4ff; }
+  .header h1 { font-size: 18pt; color: #2c5282; margin: 0 0 4px 0; }
+  .header .sub { font-size: 11pt; color: #4a5568; }
+  .header .meta { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 10px; font-size: 12pt; }
+  .header .meta span { border-bottom: 2px dotted #999; min-width: 160px; display: inline-block; }
+  .score-box { border: 2px solid #2c5282; border-radius: 6px; padding: 2px 12px; font-weight: bold; background: #fff; }
+  .instructions { font-weight: bold; font-size: 12pt; background: #fffff0; border-left: 5px solid #d69e2e; padding: 10px 14px; margin: 14px 0 18px 0; }
+  .section { margin: 22px 0 10px 0; }
+  .section h2 { font-size: 14pt; color: #fff; background: #2c5282; padding: 8px 14px; border-radius: 8px; margin: 0 0 4px 0; }
+  .section .desc { font-size: 11pt; color: #4a5568; margin: 0 0 12px 2px; font-style: italic; }
+  .problems { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .problems { grid-template-columns: 1fr; } }
+  .problem { border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 14px; background: #fff; page-break-inside: avoid; }
+  .problem.full { grid-column: 1 / -1; }
+  .p-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .problem-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #2c5282; color: white; font-weight: bold; font-size: 12pt; flex-shrink: 0; }
+  .pts { font-size: 10pt; color: #718096; margin-left: auto; white-space: nowrap; }
+  .checkbox { width: 16px; height: 16px; border: 2px solid #4a5568; border-radius: 3px; display: inline-block; flex-shrink: 0; }
+  .q { font-size: 12pt; margin: 4px 0; }
+  .q code, .math { font-family: Georgia, serif; font-weight: bold; font-size: 13pt; }
+  .workspace { min-height: 70px; background: #f7fafc; border-radius: 4px; margin-top: 8px; border: 1px dashed #cbd5e0; }
+  .workspace.tall { min-height: 100px; }
+  .answer-line { border-bottom: 2px dotted #a0aec0; margin-top: 10px; min-height: 22px; font-size: 10pt; color: #a0aec0; }
+  hr.divider { border: none; border-top: 2px solid #e2e8f0; margin: 18px 0; }
+  .answer-key { margin-top: 30px; border-top: 3px solid #2c5282; padding-top: 16px; }
+  .answer-key h2 { font-size: 16pt; color: #2c5282; }
+  .answer-key .problem { background: #fff5f5; }
+  .correct { color: #c53030; font-weight: bold; }
+  .steps { font-size: 11pt; color: #2d3748; margin-top: 6px; }
+  .steps em { color: #744210; }
+  .footer { margin-top: 20px; font-size: 10pt; color: #718096; text-align: center; }
+  .print-btn { background: #2c5282; color: #fff; border: none; padding: 10px 22px; border-radius: 6px; font-size: 12pt; cursor: pointer; margin: 10px 0; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">🖨️ Print Worksheet</button>
+
+<div class="header">
+  <h1>📐 Factorization &amp; Algebraic Expressions</h1>
+  <div class="sub">From Level 0 Basics → Medium → Hard | Middle / High School | Show all work</div>
+  <div class="meta">
+    <div>Name: <span>&nbsp;</span></div>
+    <div>Date: <span>&nbsp;</span></div>
+    <div>Score: <span class="score-box">___ / 30</span></div>
+  </div>
+</div>
+
+<div class="instructions"><b>Instructions:</b> Show all steps in the workspace. Simplify fully, expand carefully with signs, and factor completely. Each problem shows its points. Total: 30 points.</div>
+
+<!-- PART A -->
+<div class="section">
+  <h2>Part A: Level 0 — Basics / Warm-up (Q1–Q6)</h2>
+  <p class="desc">Vocabulary, like terms, simplifying. ⭐ Basic recall.</p>
+  <div class="problems">
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">1</span><span class="pts">[1 pt]</span></div><p class="q">Circle the <b>like terms</b> in: <span class="math">3x, 5, 2x, −7, x²</span><br>Then list them below.</p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">2</span><span class="pts">[1 pt]</span></div><p class="q">Simplify: <span class="math">3a + 5a</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">3</span><span class="pts">[1 pt]</span></div><p class="q">Simplify: <span class="math">7x − 2x + 4</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">4</span><span class="pts">[1 pt]</span></div><p class="q">Simplify (collect like terms): <span class="math">4m + 2n − 2m + 5n</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">5</span><span class="pts">[1 pt]</span></div><p class="q">Simplify: <span class="math">2a² + 3a² − a²</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">6</span><span class="pts">[1 pt]</span></div><p class="q">Identify: in <span class="math">5x² − 3x + 7</span>, what is the <b>coefficient of x²</b>, the <b>coefficient of x</b>, and the <b>constant term</b>?</p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PART B -->
+<div class="section">
+  <h2>Part B: Expanding Expressions (Q7–Q12)</h2>
+  <p class="desc">Distributive property, FOIL, double brackets, perfect squares. ⭐⭐ Simple application.</p>
+  <div class="problems">
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">7</span><span class="pts">[1 pt]</span></div><p class="q">Expand: <span class="math">3(x + 4)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">8</span><span class="pts">[1 pt]</span></div><p class="q">Expand: <span class="math">−2(2y − 5)</span> ⚠️ watch the signs!</p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">9</span><span class="pts">[1 pt]</span></div><p class="q">Expand: <span class="math">x(x + 7)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">10</span><span class="pts">[1 pt]</span></div><p class="q">Expand (FOIL): <span class="math">(x + 3)(x + 5)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">11</span><span class="pts">[1 pt]</span></div><p class="q">Expand: <span class="math">(2x − 1)(x + 4)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">12</span><span class="pts">[1 pt]</span></div><p class="q">Expand the square: <span class="math">(x − 3)²</span> <br><small>Recall: (a−b)² = a² − 2ab + b²</small></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PART C -->
+<div class="section">
+  <h2>Part C: Adding &amp; Subtracting Algebraic Expressions (Q13–Q17)</h2>
+  <p class="desc">Collect like terms, brackets, minus-sign distribution. ⭐⭐ Multi-step.</p>
+  <div class="problems">
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">13</span><span class="pts">[1 pt]</span></div><p class="q">Add: <span class="math">(3x + 5) + (2x − 1)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">14</span><span class="pts">[1 pt]</span></div><p class="q">Add: <span class="math">(5y² − 2y + 4) + (y² + 3y − 2)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">15</span><span class="pts">[1 pt]</span></div><p class="q">Subtract: <span class="math">(4a − 7) − (2a − 3)</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">16</span><span class="pts">[1 pt]</span></div><p class="q">Subtract: <span class="math">(3x² + 2x − 1) − (x² − 4x + 5)</span></p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">17</span><span class="pts">[1 pt]</span></div><p class="q">Simplify: <span class="math">2(3x + 1) + 3(x − 4)</span><br><small>Hint: expand first, then collect.</small></p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PART D -->
+<div class="section">
+  <h2>Part D: Factorization — Medium (Q18–Q23)</h2>
+  <p class="desc">Common factor, grouping, difference of two squares, x²+bx+c. ⭐⭐⭐ Multi-step.</p>
+  <div class="problems">
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">18</span><span class="pts">[1 pt]</span></div><p class="q">Factor (common factor): <span class="math">6x + 9</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">19</span><span class="pts">[1 pt]</span></div><p class="q">Factor fully: <span class="math">4x² − 8x</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">20</span><span class="pts">[1 pt]</span></div><p class="q">Factor: <span class="math">x² + 7x + 10</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">21</span><span class="pts">[1 pt]</span></div><p class="q">Factor: <span class="math">x² + 2x − 15</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">22</span><span class="pts">[1 pt]</span></div><p class="q">Factor (difference of two squares): <span class="math">x² − 25</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">23</span><span class="pts">[1 pt]</span></div><p class="q">Factor by grouping: <span class="math">x² + 3x + 2x + 6</span></p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PART E -->
+<div class="section">
+  <h2>Part E: Factorization &amp; Mixed — Hard (Q24–Q28)</h2>
+  <p class="desc">ax²+bx+c, perfect squares, harder difference of squares, mixed. 🔥 Challenge.</p>
+  <div class="problems">
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">24</span><span class="pts">[1 pt]</span></div><p class="q">Factor: <span class="math">2x² + 7x + 3</span></p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">25</span><span class="pts">[1 pt]</span></div><p class="q">Factor: <span class="math">3x² − 5x − 2</span></p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">26</span><span class="pts">[1 pt]</span></div><p class="q">Factor: <span class="math">9x² − 49</span></p><div class="answer-line">Answer:</div><div class="workspace"></div></div>
+    <div class="problem"><div class="p-head"><span class="checkbox"></span><span class="problem-num">27</span><span class="pts">[1 pt]</span></div><p class="q">Factor (perfect square): <span class="math">4x² + 12x + 9</span></p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+    <div class="problem full"><div class="p-head"><span class="checkbox"></span><span class="problem-num">28</span><span class="pts">[3 pts]</span></div><p class="q">🏡 <b>Application:</b> A rectangular garden has area <span class="math">x² + 7x + 12</span> (in m²).<br>(a) Factor the area to find expressions for length and width. [2 pts]<br>(b) If x = 3, find the actual length and width. [1 pt]</p><div class="answer-line">Answer:</div><div class="workspace tall"></div></div>
+  </div>
+</div>
+
+<div class="footer">Factorization &amp; Algebraic Expressions • 28 problems • 30 points • Remember: factorisation is the REVERSE of expanding — always expand your answer to check! ✅</div>
+
+<!-- ANSWER KEY -->
+<div class="answer-key">
+  <h2>🔑 Answer Key (for Teacher — worked steps for key/hard problems)</h2>
+  <div class="problems">
+    <div class="problem"><b>1.</b> <span class="correct">Like terms: 3x &amp; 2x; 5 &amp; −7. x² is alone.</span><div class="steps">Same variable + same power = like terms.</div></div>
+    <div class="problem"><b>2.</b> <span class="correct">8a</span><div class="steps">3+5=8 → 8a.</div></div>
+    <div class="problem"><b>3.</b> <span class="correct">5x + 4</span><div class="steps">7x−2x=5x; +4 stays.</div></div>
+    <div class="problem"><b>4.</b> <span class="correct">2m + 7n</span><div class="steps">4m−2m=2m; 2n+5n=7n.</div></div>
+    <div class="problem"><b>5.</b> <span class="correct">4a²</span><div class="steps">2+3−1=4 → 4a².</div></div>
+    <div class="problem"><b>6.</b> <span class="correct">coeff x² = 5, coeff x = −3, constant = 7</span></div>
+    <div class="problem"><b>7.</b> <span class="correct">3x + 12</span><div class="steps">3·x + 3·4.</div></div>
+    <div class="problem"><b>8.</b> <span class="correct">−4y + 10</span><div class="steps">−2·2y=−4y; −2·(−5)=+10. ❌ Common mistake: writing −10.</div></div>
+    <div class="problem"><b>9.</b> <span class="correct">x² + 7x</span></div>
+    <div class="problem"><b>10.</b> <span class="correct">x² + 8x + 15</span><div class="steps">FOIL: x·x=x²; x·5=5x; 3·x=3x; 3·5=15 → x²+8x+15.</div></div>
+    <div class="problem"><b>11.</b> <span class="correct">2x² + 7x − 4</span><div class="steps">2x·x=2x²; 2x·4=8x; −1·x=−x; −1·4=−4 → 2x²+8x−x−4.</div></div>
+    <div class="problem"><b>12.</b> <span class="correct">x² − 6x + 9</span><div class="steps">(x−3)(x−3): x²−3x−3x+9. ❌ Mistake: x²−9 (forgot middle term).</div></div>
+    <div class="problem"><b>13.</b> <span class="correct">5x + 4</span><div class="steps">3x+2x=5x; 5−1=4.</div></div>
+    <div class="problem"><b>14.</b> <span class="correct">6y² + y + 2</span><div class="steps">5y²+y²=6y²; −2y+3y=y; 4−2=2.</div></div>
+    <div class="problem"><b>15.</b> <span class="correct">2a − 4</span><div class="steps">Distribute −: 4a−7−2a+3 → 2a−4. ❌ Mistake: 2a−10 (forgot −(−3)=+3).</div></div>
+    <div class="problem"><b>16.</b> <span class="correct">2x² + 6x − 6</span><div class="steps">3x²+2x−1−x²+4x−5 → (3x²−x²)=2x²; (2x+4x)=6x; (−1−5)=−6.</div></div>
+    <div class="problem"><b>17.</b> <span class="correct">9x − 10</span><div class="steps">6x+2+3x−12 → 9x−10.</div></div>
+    <div class="problem"><b>18.</b> <span class="correct">3(2x + 3)</span><div class="steps">GCF=3. Check: 3·2x+3·3=6x+9 ✓</div></div>
+    <div class="problem"><b>19.</b> <span class="correct">4x(x − 2)</span><div class="steps">GCF=4x.</div></div>
+    <div class="problem"><b>20.</b> <span class="correct">(x + 5)(x + 2)</span><div class="steps">Need +10, +7: 5 &amp; 2. Check: 5+2=7, 5·2=10 ✓</div></div>
+    <div class="problem"><b>21.</b> <span class="correct">(x + 5)(x − 3)</span><div class="steps">Need −15, +2: +5 &amp; −3. 5+(−3)=2 ✓</div></div>
+    <div class="problem"><b>22.</b> <span class="correct">(x − 5)(x + 5)</span><div class="steps">a²−b²=(a−b)(a+b).</div></div>
+    <div class="problem"><b>23.</b> <span class="correct">(x + 3)(x + 2)</span><div class="steps">Group: x(x+3)+2(x+3) → (x+3)(x+2).</div></div>
+    <div class="problem"><b>24.</b> <span class="correct">(2x + 1)(x + 3)</span><div class="steps"><em>ac-method:</em> a·c=6. Need 6 &amp; +7: 6 &amp; 1. 2x²+6x+x+3 → 2x(x+3)+1(x+3).</div></div>
+    <div class="problem"><b>25.</b> <span class="correct">(3x + 1)(x − 2)</span><div class="steps"><em>ac=−6, b=−5:</em> −6 &amp; +1. 3x²−6x+x−2 → 3x(x−2)+1(x−2).</div></div>
+    <div class="problem"><b>26.</b> <span class="correct">(3x − 7)(3x + 7)</span><div class="steps">(3x)²−7². Check by expanding ✓</div></div>
+    <div class="problem"><b>27.</b> <span class="correct">(2x + 3)² or (2x+3)(2x+3)</span><div class="steps">a²+2ab+b² with a=2x,b=3: (2x)²+2(2x)(3)+3²=4x²+12x+9 ✓</div></div>
+    <div class="problem full"><b>28.</b> <span class="correct">(a) (x+3)(x+4) so length = x+4, width = x+3 (or vice versa). (b) x=3 → 6 m by 7 m.</span><div class="steps"><em>(a)</em> Need +12, +7: 3 &amp; 4 → (x+3)(x+4). [2 pts: 1 for each factor / 1 factorising + 1 identifying L/W]. <em>(b)</em> 3+3=6, 3+4=7. Check area: 6·7=42; x²+7x+12 at x=3: 9+21+12=42 ✓ [1 pt].</div></div>
+  </div>
+</div>
+
+</body>
+</html>

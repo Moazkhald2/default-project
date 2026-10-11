@@ -30,6 +30,7 @@ app.use(
 
 // --- rate limit: 60 req / 60s per IP (in-memory) ---
 const hits = new Map<string, { n: number; t: number }>();
+let lastSweep = 0;
 app.use("/api/*", async (c, next) => {
   const ip =
     c.req.header("x-forwarded-for")?.split(",")[0]?.trim() ??
@@ -42,7 +43,13 @@ app.use("/api/*", async (c, next) => {
     cur.n++;
     if (cur.n > 60) return c.json({ error: "rate limited" }, 429);
   }
-  if (hits.size > 5000) for (const [k, v] of hits) if (now - v.t > 60_000) hits.delete(k);
+  // Sweep stale entries at most once per 60s — the old code iterated the
+  // whole map (5000+ entries) on EVERY request once over threshold,
+  // i.e. O(n) per request exactly under load.
+  if (hits.size > 5000 && now - lastSweep > 60_000) {
+    lastSweep = now;
+    for (const [k, v] of hits) if (now - v.t > 60_000) hits.delete(k);
+  }
   await next();
 });
 
@@ -58,8 +65,7 @@ const ALLOWED = new Set([
 app.use(
   "/api/*",
   cors({
-    origin: (origin) =>
-      origin && ALLOWED.has(origin) ? origin : ALLOWED.has(origin ?? "") ? origin! : "",
+    origin: (origin) => (origin && ALLOWED.has(origin) ? origin : ""),
     allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowHeaders: ["Content-Type", "Authorization"],
     maxAge: 600,
