@@ -9,8 +9,8 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run",
     "deploy": "wrangler deploy",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "npx -y drizzle-kit@0.31.11 generate",
+    "db:migrate": "npx -y drizzle-kit@0.31.11 migrate",
     "db:seed": "tsx src/db/seed.ts"
   },
   "dependencies": {
@@ -27,7 +27,6 @@
     "@hono/node-server": "^2.1.1",
     "@types/better-sqlite3": "^9.6.0",
     "@types/node": "^26.2.0",
-    "drizzle-kit": "^0.31.10",
     "tsx": "^4.23.12",
     "vitest": "^4.1.11"
   }
