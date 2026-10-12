@@ -14,14 +14,14 @@
     "db:seed": "tsx src/db/seed.ts"
   },
   "dependencies": {
-    "@hono/zod-validator": "^0.9.0",
-    "@libsql/client": "^0.17.4",
+    "@hono/zod-validator": "^0.9.1",
+    "@libsql/client": "^0.18.0",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^13.0.3",
     "dotenv": "^17.4.2",
-    "drizzle-orm": "^0.45.2",
-    "hono": "^4.13.7",
-    "zod": "^4.4.3"
+    "drizzle-orm": "^0.45.4",
+    "hono": "^4.13.13",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@hono/node-server": "^2.1.1",
