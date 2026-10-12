@@ -8,5 +8,57 @@
       "project-bootstrap": "allow",
       "free-claude-code": "allow"
     }
+  },
+  "mcp": {
+    "supabase": {
+      "type": "remote",
+      "url": "https://mcp.supabase.com/mcp?project_ref=vjhzbqtoktktrjevcodq&features=docs%2Caccount%2Cdatabase%2Cdebugging%2Cdevelopment%2Cfunctions%2Cbranching",
+      "enabled": true
+    },
+    "cloudflare": {
+      "type": "remote",
+      "url": "https://mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-docs": {
+      "type": "remote",
+      "url": "https://docs.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-bindings": {
+      "type": "remote",
+      "url": "https://bindings.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-builds": {
+      "type": "remote",
+      "url": "https://builds.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-observability": {
+      "type": "remote",
+      "url": "https://observability.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "sqlite": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mcp-server-sqlite",
+        "--db-path",
+        "C:/Users/moaz7/OneDrive/Documents/Default Project/dev.db"
+      ],
+      "enabled": true
+    }
+  },
+  "tools": {
+    "supabase_*": true,
+    "cloudflare_*": true,
+    "cloudflare-docs_*": true,
+    "cloudflare-bindings_*": true,
+    "cloudflare-builds_*": true,
+    "cloudflare-observability_*": true,
+    "sqlite_*": true
   }
 }

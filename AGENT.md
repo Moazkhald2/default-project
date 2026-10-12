@@ -56,3 +56,12 @@ Every AI coding assistant, autonomous agent, and LLM toolchain operating in this
 - `scripts/ingest.mjs` — validates frontmatter + KaTeX + figure refs
 - `apps/web/src/components/MathExam.tsx` — Vite React exam (KaTeX + GebraEmbed)
 - `apps/web/src/index.css` — Tailwind v4 `@theme` (House v2 mapping)
+
+## 5. OpenCode Config Canonical (2026-10-11 audit fix)
+
+- Canonical: `~/.config/opencode/opencode.jsonc` (global) + `./opencode.json` (project override merges).
+- Project `opencode.json` enables for this repo only: `supabase`, `cloudflare*` (6), `sqlite` (`dev.db`) — global stays lean for tokens.
+- Global `skills.paths` includes `./.opencode/skills` (project) — 4 skills: `code-review`, `perf-check`, `project-bootstrap`, `free-claude-code`.
+- `agent-kit/` is archive only — do NOT load. `.bak` files untracked, gitignored.
+- `.agents/skills/` mirrors `.opencode/skills/` (4 valid). Empty skeleton dirs pruned. Do NOT treat as opencode source unless `SKILL.md` present at top level.
+- Generated `sheets/*.pdf`, `branded-sheets/*.pdf` gitignored (except 2 canonical tracked).

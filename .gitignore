@@ -25,3 +25,13 @@ backups/autopilot-*.log
 
 # stray local copy (untracked)
 test-project/
+
+# generated PDFs (keep via OneDrive, not git — except the 2 canonical tracked ones)
+sheets/*.pdf
+branded-sheets/*.pdf
+!sheets/grade10_trig_u4.pdf
+!sheets/primary_worksheet.pdf
+
+# opencode config drift / backups
+*.bak
+agent-kit/opencode-config/opencode.jsonc.pre-fix.bak
