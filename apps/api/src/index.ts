@@ -5,7 +5,7 @@ import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
 import health from "./routes/health.js";
 import exams from "./routes/exams.js";
-import auth from "./routes/auth.js";
+import auth, { authMiddleware } from "./routes/auth.js";
 import hrms from "./routes/hrms.js";
 import stripe from "./routes/stripe.js";
 import students from "./routes/students.js";
@@ -13,18 +13,24 @@ import students from "./routes/students.js";
 const app = new Hono();
 
 // --- security headers (HSTS + CSP + anti-clickjacking) ---
+// M2: allow geogebra.org (GebraEmbed deployggb.js + iframes) and picsum.photos
+// (PerfImage/App hero) — everything else stays 'self'.
 app.use(
   secureHeaders({
     contentSecurityPolicy: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://www.geogebra.org"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'", "https://fonts.googleapis.com"],
+      imgSrc: ["'self'", "data:", "https://picsum.photos", "https:"],
+      connectSrc: ["'self'", "https://fonts.googleapis.com", "https://www.geogebra.org"],
+      frameSrc: ["'self'", "https://www.geogebra.org"],
       frameAncestors: ["'none'"],
     },
-    crossOriginEmbedderPolicy: false,
+    strictTransportSecurity: "max-age=63072000; includeSubDomains; preload",
+    xContentTypeOptions: "nosniff",
+    referrerPolicy: "strict-origin-when-cross-origin",
+    crossOriginEmbedderPolicy: true,
   }),
 );
 
@@ -53,14 +59,18 @@ app.use("/api/*", async (c, next) => {
   await next();
 });
 
+// Permissions-Policy header (not supported by hono/secure-headers in this version)
+app.use("*", async (c, next) => {
+  await next();
+  c.header("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+});
+
 app.use(logger());
-// CORS allowlist — no wildcard
+// CORS allowlist — no wildcard. Includes verified production domain.
 const ALLOWED = new Set([
   "http://localhost:5173",
   "http://localhost:3000",
-  "https://default-project.pages.dev",
-  "https://default-project-aj2.pages.dev",
-  "https://02dfcd8c.default-project-aj2.pages.dev",
+  "https://math-mentor-lms.pages.dev",
 ]);
 app.use(
   "/api/*",
@@ -74,6 +84,17 @@ app.use(
 );
 app.route("/api", health);
 app.route("/api/auth", auth);
+// C1: enforce auth — teacher-only for students + hrms, student+teacher for submit.
+// Registered BEFORE app.route() so Hono runs them (order matters).
+// Per-route guards inside exams.ts cover POST / (teacher) and /submit scoping;
+// the middleware below guarantees no route is left open even if a new
+// handler is added later.
+app.use("/api/students", authMiddleware(["teacher"]));
+app.use("/api/students/*", authMiddleware(["teacher"]));
+app.use("/api/hrms", authMiddleware(["teacher"]));
+app.use("/api/hrms/*", authMiddleware(["teacher"]));
+app.use("/api/exams/submit", authMiddleware(["teacher", "student"]));
+app.use("/api/exams/submissions", authMiddleware(["teacher"]));
 app.route("/api/exams", exams);
 app.route("/api/hrms", hrms);
 app.route("/api/stripe", stripe);

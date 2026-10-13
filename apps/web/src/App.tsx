@@ -219,18 +219,6 @@ export default function App() {
       </Suspense>
 
       <footer className="mt-8 flex gap-4 text-sm text-muted">
-        <a
-          href="/api/health"
-          className="underline decoration-border underline-offset-4 hover:text-ink"
-        >
-          API health
-        </a>
-        <a
-          href="/api/exams/bank"
-          className="underline decoration-border underline-offset-4 hover:text-ink"
-        >
-          Bank JSON
-        </a>
         <span>Typst: bash scripts/fast_build.sh</span>
       </footer>
     </main>

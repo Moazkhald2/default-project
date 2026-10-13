@@ -1,15 +1,12 @@
 // Shared API client — wires every department (auth, students, exams, hrms, stripe)
-// through one token-aware fetch. Same-origin: Vite proxies /api → :3000 in dev.
-export function authHeaders(extra: Record<string, string> = {}): Record<string, string> {
-  const t = localStorage.getItem("token");
-  return t ? { Authorization: `Bearer ${t}`, ...extra } : extra;
-}
+// through one cookie-aware fetch. Same-origin: Vite proxies /api → :3000 in dev.
+// H2: JWT is stored in an httpOnly cookie set by /api/auth/login — no localStorage.
 export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
   const res = await fetch(path, {
     ...init,
+    credentials: "include",
     headers: {
       "Content-Type": "application/json",
-      ...authHeaders(),
       ...((init.headers as Record<string, string>) ?? {}),
     },
   });
@@ -17,7 +14,7 @@ export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
   return res.json() as Promise<T>;
 }
 export const apiGet = <T>(path: string): Promise<T> =>
-  fetch(path, { headers: authHeaders() }).then((r) => {
+  fetch(path, { credentials: "include" }).then((r) => {
     if (!r.ok) throw new Error(`GET ${path} → ${r.status}`);
     return r.json() as Promise<T>;
   });

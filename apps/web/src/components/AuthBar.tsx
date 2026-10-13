@@ -5,22 +5,18 @@ export function AuthBar() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   useEffect(() => {
-    const t = localStorage.getItem("token");
-    if (!t) return;
     void apiGet<{ user: { name: string; role: string; email: string } }>("/api/auth/me")
       .then((j) => j?.user && setUser(j.user))
       .catch(() => {});
   }, []);
   const login = () => {
-    void api<{ token: string; user: { name: string; role: string; email: string } }>(
-      "/api/auth/login",
-      { method: "POST", body: JSON.stringify({ email, password: pass }) },
-    ).then((j) => {
-      if (j.token) {
-        localStorage.setItem("token", j.token);
-        setUser(j.user);
-      }
-    });
+    void api<{ user: { name: string; role: string; email: string } }>("/api/auth/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password: pass }),
+    }).then((j) => j?.user && setUser(j.user));
+  };
+  const logout = () => {
+    void api("/api/auth/logout", { method: "POST" }).then(() => setUser(null));
   };
   if (user) {
     return (
@@ -28,10 +24,7 @@ export function AuthBar() {
         <span className="font-medium text-ink">{user.name}</span>
         <span className="rounded-full bg-primary px-2 py-0.5 text-xs text-white">{user.role}</span>
         <button
-          onClick={() => {
-            localStorage.removeItem("token");
-            setUser(null);
-          }}
+          onClick={logout}
           className="ml-auto underline decoration-border underline-offset-4 hover:text-ink"
         >
           Logout
@@ -60,7 +53,6 @@ export function AuthBar() {
       >
         Login
       </button>
-      <span className="text-xs text-muted">demo login — ask teacher</span>
     </div>
   );
 }

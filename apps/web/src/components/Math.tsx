@@ -22,11 +22,13 @@ function renderCached(tex: string, display: boolean): string {
     html = katex.renderToString(tex, {
       displayMode: display,
       throwOnError: false,
-      strict: false,
+      strict: true,
       trust: false,
     });
   } catch {
-    html = `<span class="text-red-600">Invalid LaTeX: ${tex}</span>`;
+    // H2: escape fallback tex before innerHTML — raw tex may contain <>& payloads
+    const esc = tex.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    html = `<span class="text-red-600">Invalid LaTeX: ${esc}</span>`;
   }
   if (renderCache.size >= RENDER_CACHE_MAX) {
     const oldest = renderCache.keys().next().value;
